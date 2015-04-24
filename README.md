@@ -1,18 +1,10 @@
+ICF Interactive
 
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+Welcome!
+This is the baseline application constucted leveraging BDD 
+techniques on the MEAN stack.  The dev environment consists of Cloud9 IDE,
+Heroku, GitHub and CodeShip.  The prototype environment leverages an AWS ec2
+instance replacing Heroku as the app server. 
 
-
-Hi there! Welcome to Cloud9 IDE!
-
-To get you started, create some files, play with the terminal,
-or visit http://docs.c9.io for our documentation.
-If you want, you can also go watch some training videos at
-http://www.youtube.com/user/c9ide.
-
-Happy coding!
-The Cloud9 IDE team
+Integrated CodeShip. Testing build
+Integrated CodeShip continuous deployment with Heroku.

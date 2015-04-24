@@ -85,14 +85,6 @@ app.get('*', function (req, res) {
 });
 
 
-//need to move to protect the secrets
-//mongoose.connect('mongodb://localhost/generic_node');
-demoData.connectDb('mongodb://icfproto:Ug7ZmdXK@ds051831.mongolab.com:51831/generic_node')
-.then(function() {
-    console.log('connected to mongodb successfully!');
-    demoData.seedStuff();
-});
-
 server = app.listen(app.get('port'), app.get('host'), function () {
  
  console.log("Express server listening on port " + app.get('port'));

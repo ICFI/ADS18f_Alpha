@@ -1,6 +1,6 @@
 On January 9th, 18F released an Agile Delivery Services RFI, and challenged respondents to show not tell. This approach removed the constraints of page counts, font sizes, and compliance matrices; a refreshing break. We allowed ourselves to just do. To design, to work cooperatively, to test, revise, build, expand, refine, and deliver.
 
-The RFI was the best stress test we could have asked for. Real-life users on hand to define, inform, and validate, proving to ourselves that we had the skills, knowledge, and will to respond with a best-of-class solution. We also learned a lot about what we didn’t know.[^1]
+The RFI was the best stress test we could have asked for: real-life users on hand to define, inform, and validate, proving to ourselves that we had the skills, knowledge, and will to respond with a best-of-class solution. We also learned a lot about what we didn’t know.[^1]
 
 So we practiced. Following the same basic principles, we designed a way to prepare for the RFP, to advance our readiness and make a place where all the crazy and beautiful ideas we hatch and nurture become the normal way to work.
 

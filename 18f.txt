@@ -1,0 +1,48 @@
+++ Contracting Officer ++
+
+review step by step flow
+
+current resources used, interplay, prioritization, relevance
+
+rank importance of different data 
+
+
+
+Applications:
+- outside hooks, is this everything
+
+Yelp format:
+- 
+ 
+
+Equal priority
+1. Registered in SAM (duns) Not be excluded party, can't be remedied
+2, Small business designation, icons, constant reminder progress to goal
+3. Market based data, multiple award schedule contract, how much awarded; proportion of work (multiple MAS, see where doing most of work)
+- IDB umbrella without tasks, need performance standards
+- On schedule, but no work
+		- volume
+		- relative to total size
+- importance  = schedule, content of work || skeptical of where work is done, not relevant
+
+
+Hooks
+- Performance eval scores: CO, and contractor response and COR
+- Other risk factors:
+	- new company
+	- # of subs, esp if encouraging 
+	- previous experience, % of budget if possible
+
+Independent gov't cost estimate? Not captured anywhere? FBO, estimated values as basis?
+
+If CO looking at multiple dev 
+
+Other types of IDVs, helpful to know
+
+GWACs
+BPAs
+
+
+
+
+

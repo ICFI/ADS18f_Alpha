@@ -1,6 +1,6 @@
 This winter, 18F released an Agile Delivery Services RFI and challenged respondents to show not tell. They removed the constraints of page counts, font sizes, and compliance matrices … a refreshing break. We were allowed to just do. 
 
-The RFI was the best stress test we could have asked for: real-life users on hand to define, inform, and validate. We proved to ourselves that we had the skills, knowledge, and will to respond with a best-of-class solution. 
+The RFI was the best stress test we could have asked for. Drawing on the experiences of real-life users as we met the challenge, we proved to ourselves that we had the knowledge, skills, and will to respond with a best-of-class solution. 
 
 We also learned a lot about what we didn’t know.[^1]
 

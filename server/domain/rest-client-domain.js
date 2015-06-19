@@ -3,9 +3,7 @@
 var Promise = require("bluebird");
 var Client = require('node-rest-client').Client;
 var https = require('https');
-if (process.env.NODE_ENV !== 'production'){
-  require('longjohn');
-}
+
 
 //var ElasticSearchQuery = require("./essearch-query-template.js");
 

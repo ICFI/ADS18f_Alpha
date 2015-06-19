@@ -17,6 +17,7 @@
     "express-session": "^1.10.3",
     "helmet": "^0.6.1",
     "jade": "^1.9.2",
+    "longjohn": "^0.2.4",
     "node-rest-client": "^1.4.4"
   },
   "devDependencies": {

@@ -22,7 +22,7 @@ module.exports = function(searchProxy, app) {
                     });
     })
 
-    app.get('/api/v0/medicine/typeahead/:medicine?', function(req, res) {
+    app.get('/api/v0/drug/typeahead/:medicine?', function(req, res) {
                var medicine = req.params.medicine;
                 res.send({collection:[{value:"Oxycodone"},
                                 {value:"Oxycontin"},

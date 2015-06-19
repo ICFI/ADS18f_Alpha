@@ -64,7 +64,7 @@ function executeHttpClient(url, path){
                 res.on("end", function(data){
                     resolve(JSON.parse(response_data));
                 })
-            });
+            }).end();
 
         }catch (e) {
           // reject the promise with caught error

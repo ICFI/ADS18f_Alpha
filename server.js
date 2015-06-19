@@ -10,7 +10,8 @@ var server = null;
 var env = process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
 var app = express();
-//require('./server/services/rest-client-service.js')(searchProxy, app);
+var searchProxy = require("./server/domain/rest-client-domain.js");
+require('./server/services/rest-client-service.js')(searchProxy, app);
 
 app.set('views', __dirname + '/server/views');
 app.set('view engine', 'jade');

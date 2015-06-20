@@ -20,7 +20,18 @@ describe("The FDA Prototype drug search API", function() {
             console.error(e);
         });
     });
-    it("should be able to query the Open FDA dataset fields of brand_name, generic_name, substance_name")
+    it("should be able to query the Open FDA dataset fields of brand_name, generic_name, substance_name", function(done){
+        var args = '/drug/label.json?search=fdaopen.brand_name="Tylenol"+OR+fdaopen.generic_name="Tylenol"+OR+fdaopen.substance_name="Tylenol"&limit=1';
+        searchData.doHttpSearch(_test_url, args)
+        .then(function(collection) {
+            //console.log(collection);
+            expect(collection).to.be.a("object");
+            expect(collection.results.length).to.be.at.least(1);
+            done();
+        }).catch(function(e){
+            console.error(e);
+        });
+    });
     it("should query the spl_medguide field for the provided symptom and return a result")
     it("should combine these two and query for both parameters")
     it("should parse the results and return a value of found=true if a search returns a match, false otherwise")

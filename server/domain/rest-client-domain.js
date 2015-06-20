@@ -17,6 +17,29 @@ var options_auth={
 
 exports.doRestSearch = executeRestClient;
 exports.doHttpSearch = executeHttpClient;
+exports.parseDrugLabel = function(resultSet) {
+    
+    return new Promise(function(resolve, reject) {
+        var retVal = {};
+        try {
+            if(resultSet.results.length>0){
+                retVal.found = true;
+                retVal.brand_name=resultSet.results[0].openfda.brand_name[0];
+                retVal.generic_name=resultSet.results[0].openfda.generic_name[0];
+                retVal.substance_name=resultSet.results[0].openfda.substance_name[0];
+                retVal.spl_medguide=resultSet.results[0].spl_medguide;
+            }else {
+                retVal.found = false;
+            } 
+            resolve(retVal);
+        }catch (e) {
+              // reject the promise with caught error
+              console.log(e);
+              reject(e);
+        }
+    });
+}
+
 
 function executeRestClient(url, args) {
 

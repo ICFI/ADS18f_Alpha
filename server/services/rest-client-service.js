@@ -22,6 +22,19 @@ module.exports = function(searchProxy, app) {
                     });
     })
 
+    app.get('/api/v1/drug/label/:medicine/:reaction', function(req, res) {
+        var medicine = req.params.medicine;
+        var reaction = req.params.reaction;
+
+        var args = '/drug/label.json?search=(openfda.brand_name:"'+ medicine +'"+OR+openfda.generic_name:"'+ medicine +'"+OR+openfda.substance_name:"'+ medicine +'")+AND+spl_medguide:"' + reaction + '"&limit=1';
+        searchProxy.doHttpSearch(_url, args)
+        .then(searchProxy.parseDrugLabel)
+        .then(function(collection){
+            res.send(collection);
+        })
+      
+    });
+
     app.get('/api/v0/drug/typeahead/:medicine?', function(req, res) {
                var medicine = req.params.medicine;
                 res.send({collection:[{value:"Oxycodone"},
@@ -41,16 +54,5 @@ module.exports = function(searchProxy, app) {
                                 {value:"Dizziness"}
                                 ]})
     })        
-    app.get('/api/v99/drug/label/:medicine/:reaction', function(req, res) {
-        var medicine = req.params.medicine;
-        var reaction = req.params.reaction;
-        //adverse_reactions_table
-        //spl_medguide
-        var args = '/drug/label.json?search=openfda.brand_name:"'+ medicine +'"+AND+spl_medguide:"' + reaction + '"&limit=100';
-        searchProxy.doHttpSearch(_url, args)
-        .then(function(collection){
-            res.send(collection);
-        })
-      
-    });
+
 }

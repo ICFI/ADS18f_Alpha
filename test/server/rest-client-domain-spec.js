@@ -4,7 +4,7 @@ var https = require('https');
 
 var ElasticSearchQuery = require("../../server/domain/essearch-query-template.js");
 
-var searchData = require("../../server/domain/rest-client-domain.js");
+var searchProxy = require("../../server/domain/rest-client-domain.js");
 
 var rawResults = require("./oxy_dizzi_results_shim.js");
 var drugResults = require("./oxy_type_ahead_shim.js");
@@ -15,7 +15,7 @@ describe("The FDA Prototype drug search API", function() {
     
     it("should be able to query the Open FDA dataset for a known medicine and return a result", function(done){
         var args = '/drug/label.json?search=Tylenol&limit=1';
-        searchData.doHttpSearch(_test_url, args)
+        searchProxy.doHttpSearch(_test_url, args)
         .then(function(collection) {
             //console.log(collection);
             expect(collection).to.be.a("object");
@@ -28,7 +28,7 @@ describe("The FDA Prototype drug search API", function() {
     it("should be able to query the Open FDA dataset fields of brand_name, generic_name, substance_name", function(done){
         var args = '/drug/label.json?search=(openfda.brand_name:"Tylenol"+OR+openfda.generic_name:"Tylenol"+OR+openfda.substance_name:"Tylenol")&limit=1';
         //
-        searchData.doHttpSearch(_test_url, args)
+        searchProxy.doHttpSearch(_test_url, args)
         .then(function(collection) {
             //console.log(collection);
             expect(collection).to.be.a("object");
@@ -42,7 +42,7 @@ describe("The FDA Prototype drug search API", function() {
     it("should query the spl_medguide field for the provided symptom and return a result", function(done){
         var args = '/drug/label.json?search=openfda.spl_medguide="Dizziness"&limit=1';
         //
-        searchData.doHttpSearch(_test_url, args)
+        searchProxy.doHttpSearch(_test_url, args)
         .then(function(collection) {
             //console.log(collection);
             expect(collection).to.be.a("object");
@@ -55,7 +55,7 @@ describe("The FDA Prototype drug search API", function() {
     it("should combine these two and query for both parameters", function(done){
         var args = '/drug/label.json?search=(openfda.brand_name:"Oxycontin"+OR+openfda.generic_name:"Oxycontin"+OR+openfda.substance_name:"Oxycontin")+AND+spl_medguide:"Dizziness"&limit=1';
         //
-        searchData.doHttpSearch(_test_url, args)
+        searchProxy.doHttpSearch(_test_url, args)
         .then(function(collection) {
             //console.log(collection);
             expect(collection).to.be.a("object");
@@ -100,8 +100,8 @@ describe("The FDA Prototype drug search API", function() {
     it("should validate that the spl_medguide has a length of at least 50", function(done){
         var args = '/drug/label.json?search=(openfda.brand_name:"Oxycontin"+OR+openfda.generic_name:"Oxycontin"+OR+openfda.substance_name:"Oxycontin")+AND+spl_medguide:"Dizziness"&limit=1';
         //search with live data
-        searchData.doHttpSearch(_test_url, args)
-        .then(searchData.parseDrugLabel)
+        searchProxy.doHttpSearch(_test_url, args)
+        .then(searchProxy.parseDrugLabel)
         .then(function(res) {
             expect(res.found).to.be.equal(true);
             expect(res.brand_name).to.be.deep.equal('OxyContin');
@@ -121,7 +121,7 @@ describe("The FDA medicine type-ahead", function(){
         var searchRaw = "oxy";
         var i = 0;
         var str = '';
-        var res = searchData.parseRawDrugName(searchRaw)
+        var res = searchProxy.parseRawDrugName(searchRaw)
 
         expect(res).to.be.equal("[oO][xX][yY]");
         done();
@@ -133,7 +133,7 @@ describe("The FDA medicine type-ahead", function(){
             var elasticTemplate = new ElasticSearchQuery();
             var args = elasticTemplate.getDrugTypeAhead();
             //console.log(args);
-            var res = searchData.parseRawDrugName(searchRaw)
+            var res = searchProxy.parseRawDrugName(searchRaw)
             //.then(function(res){
                 args.aggs.autocomplete.terms.include.pattern = res + '.*';
                 args.query.bool.must[0].prefix.capitalized_case.value = searchRaw.toLowerCase();
@@ -155,7 +155,7 @@ describe("The FDA medicine type-ahead", function(){
             args.aggs.autocomplete.terms.include.pattern = searchString + '.*';
             //console.log("**********:" + JSON.stringify(args.query.bool.must[0].prefix.capitalized_case.value) + "****************");
             args.query.bool.must[0].prefix.capitalized_case.value = searchRaw;
-            searchData.doRestSearch("https://18f-3263339722.us-east-1.bonsai.io/fda/drug/_search", args)
+            searchProxy.doRestSearch("https://18f-3263339722.us-east-1.bonsai.io/fda/drug/_search", args)
             .then(function(collection) {
                 //console.log(collection);
                 expect(collection.length).to.be.at.least(1);
@@ -171,7 +171,7 @@ describe("The FDA medicine type-ahead", function(){
         var typeAhead =  JSON.stringify(drugResults.getResultset());
         //console.log(typeAhead)
         var res = {};
-        searchData.parseTypeAhead(typeAhead)
+        searchProxy.parseTypeAhead(typeAhead)
         .then(function(result){
             //console.log("**********:" + result.collection);
             expect(result.collection.length).to.be.at.least(1);
@@ -188,15 +188,15 @@ describe("The FDA medicine type-ahead", function(){
         var elasticTemplate = new ElasticSearchQuery();
         var args = elasticTemplate.getDrugTypeAhead();
         
-        var regEx = searchData.parseRawDrugName(searchString);
+        var regEx = searchProxy.parseRawDrugName(searchString);
         
         args.aggs.autocomplete.terms.include.pattern = regEx + '.*';
         args.query.bool.must[0].prefix.capitalized_case.value = searchString.toLowerCase();
         //console.log(JSON.stringify(args));
-        searchData.doRestSearch("https://18f-3263339722.us-east-1.bonsai.io/fda/drug/_search", args)
-        .then(searchData.parseTypeAhead)
+        searchProxy.doRestSearch("https://18f-3263339722.us-east-1.bonsai.io/fda/drug/_search", args)
+        .then(searchProxy.parseTypeAhead)
         .then(function(result){
-            console.log("**********:" + JSON.stringify(result));
+            //console.log("**********:" + JSON.stringify(result));
             expect(result.collection.length).to.be.equal(5);
             done();
         })
@@ -215,15 +215,15 @@ describe("The FDA medicine type-ahead", function(){
         var elasticTemplate = new ElasticSearchQuery();
         var args = elasticTemplate.getDrugTypeAhead();
         
-        var regEx = searchData.parseRawDrugName(searchString);
+        var regEx = searchProxy.parseRawDrugName(searchString);
         
         args.aggs.autocomplete.terms.include.pattern = regEx + '.*';
         args.query.bool.must[0].prefix.capitalized_case.value = searchString.toLowerCase();
         //console.log(JSON.stringify(args));
-        searchData.doRestSearch("https://18f-3263339722.us-east-1.bonsai.io/fda/drug/_search", args)
-        .then(searchData.parseTypeAhead)
+        searchProxy.doRestSearch("https://18f-3263339722.us-east-1.bonsai.io/fda/drug/_search", args)
+        .then(searchProxy.parseTypeAhead)
         .then(function(result){
-            console.log("**********:" + JSON.stringify(result));
+            //console.log("**********:" + JSON.stringify(result));
             expect(result.collection.length).to.be.equal(5);
             done();
         })

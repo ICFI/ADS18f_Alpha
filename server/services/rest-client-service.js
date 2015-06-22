@@ -50,12 +50,12 @@ module.exports = function(searchProxy, app) {
         var elasticTemplate = new ElasticSearchQuery();
         var args = elasticTemplate.getDrugTypeAhead();
         
-        console.log("MEDICINE" + medicine);
+        
         var regEx = searchProxy.parseRawDrugName(medicine);
         
         args.aggs.autocomplete.terms.include.pattern = regEx + '.*';
         args.query.bool.must[0].prefix.capitalized_case.value = medicine.toLowerCase();
-        //console.log(JSON.stringify(args));
+        //console.log("REST-CLIENT-SERVICE" + JSON.stringify(args));
         searchProxy.doRestSearch("https://18f-3263339722.us-east-1.bonsai.io/fda/drug/_search", args)
         .then(searchProxy.parseTypeAhead)
         .then(function(result){

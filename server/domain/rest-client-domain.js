@@ -101,7 +101,7 @@ function executeRestClient(url, args) {
             restArgs.data = args;
             //console.log(JSON.stringify(restArgs));
             client.post(url, restArgs, function(data, response) {
-              //console.log(JSON.stringify(data));
+              //console.log("REST-CLIENT-DATA:  " + JSON.stringify(data));
               resolve(data);
             });
          }catch (e) {

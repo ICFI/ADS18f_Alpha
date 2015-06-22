@@ -5,15 +5,18 @@ var Client = require('node-rest-client').Client;
 var https = require('https');
 
 
-//var ElasticSearchQuery = require("./essearch-query-template.js");
+var ElasticSearchQuery = require("./essearch-query-template.js");
 
-var BaseUrl = "https://18f-3263339722.us-east-1.bonsai.io/uscis/_search";
+var BaseUrl = "https://18263339722.us-east-1.bonsai.io/fda/_search";
 
 var options_auth={
-  mimetypes:{
+    user:process.env.ES_USER,
+    password:process.env.ES_PWD,
+    mimetypes:{
     json:["application/json","application/json;charset=utf-8"]
   }
 };
+
 
 exports.doRestSearch = executeRestClient;
 exports.doHttpSearch = executeHttpClient;
@@ -40,10 +43,54 @@ exports.parseDrugLabel = function(resultSet) {
     });
 }
 
+exports.parseRawDrugName = function(val) {
+        var retVal = '';
+        var i = 0;
+        try {
+            while(i++<val.length)
+            {
+                var curLetter = val.substring(i-1, i);
+                retVal+='[' + curLetter.toLowerCase() + curLetter.toUpperCase() + ']'
+            } 
+            return retVal;
+        }catch (e) {
+            // reject the promise with caught error
+            console.log(e);
+            return "";
+        }
+}
+
+exports.parseTypeAhead = function(params){
+  return new Promise(function(resolve, reject){
+    try{
+        var vals = {};
+        try{
+            vals = JSON.parse(params)
+        }catch(e){
+            vals = params
+        }
+
+        
+      //console.log("parseTypeAhead: vals= " + params);
+      var lookupVals = vals.aggregations.autocomplete.buckets
+      var retVal = {}
+      retVal.collection = [];
+      var i =0;
+      for(var s in lookupVals){
+        retVal.collection[i] = {key: lookupVals[s].key};
+        i++;
+      }
+      resolve(retVal)
+    }
+    catch (e) {
+      // reject the promise with caught error
+      reject(e);
+    }
+  });
+};
 
 function executeRestClient(url, args) {
 
-  console.log(options_auth);
   var client = new Client(options_auth);
     return new Promise(function(resolve, reject) {
         try {
@@ -54,7 +101,7 @@ function executeRestClient(url, args) {
             restArgs.data = args;
             //console.log(JSON.stringify(restArgs));
             client.post(url, restArgs, function(data, response) {
-              console.log(JSON.stringify(data));
+              //console.log(JSON.stringify(data));
               resolve(data);
             });
          }catch (e) {

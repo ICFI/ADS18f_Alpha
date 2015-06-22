@@ -2895,3 +2895,6 @@ a.list-group-item-danger.active:focus {
 .fill-in-the-blank.blank-the-in-filled .blank-label {
   opacity: 0;
 }
+footer {
+  margin-top: 60px;
+}

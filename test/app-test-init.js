@@ -1,2 +1,2 @@
 //initialize for Karma tests; define the app variable
-app = angular.module('app', ['ngResource']);
+app = angular.module('ads18fApp', []);

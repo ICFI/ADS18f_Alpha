@@ -1,7 +1,7 @@
 {
-  "name": "angular-resource",
+  "name": "angular-aria",
   "version": "1.3.14",
-  "description": "AngularJS module for interacting with RESTful server-side data sources",
+  "description": "AngularJS module for making accessibility easy",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,7 +14,8 @@
     "angular",
     "framework",
     "browser",
-    "rest",
+    "accessibility",
+    "a11y",
     "client-side"
   ],
   "author": "Angular Core Team <angular-core+npm@google.com>",

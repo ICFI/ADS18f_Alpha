@@ -1,5 +1,27 @@
 doctype
 html(lang="en-us")
     head
-    body
-        h1 Hello! I am a placeholder.  What am I doing?  Not much of anything but rendering some static text.
+        meta(charset="utf-8")
+        meta(http-equiv="x-ua-compatible" content="ie-edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        meta(name="description" content="")
+        title Title
+        link(rel='stylesheet', href='/scripts/bootstrap/dist/css/bootstrap.min.css')
+    body(data-ng-app='ads18fApp')
+        main.container(data-ng-controller='Ads18fController' role="main")
+            form(novalidate name="drugCauseSymptom" data-ng-submit="submit()")
+                p Is/Are <fill-in-the-blank label="Enter Symptom" data-the-blank="symptom"></fill-in-the-blank> a side effect of <fill-in-the-blank label="Enter Medicine" data-the-blank="drug"></fill-in-the-blank>
+                button(type="submit" data-ng-disabled="formIsValid()") Find Out
+            section(data-ng-class="{in: hasResult}" class="collapse")
+                h1 {{confirmSideEffect}}, {{resultSymptom}} is/are a side effect of {{resultDrug}}
+                div(ng-bind-html="guide")
+        script(src='/scripts/jquery/dist/jquery.min.js')
+        script(src='/scripts/jquery-auto-complete/jquery.auto-complete.min.js')
+        script(src='/scripts/angular/angular.min.js')
+        script(src='/scripts/angular-sanitize/angular-sanitize.min.js')
+        script(src='/scripts/angular-aria/angular-aria.min.js')
+        script(src='/app/app.js')
+        script(src='/app/config.js')
+        script(src='/app/factories.js')    
+        script(src='/app/controllers.js')
+        script(src='/app/directives.js')

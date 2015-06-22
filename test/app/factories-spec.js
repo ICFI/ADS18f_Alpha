@@ -93,7 +93,7 @@ describe("test factories", function () {
 
         beforeEach(inject(function (_typeAhead_, _$httpBackend_, _DATA_PATHS_) {
             $httpBackend         = _$httpBackend_;
-            typeAhead = _typeAhead_;
+            typeAhead            = _typeAhead_;
             DATA_PATHS           = _DATA_PATHS_;
         }));
 
@@ -109,7 +109,7 @@ describe("test factories", function () {
                 'query' : query
             }).then(
                 function (queryResults) {
-                    results = queryResults.collection;
+                    results = queryResults;
                 }
             );
             $httpBackend.flush();
@@ -129,7 +129,7 @@ describe("test factories", function () {
                 'query' : query
             }).then(
                 function (queryResults) {
-                    results = queryResults.collection;
+                    results = queryResults;
                 }
             );
             $httpBackend.flush();

@@ -35,11 +35,30 @@
             };
         },
 
-        typeAhead = function ($http, $q, DATA_PATHS, MESSAGES) {
+        typeAhead = function ($http, $q, DATA_PATHS) {
             var formatGetPath = function (params) {
-                    return DATA_PATHS.DRUG_SYMPTOM
-                           .replace('%drug%', params.drug)
-                           .replace('%symptom%', params.symptom);
+                    var path;
+
+                    switch (params.field) {
+                    case 'DRUG':
+                        path = DATA_PATHS.TYPEAHEAD_DRUG;
+                        break;
+                    case 'SYMPTOM':
+                        path = DATA_PATHS.TYPEAHEAD_SYMPTOM;
+                        break;
+                    }
+
+                    return path + params.query;
+                },
+
+                formatResponse = function (data) {
+                    var response = [];
+
+                    angular.forEach(data.collection, function (item) {
+                        response.push(item.value);
+                    });
+
+                    return response;
                 },
 
                 get = function (params) {
@@ -52,9 +71,9 @@
                         'method': 'GET',
                         'url'   : formatGetPath(params)
                     }).success(function (data) {
-                        deferred.resolve(data);
+                        deferred.resolve(formatResponse(data));
                     }).error(function () {
-                        deferred.reject(MESSAGES.SERVER_ERRROR);
+                        deferred.resolve([]);
                     });
 
                     response = deferred.promise;
@@ -68,5 +87,5 @@
         };
 
     angular.module('ads18fApp').factory('doesDrugCauseSymptom', ['$http', '$q', 'DATA_PATHS', 'MESSAGES', doesDrugCauseSymptom])
-                               .factory('typeAhead', ['$http', '$q', 'DATA_PATHS', 'MESSAGES', typeAhead]);
+                               .factory('typeAhead', ['$http', '$q', 'DATA_PATHS', typeAhead]);
 }());

@@ -6,16 +6,21 @@ html(lang="en-us")
         meta(name="viewport" content="width=device-width, initial-scale=1")
         meta(name="description" content="")
         title Title
-        link(rel='stylesheet', href='/scripts/bootstrap/dist/css/bootstrap.min.css')
+        link(rel='stylesheet', href='/css/main.css')
         link(rel='stylesheet', href='/vendor/jquery-auto-complete/jquery.auto-complete.css')
     body(data-ng-app='ads18fApp')
-        main.container(data-ng-controller='Ads18fController' role="main")
-            form(novalidate name="drugCauseSymptom" data-ng-submit="submit()")
-                p Is/Are <fill-in-the-blank label="Enter Symptom" data-the-blank="symptom" data-typeahead-query-field="SYMPTOM"></fill-in-the-blank> a side effect of <fill-in-the-blank label="Enter Medicine" data-the-blank="drug" data-typeahead-query-field="DRUG"></fill-in-the-blank>
-                button(type="submit" data-ng-disabled="formIsValid()") Find Out
-            section(data-ng-class="{in: hasResult}" class="collapse")
-                h1 {{hasSideEffectText}}, {{resultSymptom}} is/are a side effect of {{resultDrug}}
+        header.container
+            h1 <span class="brand-color">ToBeDetermined</span>.gov
+        main(data-ng-controller='Ads18fController' role="main")
+            section.jumbotron.medicine-lib
+                form(novalidate class="container" name="drugCauseSymptom" data-ng-submit="submit()")
+                    p Is/Are <fill-in-the-blank label="Enter Symptom" data-the-blank="symptom" data-typeahead-query-field="SYMPTOM"></fill-in-the-blank> a side effect of <fill-in-the-blank label="Enter Medicine" data-the-blank="drug" data-typeahead-query-field="DRUG"></fill-in-the-blank>?
+                    button(type="submit" data-ng-disabled="formIsValid()" class="btn btn-lg btn-success") Find Out
+            section(data-ng-class="{in: hasResult}" class="collapse container")
+                h1 {{hasSideEffectText}}, {{resultSymptom}} is/are a side effect of {{resultDrug}}.
                 div(ng-bind-html="guide" data-ng-class="{in: hasSideEffect}" class="collapse")
+        footer.container
+            p powered by <a href="https://open.fda.gov/">openFDA</a> &amp; <a href="http://www.icfi.com/">ICF International</a>
         script(src='/scripts/jquery/dist/jquery.min.js')
         script(src='/vendor/jquery-auto-complete/jquery.auto-complete.min.js')
         script(src='/scripts/angular/angular.min.js')

@@ -1,0 +1,37 @@
+.brand-color {
+    color: @brand-primary;
+}
+
+.medicine-lib p {
+    font-size: @font-size-h1;
+}
+
+.fill-in-the-blank {
+    display: inline;
+    position: relative;
+
+    input {
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid @brand-primary;
+        z-index: 2;
+    }
+
+    .blank-label {
+        position: absolute;
+        z-index: 1;
+        font-weight: 400;
+        font-style: italic;
+        width: 100%;
+        text-align: center;
+        font-size: .6em;
+        color: @gray;
+        bottom: 0;
+        opacity: 1;
+        .transition(opacity 100ms);
+    }
+    
+    &.blank-the-in-filled .blank-label {
+        opacity: 0;
+    }
+}

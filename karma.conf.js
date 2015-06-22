@@ -1,7 +1,8 @@
+/*jslint indent: 2 */
 // Karma configuration
 // Generated on Thu Mar 05 2015 18:16:49 GMT+0000 (UTC)
 
-module.exports = function(config) {
+module.exports = function (config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
@@ -20,6 +21,7 @@ module.exports = function(config) {
       'public/scripts/angular-mocks/angular-mocks.js',
       'test/app-test-init.js',
       'public/app/**/*.js',
+      'public/app/partials/**/*.html',
       'test/app/**/*.js'
     ],
 
@@ -33,8 +35,12 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+      '**/*.html': ['ng-html2js']
     },
 
+    ngHtml2JsPreprocessor: {
+      stripPrefix: 'public',
+    },
 
     // test results reporter to use
     // possible values: 'dots', 'progress'

@@ -22,6 +22,7 @@
                             response(data);
                         });
                     },
+                    minChars : 2,
                     onSelect: function (event, term, item) {
                         scope.$apply(function () {
                             scope.theBlank = term;

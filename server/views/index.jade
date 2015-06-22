@@ -7,16 +7,17 @@ html(lang="en-us")
         meta(name="description" content="")
         title Title
         link(rel='stylesheet', href='/scripts/bootstrap/dist/css/bootstrap.min.css')
+        link(rel='stylesheet', href='/vendor/jquery-auto-complete/jquery.auto-complete.css')
     body(data-ng-app='ads18fApp')
         main.container(data-ng-controller='Ads18fController' role="main")
             form(novalidate name="drugCauseSymptom" data-ng-submit="submit()")
-                p Is/Are <fill-in-the-blank label="Enter Symptom" data-the-blank="symptom"></fill-in-the-blank> a side effect of <fill-in-the-blank label="Enter Medicine" data-the-blank="drug"></fill-in-the-blank>
+                p Is/Are <fill-in-the-blank label="Enter Symptom" data-the-blank="symptom" data-typeahead-query-field="SYMPTOM"></fill-in-the-blank> a side effect of <fill-in-the-blank label="Enter Medicine" data-the-blank="drug" data-typeahead-query-field="DRUG"></fill-in-the-blank>
                 button(type="submit" data-ng-disabled="formIsValid()") Find Out
             section(data-ng-class="{in: hasResult}" class="collapse")
-                h1 {{confirmSideEffect}}, {{resultSymptom}} is/are a side effect of {{resultDrug}}
-                div(ng-bind-html="guide")
+                h1 {{hasSideEffectText}}, {{resultSymptom}} is/are a side effect of {{resultDrug}}
+                div(ng-bind-html="guide" data-ng-class="{in: hasSideEffect}" class="collapse")
         script(src='/scripts/jquery/dist/jquery.min.js')
-        script(src='/scripts/jquery-auto-complete/jquery.auto-complete.min.js')
+        script(src='/vendor/jquery-auto-complete/jquery.auto-complete.min.js')
         script(src='/scripts/angular/angular.min.js')
         script(src='/scripts/angular-sanitize/angular-sanitize.min.js')
         script(src='/scripts/angular-aria/angular-aria.min.js')

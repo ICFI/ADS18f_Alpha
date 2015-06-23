@@ -1,7 +1,7 @@
 "use strict";
 
 var bodyParser = require("body-parser");
-//var ElasticSearchQuery = require("../domain/essearch-query-template.js");
+var ElasticSearchQuery = require("../domain/essearch-query-template.js");
 var _url = 'api.fda.gov'
 
 
@@ -45,6 +45,24 @@ module.exports = function(searchProxy, app) {
                                 ]})
     })      
   
+    app.get('/api/v1/drug/typeahead/:medicine?', function(req, res) {
+        var medicine = req.params.medicine;
+        var elasticTemplate = new ElasticSearchQuery();
+        var args = elasticTemplate.getDrugTypeAhead();
+        
+        
+        var regEx = searchProxy.parseRawDrugName(medicine);
+        
+        args.aggs.autocomplete.terms.include.pattern = regEx + '.*';
+        args.query.bool.must[0].prefix.capitalized_case.value = medicine.toLowerCase();
+        //console.log("REST-CLIENT-SERVICE" + JSON.stringify(args));
+        searchProxy.doRestSearch("https://18f-3263339722.us-east-1.bonsai.io/fda/drug/_search", args)
+        .then(searchProxy.parseTypeAhead)
+        .then(function(result){
+            res.send(result.collection);
+        })
+    })
+    
     app.get('/api/v0/symptom/typeahead/:symptom?', function(req, res) {
                var symptom = req.params.symptom;
                 res.send({collection:[{value:"Diaper Rash"},

@@ -3,50 +3,68 @@ function ElasticSearchQuery() {
   // initialize instance properties
 
     this.drugTypeAhead = {
-              "size": 0,
-              "aggs": {
-                "autocomplete": {
-                  "terms": {
-                    "field": "provider_state.raw",
-                    "order": {
-                      "_term": "asc"
-                    },
-                    "include": {
-                      "pattern": "M.*"
-                    },
-                    "size" : 30
-                  }
-                }
-              },
-              "query": {
-                "prefix": {
-                  "provider_state.raw": {  "value": "M"    }
-                }
+          "size": 0,
+          "aggs": {
+            "autocomplete": {
+              "terms": {
+                "field": "capitalized_case.raw",
+                "order": {
+                  "_term": "asc"
+                },
+                "include": {
+                          "pattern": "[oO][xX][yY].*"
+                },
+                "size" : 5
               }
-            };
+            }
+          },
+          "query": {
+
+                "bool": {
+                  "must" : [
+                                { "prefix": {"capitalized_case": {"value": "oxy"}} },
+                                { "match" : {"_type" : "drug" }}
+                            ]
+                }
+
+          }
+        };
 
     this.symptomTypeAhead = {
-              "size": 0,
-              "aggs": {
-                "autocomplete": {
-                  "terms": {
-                    "field": "provider_state.raw",
+        "size": 0,
+        "aggs": {
+            "autocomplete": {
+                "terms": {
+                    "field": "capitalized_case.raw",
                     "order": {
-                      "_term": "asc"
+                        "_term": "asc"
                     },
                     "include": {
-                      "pattern": "M.*"
+                        "pattern": "[bB][aA][cC].*"
                     },
-                    "size" : 30
-                  }
+                    "size": 5
                 }
-              },
-              "query": {
-                "prefix": {
-                  "provider_state.raw": {  "value": "M"    }
-                }
-              }
-            };
+            }
+        },
+        "query": {
+            "bool": {
+                "must": [
+                    {
+                        "prefix": {
+                            "capitalized_case": {
+                                "value": "bac"
+                            }
+                        }
+                    },
+                    {
+                        "match": {
+                            "_type": "side_effect"
+                        }
+                    }
+                ]
+            }
+        }
+    }
   
 }
 

@@ -43,7 +43,7 @@ exports.parseDrugLabel = function(resultSet) {
     });
 }
 
-exports.parseRawDrugName = function(val) {
+exports.parseRegExpression = function(val) {
         var retVal = '';
         var i = 0;
         try {

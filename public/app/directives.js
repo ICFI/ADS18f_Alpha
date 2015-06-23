@@ -22,7 +22,7 @@
                             response(data);
                         });
                     },
-                    minChars : 2,
+                    minChars : 1,
                     onSelect: function (event, term, item) {
                         scope.$apply(function () {
                             scope.theBlank = term;

@@ -54,8 +54,8 @@
                 formatResponse = function (data) {
                     var response = [];
 
-                    angular.forEach(data.collection, function (item) {
-                        response.push(item.value);
+                    angular.forEach(data, function (item) {
+                        response.push(item.key);
                     });
 
                     return response;

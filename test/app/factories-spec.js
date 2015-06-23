@@ -72,22 +72,20 @@ describe("test factories", function () {
         var DATA_PATHS,
             typeAhead,
             $httpBackend,
-            drugResponse = {
-                "collection"    : [
-                    {"value"    : "Oxycodone"},
-                    {"value"    : "Oxycontin"},
-                    {"value"    : "Oxyfast"},
-                    {"value"    : "Oxymetazoline"},
-                    {"value"    : "Oxymorphone"}]
-            },
-            symptomResponse = {
-                "collection"    : [
-                    {"value"    : "Diaper Rash"},
-                    {"value"    : "Diarrhea"},
-                    {"value"    : "Difficulty swallowing"},
-                    {"value"    : "Diplopia"},
-                    {"value"    : "Dizziness"}]
-            };
+            drugResponse = [
+                {"key"    : "Oxycodone"},
+                {"key"    : "Oxycontin"},
+                {"key"    : "Oxyfast"},
+                {"key"    : "Oxymetazoline"},
+                {"key"    : "Oxymorphone"}
+            ],
+            symptomResponse = [
+                {"key"    : "Diaper Rash"},
+                {"key"    : "Diarrhea"},
+                {"key"    : "Difficulty swallowing"},
+                {"key"    : "Diplopia"},
+                {"key"    : "Dizziness"}
+            ];
 
         beforeEach(module('ads18fApp'));
 

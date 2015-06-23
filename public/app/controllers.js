@@ -18,7 +18,8 @@
                     function (data) {
                         $scope.result            = data;
 
-                        $scope.confirmSideEffect = (data.found === "true") ? "Yes" : "No";
+                        $scope.hasSideEffect     = data.found === "true";
+                        $scope.hasSideEffectText = ($scope.hasSideEffect) ? "Yes" : "No";
                         $scope.guide             = data.spl_medguide;
                         $scope.resultDrug        = $scope.drug;
                         $scope.resultSymptom     = $scope.symptom;

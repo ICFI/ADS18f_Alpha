@@ -33,7 +33,59 @@
             return {
                 get : get
             };
+        },
+
+        typeAhead = function ($http, $q, DATA_PATHS) {
+            var formatGetPath = function (params) {
+                    var path;
+
+                    switch (params.field) {
+                    case 'DRUG':
+                        path = DATA_PATHS.TYPEAHEAD_DRUG;
+                        break;
+                    case 'SYMPTOM':
+                        path = DATA_PATHS.TYPEAHEAD_SYMPTOM;
+                        break;
+                    }
+
+                    return path + params.query;
+                },
+
+                formatResponse = function (data) {
+                    var response = [];
+
+                    angular.forEach(data.collection, function (item) {
+                        response.push(item.value);
+                    });
+
+                    return response;
+                },
+
+                get = function (params) {
+                    var response,
+                        deferred;
+
+                    deferred = $q.defer();
+
+                    $http({
+                        'method': 'GET',
+                        'url'   : formatGetPath(params)
+                    }).success(function (data) {
+                        deferred.resolve(formatResponse(data));
+                    }).error(function () {
+                        deferred.resolve([]);
+                    });
+
+                    response = deferred.promise;
+
+                    return response;
+                };
+
+            return {
+                get : get
+            };
         };
 
-    angular.module('ads18fApp').factory('doesDrugCauseSymptom', ['$http', '$q', 'DATA_PATHS', 'MESSAGES', doesDrugCauseSymptom]);
+    angular.module('ads18fApp').factory('doesDrugCauseSymptom', ['$http', '$q', 'DATA_PATHS', 'MESSAGES', doesDrugCauseSymptom])
+                               .factory('typeAhead', ['$http', '$q', 'DATA_PATHS', typeAhead]);
 }());

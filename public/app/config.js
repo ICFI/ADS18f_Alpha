@@ -4,7 +4,7 @@
     'use strict';
 
     var DATA_PATHS = {
-            'TYPEAHEAD_DRUG'    : '/api/v0/drug/typeahead/',
+            'TYPEAHEAD_DRUG'    : '/api/v1/drug/typeahead/',
             'TYPEAHEAD_SYMPTOM' : '/api/v0/symptom/typeahead/',
             'DRUG_SYMPTOM'      : '/api/v0/medicine/%drug%/%symptom%'
         },

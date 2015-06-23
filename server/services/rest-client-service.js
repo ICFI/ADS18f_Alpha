@@ -65,12 +65,13 @@ module.exports = function(searchProxy, app) {
     
     app.get('/api/v0/symptom/typeahead/:symptom?', function(req, res) {
                var symptom = req.params.symptom;
-                res.send({collection:[{value:"Diaper Rash"},
-                                {value:"Diarrhea"},
-                                {value:"Difficulty swallowing"},
-                                {value:"Diplopia"},
-                                {value:"Dizziness"}
-                                ]})
+                res.send([
+                    {"key"    : "Diaper Rash"},
+                    {"key"    : "Diarrhea"},
+                    {"key"    : "Difficulty swallowing"},
+                    {"key"    : "Diplopia"},
+                    {"key"    : "Dizziness"}
+                ])
     })        
 
 }

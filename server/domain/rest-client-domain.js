@@ -25,15 +25,23 @@ exports.parseDrugLabel = function(resultSet) {
     return new Promise(function(resolve, reject) {
         var retVal = {};
         try {
-            if(resultSet.results.length>0){
-                retVal.found = true;
-                retVal.brand_name=resultSet.results[0].openfda.brand_name[0];
-                retVal.generic_name=resultSet.results[0].openfda.generic_name[0];
-                retVal.substance_name=resultSet.results[0].openfda.substance_name[0];
-                retVal.spl_medguide=resultSet.results[0].spl_medguide;
-            }else {
-                retVal.found = false;
-            } 
+            //console.log("parseDrugLabel:  " + JSON.stringify(resultSet))
+            if(!resultSet.error){
+                //console.log("parseDrugLabel:  error is NOT undefined")
+                if(resultSet.results.length>0){
+                    retVal.found = true;
+                    retVal.brand_name=resultSet.results[0].openfda.brand_name[0];
+                    retVal.generic_name=resultSet.results[0].openfda.generic_name[0];
+                    retVal.substance_name=resultSet.results[0].openfda.substance_name[0];
+                    retVal.spl_medguide=resultSet.results[0].spl_medguide;
+                }else {
+                    retVal.found = false;
+                } 
+                
+            }else{
+                //console.log("parseDrugLabel:  error is undefined")
+                retVal.showError=true;
+            }
             resolve(retVal);
         }catch (e) {
               // reject the promise with caught error
@@ -74,12 +82,18 @@ exports.parseTypeAhead = function(params){
       //console.log("parseTypeAhead: vals= " + params);
       var lookupVals = vals.aggregations.autocomplete.buckets
       var retVal = {}
+      
+      retVal.showError=false;
       retVal.collection = [];
       var i =0;
       for(var s in lookupVals){
         retVal.collection[i] = {key: lookupVals[s].key};
         i++;
       }
+      if(retVal.collection.length==0){
+          retVal.showError=true;
+      }
+      
       resolve(retVal)
     }
     catch (e) {

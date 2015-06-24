@@ -8,6 +8,8 @@ var searchProxy = require("../../server/domain/rest-client-domain.js");
 
 var rawResults = require("./oxy_dizzi_results_shim.js");
 var drugResults = require("./oxy_type_ahead_shim.js");
+var emptyResult = require("./empty_type_ahead.js");
+var emptyFdaResult = require("./empty_openfda.js");
 
 var _test_url = 'api.fda.gov'
 
@@ -113,6 +115,21 @@ describe("The FDA Prototype drug search API", function() {
             console.error(e);
         });        
     }) 
+    
+    it("should return a flag to the front-end if no results are found indicating to show an error message", function(done){
+        var result =  emptyFdaResult.getResultset();
+        //console.log(result)
+        var res = {};
+        searchProxy.parseDrugLabel(result)
+        .then(function(result){
+            //console.log("**********:" + result.collection);
+            expect(result.showError).to.be.equal(true);
+            done();
+        })
+        .catch(function(e) {
+            console.error("Exception: " + e);
+        });
+    })
 
 })
 
@@ -165,6 +182,22 @@ describe("The FDA medicine type-ahead", function(){
                 console.error("Exception: " + e);
             });
             
+    })
+   
+    it("should return a flag to the front-end if no results are found indicating to show an error message", function(done){
+        var typeAhead =  JSON.stringify(emptyResult.getResultset());
+        //console.log(typeAhead)
+        var res = {};
+        searchProxy.parseTypeAhead(typeAhead)
+        .then(function(result){
+            //console.log("**********:" + result.collection);
+            expect(result.collection.length).to.be.equal(0);
+            expect(result.showError).to.be.equal(true);
+            done();
+        })
+        .catch(function(e) {
+            console.error("Exception: " + e);
+        });
     })
     
     it("should parse the search result into a usable JSON format for the front-end", function(done){
@@ -293,6 +326,7 @@ describe("The FDA symptom type-ahead", function(){
             console.error("Exception: " + e);
         });
     })
+
     it("should return a list containing Nausea when passed the string 'nau', 'Nau', or 'NAU'", function(done){
         var searchString = 'nAu';
         var url = "https://18f-3263339722.us-east-1.bonsai.io/fda/side_effect/_search";

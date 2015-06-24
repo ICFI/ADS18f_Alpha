@@ -122,7 +122,7 @@ exports.parseCompoundTypeAhead = function(params){
       retVal.collection = [];
       var i =0;
       for(var s in lookupVals){
-        retVal.collection[i] = {key: lookupVals[s].fields.capitalized_case};
+        retVal.collection[i] = {key: lookupVals[s].fields.capitalized_case[0]};
         i++;
       }
       if(retVal.collection.length==0){

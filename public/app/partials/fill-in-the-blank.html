@@ -1,3 +1,3 @@
-<div class="fill-in-the-blank" data-ng-class="{'blank-the-in-filled': theBlank != ''}">
+<div class="fill-in-the-blank" data-ng-class="{'blank-the-in-filled': (theBlank !== '' && theBlank !== undefined)}">
     <label><span class="blank-label">{{label}}</span> <input autocorrect="off" type="text" required="required" data-ng-model="theBlank" /></label>
 </div>

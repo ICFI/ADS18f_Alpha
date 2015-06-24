@@ -1,0 +1,12 @@
+.sprite(@url, @w, @h, @x: 0, @y: 0) {
+    background-image: url(@url);
+    width: @w;
+    height: @h;
+    background-position: @x @y;
+    background-repeat: no-repeat;
+    background-size: @w @h;
+}
+.sprite-retina(@url, @sizeW, @sizey) {
+  background-image: url(@url);
+  background-size: @sizeW @sizey;
+}

@@ -30,6 +30,25 @@ function ElasticSearchQuery() {
           }
         };
 
+    this.compoundDrugTypeAhead = {
+  "query": {
+
+        "bool": {
+		  "must" : [
+		  				{ "match": {"capitalized_case": "tyl chi"} },
+		  				{ "match": {"_type": "drug"} }
+		  			],
+		  "should" : [
+		  				{"prefix" : { "official_name" :  { "value" : "yyl chi", "boost" : 2.0 } }}
+		  			]
+		  	}
+
+  },
+  "size": 5,
+  "fields" : ["capitalized_case"]
+}
+
+
     this.symptomTypeAhead = {
         "size": 0,
         "aggs": {
@@ -99,6 +118,10 @@ ElasticSearchQuery.prototype.getSymptomTypeAhead = function () {
 
 ElasticSearchQuery.prototype.getSideEffectTypeAhead = function () {
     return this.sideEffectTypeAhead;
+};
+
+ElasticSearchQuery.prototype.getCompoundDrugTypeAhead = function () {
+    return this.compoundDrugTypeAhead;
 };
 
 // export the class

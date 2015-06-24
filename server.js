@@ -37,10 +37,10 @@ app.use(session({
 app.use(helmet.csp({
   defaultSrc: ["'self'"],
   scriptSrc: ["'unsafe-eval'", "'unsafe-inline'", "'self'", '*.google-analytics.com', '*.cloudfront.net'],
-  styleSrc: ["'unsafe-inline'", "'self'"],
+  styleSrc: ["'unsafe-inline'", "'self'", '*.googleapis.com'],
   imgSrc: ["'self'",'*.google-analytics.com', '*.cloudfront.net'],
   connectSrc: ["'self'"],
-  fontSrc: ["'self'"],
+  fontSrc: ["'self'", '*.gstatic.com'],
   objectSrc: [],
   mediaSrc: [],
   frameSrc: []

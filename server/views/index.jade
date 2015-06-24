@@ -8,19 +8,23 @@ html(lang="en-us")
         title medCheck.gov
         link(rel='stylesheet', href='/css/main.css')
         link(rel='stylesheet', href='/vendor/jquery-auto-complete/jquery.auto-complete.css')
+        link(href='http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,600italic,400,600,700' rel='stylesheet' type='text/css')
     body(data-ng-app='ads18fApp')
-        header.container
-            h1 <span class="brand-color">medCheck</span>.gov
+        header#site-header
+            .container
+                h1#logo-medCheck.text-hide medCheck.gov
         main(data-ng-controller='Ads18fController' role="main")
-            section.jumbotron.medicine-lib
-                form(novalidate class="container" name="drugCauseSymptom" data-ng-submit="submit()")
-                    p Is/Are <fill-in-the-blank label="Enter Symptom" data-the-blank="symptom" data-typeahead-query-field="SYMPTOM"></fill-in-the-blank> a side effect of <fill-in-the-blank label="Enter Medicine" data-the-blank="drug" data-typeahead-query-field="DRUG"></fill-in-the-blank>?
-                    button(type="submit" data-ng-disabled="formIsValid()" class="btn btn-lg btn-success") Find Out
-            section(data-ng-class="{in: hasResult}" class="collapse container")
-                h1 {{hasSideEffectText}}, {{resultSymptom}} is/are a side effect of {{resultDrug}}.
-                div(ng-bind-html="guide" data-ng-class="{in: hasSideEffect}" class="collapse")
+            div.medlib-background
+                section.jumbotron.medlib
+                    form(novalidate class="container" name="drugCauseSymptom" data-ng-submit="submit()")
+                        p.form-group 
+                            | Can <fill-in-the-blank label="Enter Medicine" data-the-blank="drug" data-typeahead-query-field="DRUG"></fill-in-the-blank> cause <fill-in-the-blank label="Enter Symptom" data-the-blank="symptom" data-typeahead-query-field="SYMPTOM"></fill-in-the-blank>?
+                            button(type="submit" data-ng-disabled="formIsValid()" class="btn btn-lg btn-find-out") Find Out
+                section(data-ng-class="{in: hasResult}" class="collapse container search-result")
+                    h2 {{hasSideEffectText}}, {{resultSymptom}} is/are a side effect of {{resultDrug}}.
+                    div(ng-bind-html="guide" data-ng-class="{in: hasSideEffect}" class="collapse")
         footer.container
-            p powered by <a href="https://open.fda.gov/">openFDA</a> &amp; <a href="http://www.icfi.com/">ICF International</a>
+            p powered by <a href="https://open.fda.gov/" id="logo-openFDA" class="logo text-hide">openFDA</a> &amp; <a href="http://www.icfi.com/" id="logo-icf" class="logo text-hide">ICF International</a>
         script(src='/scripts/jquery/dist/jquery.min.js')
         script(src='/vendor/jquery-auto-complete/jquery.auto-complete.min.js')
         script(src='/scripts/angular/angular.min.js')

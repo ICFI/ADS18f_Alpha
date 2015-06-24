@@ -1,9 +1,45 @@
+#site-header {
+    background-color: @brand-tertiary;
+    padding: @grid-gutter-width 0;
+}
+
 .brand-color {
     color: @brand-primary;
 }
 
-.medicine-lib p {
-    font-size: @font-size-h1;
+.medlib-background {
+    background-color: @brand-tertiary;
+    #gradient.vertical(darken(@brand-tertiary, 5%), @brand-tertiary, 0%, 5%);
+}
+
+.medlib {
+    background-image: url('/img/bg-med-libs.jpg');
+    background-position: center bottom;
+    background-repeat: repeat-x;
+    background-color: transparent;
+
+    border-top: 1px solid #fff;
+    padding-bottom: 200px;
+
+    p {
+        font-size: @font-size-h1;
+        font-weight: 300;
+    }
+
+    input {
+        font-weight: normal;
+    }
+}
+
+.btn.btn-find-out {
+    color: #ffffff;
+    background: #41c747;
+    #gradient.vertical(#00d57f, #00a568);
+    border:1px solid #4af055;
+    box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.45);
+    display: inline-block;
+    margin-left: @grid-gutter-width;
+    min-width: 200px;
 }
 
 .fill-in-the-blank {
@@ -14,19 +50,20 @@
         background-color: transparent;
         border: none;
         border-bottom: 2px solid @brand-primary;
+        position: relative;
         z-index: 2;
     }
 
     .blank-label {
         position: absolute;
         z-index: 1;
-        font-weight: 400;
+        font-weight: 300;
         font-style: italic;
         width: 100%;
         text-align: center;
-        font-size: .6em;
-        color: @gray;
-        bottom: 0;
+        font-size: .5em;
+        color: #9a9a9a;
+        bottom: 5px;
         opacity: 1;
         .transition(opacity 100ms);
     }
@@ -36,6 +73,48 @@
     }
 }
 
+.search-result {
+    padding-bottom: @grid-gutter-width;
+}
+
 footer {
-    margin-top: @grid-gutter-width * 2;
+    text-align: center;
+    margin: @grid-gutter-width 0;
+
+    .logo {
+        vertical-align: middle;
+        display: inline-block;
+        margin: 0 @grid-gutter-width / 3;
+    }
+}
+
+@logo-medCheck-width: 400px;
+@logo-medCheck-height: 66px;
+#logo-medCheck {
+    .sprite('/img/logo-medCheck.png', @logo-medCheck-width, @logo-medCheck-height);
+    margin: 0 auto;
+}
+
+@logo-openFDA-width: 141px;
+@logo-openFDA-height: 25px;
+#logo-openFDA {
+    .sprite('/img/logo-openFDA.gif', @logo-openFDA-width, @logo-openFDA-height);
+}
+
+@logo-icf-width: 40px;
+@logo-icf-height: 40px;
+#logo-icf {
+    .sprite('/img/logo-icf.gif', @logo-icf-width, @logo-icf-height);
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+    #logo-medCheck {
+       .sprite-retina('/img/logo-medCheck.2x.png',@logo-medCheck-width,@logo-medCheck-height); 
+    }
+    #logo-openFDA {
+       .sprite-retina('/img/logo-openFDA.2x.png',@logo-openFDA-width,@logo-openFDA-height); 
+    }
+    // #logo-icf {
+    //    .sprite-retina('/img/logo-icf.2x.png',@logo-icf-width,@logo-icf-height); 
+    // }
 }

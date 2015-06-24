@@ -103,6 +103,42 @@ exports.parseTypeAhead = function(params){
   });
 };
 
+exports.parseTypeAheadSideEffect = function(params){
+  return new Promise(function(resolve, reject){
+    try{
+        var vals = {};
+        try{
+            vals = JSON.parse(params)
+        }catch(e){
+            vals = params
+        }
+
+        
+      //console.log("parseTypeAhead: vals= " + params);
+      var lookupVals = vals.hits.hits
+      var retVal = {}
+      
+      retVal.showError=false;
+      retVal.collection = [];
+      var i =0;
+      for(var s in lookupVals){
+        retVal.collection[i] = {key: lookupVals[s].fields.capitalized_case};
+        i++;
+      }
+      if(retVal.collection.length==0){
+          retVal.showError=true;
+      }
+      
+      resolve(retVal)
+    }
+    catch (e) {
+      // reject the promise with caught error
+      reject(e);
+    }
+  });
+};
+
+
 function executeRestClient(url, args) {
 
   var client = new Client(options_auth);

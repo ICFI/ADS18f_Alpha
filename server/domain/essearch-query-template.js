@@ -66,15 +66,39 @@ function ElasticSearchQuery() {
         }
     }
   
-}
 
+
+        this.sideEffectTypeAhead = {
+              "query": {
+            
+                    "bool": {
+            		  "must" : [
+            		  				{ "match": {"capitalized_case": "pai"} },
+            		  				{ "match": {"_type": "side_effect"} }
+            		  			],
+            		  "should" : [
+            		  				{"prefix" : { "official_name" :  { "value" : "pai", "boost" : 2.0 } }}
+            		  			]
+            		  	}
+            
+              },
+              "size": 5,
+              "fields" : ["capitalized_case"]
+            }
+
+}
 // class methods
 ElasticSearchQuery.prototype.getDrugTypeAhead = function () {
     return this.drugTypeAhead;
 };
 
+//deprecated
 ElasticSearchQuery.prototype.getSymptomTypeAhead = function () {
     return this.symptomTypeAhead;
+};
+
+ElasticSearchQuery.prototype.getSideEffectTypeAhead = function () {
+    return this.sideEffectTypeAhead;
 };
 
 // export the class

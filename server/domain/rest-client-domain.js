@@ -103,7 +103,7 @@ exports.parseTypeAhead = function(params){
   });
 };
 
-exports.parseTypeAheadSideEffect = function(params){
+exports.parseCompoundTypeAhead = function(params){
   return new Promise(function(resolve, reject){
     try{
         var vals = {};

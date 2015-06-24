@@ -26,7 +26,7 @@ module.exports = function(searchProxy, app) {
         var medicine = req.params.medicine;
         var reaction = req.params.reaction;
 
-        var args = '/drug/label.json?search=(openfda.brand_name:"'+ medicine +'"+OR+openfda.generic_name:"'+ medicine +'"+OR+openfda.substance_name:"'+ medicine +'")+AND+spl_medguide:"' + reaction + '"&limit=1';
+        var args = '/drug/label.json?search=(openfda.brand_name:"'+ medicine +'"+OR+openfda.generic_name:"'+ medicine +'"+OR+openfda.substance_name:"'+ medicine +'")+AND+adverse_reactions:"' + reaction + '"&limit=1';
         searchProxy.doHttpSearch(_url, args)
         .then(searchProxy.parseDrugLabel)
         .then(function(collection){

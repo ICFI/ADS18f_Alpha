@@ -41,8 +41,8 @@ describe("The FDA Prototype drug search API", function() {
             console.error(e);
         });
     });
-    it("should query the spl_medguide field for the provided symptom and return a result", function(done){
-        var args = '/drug/label.json?search=openfda.spl_medguide="Dizziness"&limit=1';
+    it("should query the adverse_reactions field for the provided symptom and return a result", function(done){
+        var args = '/drug/label.json?search=adverse_reactions="Dizziness"&limit=1';
         //
         searchProxy.doHttpSearch(_test_url, args)
         .then(function(collection) {
@@ -55,7 +55,7 @@ describe("The FDA Prototype drug search API", function() {
         });
     });
     it("should combine these two and query for both parameters", function(done){
-        var args = '/drug/label.json?search=(openfda.brand_name:"Oxycontin"+OR+openfda.generic_name:"Oxycontin"+OR+openfda.substance_name:"Oxycontin")+AND+spl_medguide:"Dizziness"&limit=1';
+        var args = '/drug/label.json?search=(openfda.brand_name:"Oxycontin"+OR+openfda.generic_name:"Oxycontin"+OR+openfda.substance_name:"Oxycontin")+AND+adverse_reactions:"Dizziness"&limit=1';
         //
         searchProxy.doHttpSearch(_test_url, args)
         .then(function(collection) {
@@ -100,7 +100,7 @@ describe("The FDA Prototype drug search API", function() {
         }
     })
     it("should validate that the spl_medguide has a length of at least 50", function(done){
-        var args = '/drug/label.json?search=(openfda.brand_name:"Oxycontin"+OR+openfda.generic_name:"Oxycontin"+OR+openfda.substance_name:"Oxycontin")+AND+spl_medguide:"Dizziness"&limit=1';
+        var args = '/drug/label.json?search=(openfda.brand_name:"Oxycontin"+OR+openfda.generic_name:"Oxycontin"+OR+openfda.substance_name:"Oxycontin")+AND+adverse_reactions:"Dizziness"&limit=1';
         //search with live data
         searchProxy.doHttpSearch(_test_url, args)
         .then(searchProxy.parseDrugLabel)

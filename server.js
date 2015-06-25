@@ -13,6 +13,7 @@ var app = express();
 var searchProxy = require("./server/domain/rest-client-domain.js");
 require('./server/services/rest-client-service.js')(searchProxy, app);
 
+
 app.set('views', __dirname + '/server/views');
 app.set('view engine', 'jade');
 

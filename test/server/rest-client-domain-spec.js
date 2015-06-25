@@ -5,6 +5,7 @@ var https = require('https');
 var ElasticSearchQuery = require("../../server/domain/essearch-query-template.js");
 
 var searchProxy = require("../../server/domain/rest-client-domain.js");
+var ChartInfo = require("../../server/domain/rest-chart-domain.js");
 
 var rawResults = require("./oxy_dizzi_results_shim.js");
 var drugResults = require("./oxy_type_ahead_shim.js");
@@ -326,3 +327,19 @@ describe("The FDA side-effect type-ahead", function(){
     //it("will not apply any special formatting for the list returned") //eliminated as the results are provided in JSON
     //it("will return XX # of elements when querying a known result set") // eliminated as the previous tests verify this assertion
 });
+
+describe("The Charting API", function(){
+    
+   it("should return a list of known charting types to support a manifest function", function(done){
+       var chartList = [];
+       ChartInfo.getChartList()
+       .then(function(result){
+           expect(result.length).to.be.equal(3);
+           done();
+       });
+   }); 
+   
+   it("should return return data for a specific chart type when requests")
+   it("should return a graceful error when a chart is requested which does not exist")
+});
+

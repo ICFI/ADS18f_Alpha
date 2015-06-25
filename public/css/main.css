@@ -368,7 +368,7 @@ h6,
 .h5,
 .h6 {
   font-family: inherit;
-  font-weight: 500;
+  font-weight: 300;
   line-height: 1.1;
   color: inherit;
 }
@@ -452,11 +452,11 @@ h1,
 }
 h2,
 .h2 {
-  font-size: 34px;
+  font-size: 41px;
 }
 h3,
 .h3 {
-  font-size: 28px;
+  font-size: 16px;
 }
 h4,
 .h4 {
@@ -2882,7 +2882,9 @@ a.list-group-item-danger.active:focus {
   background-repeat: repeat-x;
   background-color: transparent;
   border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
   padding-bottom: 200px;
+  margin-bottom: 0;
 }
 .medlib p {
   font-size: 41px;
@@ -2891,7 +2893,10 @@ a.list-group-item-danger.active:focus {
 .medlib input {
   font-weight: normal;
 }
-.btn.btn-find-out {
+.medlib .btn-medCheck {
+  margin-left: 30px;
+}
+.btn.btn-medCheck {
   color: #ffffff;
   background: #41c747;
   background-image: -webkit-linear-gradient(top, #00d57f 0%, #00a568 100%);
@@ -2899,10 +2904,8 @@ a.list-group-item-danger.active:focus {
   background-image: linear-gradient(to bottom, #00d57f 0%, #00a568 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff00d57f', endColorstr='#ff00a568', GradientType=0);
-  border: 1px solid #4af055;
-  box-shadow: 0px 4px 5px -1px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
   display: inline-block;
-  margin-left: 30px;
   min-width: 200px;
 }
 .fill-in-the-blank {
@@ -2934,14 +2937,35 @@ a.list-group-item-danger.active:focus {
 .fill-in-the-blank.blank-the-in-filled .blank-label {
   opacity: 0;
 }
-.search-result {
-  padding-bottom: 30px;
+.search-result-wrapper {
+  background-image: -webkit-linear-gradient(top, #eeeeee 95%, #e1e1e1 100%);
+  background-image: -o-linear-gradient(top, #eeeeee 95%, #e1e1e1 100%);
+  background-image: linear-gradient(to bottom, #eeeeee 95%, #e1e1e1 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffeeeeee', endColorstr='#ffe1e1e1', GradientType=0);
 }
-footer {
-  text-align: center;
+.search-result {
+  padding: 30px 0;
+}
+.search-result h2 {
+  margin: 0 0 30px 0;
+}
+.search-result h3 {
+  font-weight: bold;
+}
+.search-result .chart-wrapper {
   margin: 30px 0;
 }
-footer .logo {
+.search-result .disclaimer {
+  margin: 30px 0;
+  color: #999999;
+  font-size: 14px;
+}
+footer#site-footer {
+  text-align: center;
+  padding: 30px 0;
+}
+footer#site-footer .logo {
   vertical-align: middle;
   display: inline-block;
   margin: 0 10px;
@@ -2953,7 +2977,7 @@ footer .logo {
   background-position: 0 0;
   background-repeat: no-repeat;
   background-size: 400px 66px;
-  margin: 0 auto;
+  margin: 0;
 }
 #logo-openFDA {
   background-image: url('/img/logo-openFDA.gif');

@@ -9,7 +9,11 @@
             'DRUG_SYMPTOM'      : '/api/v1/drug/label/%drug%/%symptom%'
         },
         MESSAGES = {
-            'SERVER_ERROR'      : 'Something went awry.'
+            'SERVER_ERROR'      : 'Something went awry.',
+            'YES'               : 'Yes',
+            'NO'                : 'No',
+            'YES_TEXT'          : 'can cause',
+            'NO_TEXT'           : 'is not known to cause'
         };
 
     angular.module('ads18fApp')

@@ -46,7 +46,7 @@ describe("Ads18fController", function () {
         expect(scope.hasResult).to.be.false;
     });
 
-    it("should display search results - hasSideEffectText = 'Yes' and medicine guide should be visible", function () {
+    it("should display search results - hasSideEffectYesNo = 'Yes' and medicine guide should be visible", function () {
         var queryHandler = httpBackend.when('GET', DATA_PATHS.DRUG_SYMPTOM.replace('%drug%', drug).replace('%symptom%', symptom))
             .respond(foundResponse);
 
@@ -59,12 +59,12 @@ describe("Ads18fController", function () {
 
         httpBackend.flush();
 
-        expect(scope.hasSideEffectText).to.equal('Yes');
+        expect(scope.hasSideEffectYesNo).to.equal('Yes');
         expect(scope.hasResult).to.be.true;
         expect(scope.hasSideEffect).to.be.true;
     });
 
-    it("should display search results - hasSideEffectText = 'No' and medicine guide should be hidden", function () {
+    it("should display search results - hasSideEffectYesNo = 'No' and medicine guide should be hidden", function () {
         var queryHandler = httpBackend.when('GET', DATA_PATHS.DRUG_SYMPTOM.replace('%drug%', drug).replace('%symptom%', symptom))
             .respond(notFoundResponse);
 
@@ -77,8 +77,34 @@ describe("Ads18fController", function () {
 
         httpBackend.flush();
 
-        expect(scope.hasSideEffectText).to.equal('No');
+        expect(scope.hasSideEffectYesNo).to.equal('No');
         expect(scope.hasResult).to.be.true;
         expect(scope.hasSideEffect).to.be.false;
+    });
+
+    it("should clear search form and hide previous search when 'Search More Side Effects is clicked'", function () {
+        var queryHandler = httpBackend.when('GET', DATA_PATHS.DRUG_SYMPTOM.replace('%drug%', drug).replace('%symptom%', symptom))
+            .respond(notFoundResponse);
+
+        scope.drug = drug;
+        scope.symptom = symptom;
+
+        scope.$digest();
+
+        scope.submit();
+
+        httpBackend.flush();
+
+        expect(scope.hasSideEffectYesNo).to.equal('No');
+        expect(scope.hasResult).to.be.true;
+        expect(scope.hasSideEffect).to.be.false;
+
+        scope.searchMore();
+
+        scope.$digest();
+
+        expect(scope.drug).to.equal('');
+        expect(scope.symptom).to.equal('');
+        expect(scope.hasResult).to.be.false;
     });
 });

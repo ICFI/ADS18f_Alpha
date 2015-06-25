@@ -17,6 +17,8 @@ module.exports = function (config) {
     // list of files / patterns to load in the browser
     files: [
       'public/scripts/jquery/dist/jquery.min.js',
+      'public/scripts/d3/d3.min.js',
+      'public/scripts/c3/c3.min.js',
       'public/vendor/jquery-auto-complete/jquery.auto-complete.min.js',
       'public/scripts/angular/angular.js',
       'public/scripts/angular-resource/angular-resource.js',

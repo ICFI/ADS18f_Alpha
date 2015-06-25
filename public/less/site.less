@@ -19,7 +19,9 @@
     background-color: transparent;
 
     border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
     padding-bottom: 200px;
+    margin-bottom: 0;
 
     p {
         font-size: @font-size-h1;
@@ -29,16 +31,18 @@
     input {
         font-weight: normal;
     }
+
+    .btn-medCheck {
+        margin-left: @grid-gutter-width;
+    }
 }
 
-.btn.btn-find-out {
+.btn.btn-medCheck {
     color: #ffffff;
     background: #41c747;
     #gradient.vertical(#00d57f, #00a568);
-    border:1px solid #4af055;
-    box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.45);
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
     display: inline-block;
-    margin-left: @grid-gutter-width;
     min-width: 200px;
 }
 
@@ -73,13 +77,35 @@
     }
 }
 
-.search-result {
-    padding-bottom: @grid-gutter-width;
+.search-result-wrapper {
+    #gradient.vertical(@brand-tertiary, darken(@brand-tertiary, 5%), 95%, 100%);
 }
 
-footer {
+.search-result {
+    padding: @grid-gutter-width 0;
+
+    h2 {
+        margin: 0 0 @grid-gutter-width 0;
+    }
+
+    h3 {
+        font-weight: bold;
+    }
+
+    .chart-wrapper {
+        margin: @grid-gutter-width 0;
+    }
+
+    .disclaimer {
+        margin: @grid-gutter-width 0;
+        color: lighten(@gray-base, 60%);
+        font-size: @font-size-small;
+    }
+}
+
+footer#site-footer {
     text-align: center;
-    margin: @grid-gutter-width 0;
+    padding: @grid-gutter-width 0;
 
     .logo {
         vertical-align: middle;
@@ -92,7 +118,7 @@ footer {
 @logo-medCheck-height: 66px;
 #logo-medCheck {
     .sprite('/img/logo-medCheck.png', @logo-medCheck-width, @logo-medCheck-height);
-    margin: 0 auto;
+    margin: 0;
 }
 
 @logo-openFDA-width: 141px;

@@ -77,3 +77,27 @@ exports.craftInteractionResponse = function(symptom, data){
     }
   });  
 }
+
+exports.parseTopFiveChart = function (drug, data){
+  
+  return new Promise(function(resolve, reject){
+    try{
+        
+        var chartData = {};
+        chartData.title="Top 5 most reported side effects from " + drug;
+        chartData.columns = [];
+        chartData.columns[0]=[];
+        chartData.columns[0][0]="Side Effects"
+        var n = 0;
+        while(n++ < data.results.length){
+          chartData.columns[0][n]=data.results[n-1].count;
+        }
+        //console.log(chartData);
+        resolve(chartData);
+    }
+    catch (e) {
+      // reject the promise with caught error
+      reject(e);
+    }
+  });    
+}

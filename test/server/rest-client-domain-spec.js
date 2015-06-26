@@ -475,17 +475,79 @@ describe("The Symptom by All Symptoms charting API", function(){
             })
         })
     });
-    /*
+    
     it("should return gracefully if no data is found to retrieve needed data", function(done){
-        var drug = "oxycontin";
+
         var symptom = "pox";
         //var data = chartData.getResultset();
-        searchProxy.getDrugInteractionChart(drug, symptom)
+        searchProxy.getInteractionChart(symptom)
         .then(searchProxy.parseDrugInteractionChart)
         .then(function(result){
             expect(result.current_drug).to.be.at.least(900);
             expect(result.all_drugs).to.be.at.least(25000);
-            chartProxy.craftDrugInteractionResponse(drug, symptom, result)
+            chartProxy.craftInteractionResponse(symptom, result)
+            .then(function(result){
+                console.log(result)     
+            })
+            .catch(function(e){
+                console.log("an error has occurred");
+                done();
+            })
+        })
+        .catch(function(e){
+            console.log("an error has occurred");
+            done();
+        })
+    }); 
+})
+
+describe("The Top 5 Reported Effects charting API", function(){
+    it("should be able to query the OpenFDA Adverse Effects dataset and return a result", function(done){
+        var drug = "oxycontin";
+        
+        var args = '/drug/event.json?search=patient.drug.openfda.brand_name:' + encodeURI(drug) + '&count=patient.reaction.reactionmeddrapt.exact&limit=5';
+        //search with live data
+        searchProxy.doHttpSearch(_test_url, args)
+        .then(function(res) {
+            expect(res.results.length).to.be.equal(5);
+            done();
+        }).catch(function(e){
+            console.error(e);
+        });        
+    });   
+
+    it("should parse the data into a format appropriate for the UI", function(done){
+        var drug = "oxycontin";
+        
+        var args = '/drug/event.json?search=patient.drug.openfda.brand_name:' + encodeURI(drug) + '&count=patient.reaction.reactionmeddrapt.exact&limit=5';
+        //search with live data
+        searchProxy.doHttpSearch(_test_url, args)
+        .then(function(res) {
+            chartProxy.parseTopFiveChart(drug, res)
+            .then(function(res){
+                expect(res.title).to.be.equal('Top 5 most reported side effects from oxycontin');
+                expect(res.columns[0].length).to.be.equal(6);
+                done();              
+            }).catch(function(e){
+                console.error(e);
+            });
+        }).catch(function(e){
+            console.error(e);
+        });         
+    });
+
+/*
+    
+    it("should return gracefully if no data is found to retrieve needed data", function(done){
+
+        var symptom = "pox";
+        //var data = chartData.getResultset();
+        searchProxy.getInteractionChart(symptom)
+        .then(searchProxy.parseDrugInteractionChart)
+        .then(function(result){
+            expect(result.current_drug).to.be.at.least(900);
+            expect(result.all_drugs).to.be.at.least(25000);
+            chartProxy.craftInteractionResponse(symptom, result)
             .then(function(result){
                 console.log(result)     
             })

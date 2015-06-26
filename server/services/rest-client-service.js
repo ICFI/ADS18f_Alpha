@@ -112,6 +112,22 @@ module.exports = function(searchProxy, app) {
                     }catch(e){
                         res.send({"error":true, "message":e.message});
                     }
+                    break;       
+    
+                case 'top_five':
+                    var args = '/drug/event.json?search=patient.drug.openfda.brand_name:' + encodeURI(drug) + '&count=patient.reaction.reactionmeddrapt.exact&limit=5';
+                    //search with live data
+                    searchProxy.doHttpSearch(_url, args)
+                    .then(function(result) {
+                        chartProxy.parseTopFiveChart(drug, result)
+                        .then(function(result){
+                            res.send(result);             
+                        }).catch(function(e){
+                            console.error(e);
+                        });
+                    }).catch(function(e){
+                        console.error(e);
+                    });  
                     break;
                 default:
                     res.send("IN PROGRESS")

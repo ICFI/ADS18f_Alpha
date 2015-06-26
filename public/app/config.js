@@ -6,7 +6,8 @@
     var DATA_PATHS = {
             'TYPEAHEAD_DRUG'    : '/api/v1/medicine/typeahead/',
             'TYPEAHEAD_SYMPTOM' : '/api/v1/sideeffect/typeahead/',
-            'DRUG_SYMPTOM'      : '/api/v1/drug/label/%drug%/%symptom%'
+            'DRUG_SYMPTOM'      : '/api/v1/drug/label/%drug%/%symptom%',
+            'CHART'             : '/api/v1/chart/%type%/%drug%/%symptom%'
         },
         MESSAGES = {
             'SERVER_ERROR'      : 'Something went awry.',

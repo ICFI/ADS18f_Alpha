@@ -20,6 +20,13 @@ describe("Ads18fController", function () {
             "substance_name" : "oxycodone",
             "spl_medguide"   : ""
         },
+        donutResponse = {
+            'title': 'Headaches make up 3% of reported adverse effects for Advil',
+            'data': [
+                ['Headaches reported', 985],
+                ['All other adverse effects reported', 24000]
+            ]
+        },
         drug         = "oxycodone",
         symptom      = "dizziness";
 
@@ -47,8 +54,14 @@ describe("Ads18fController", function () {
     });
 
     it("should display search results - hasSideEffectYesNo = 'Yes' and medicine guide should be visible", function () {
-        var queryHandler = httpBackend.when('GET', DATA_PATHS.DRUG_SYMPTOM.replace('%drug%', drug).replace('%symptom%', symptom))
+        httpBackend.when('GET', DATA_PATHS.DRUG_SYMPTOM.replace('%drug%', drug).replace('%symptom%', symptom))
             .respond(foundResponse);
+
+        httpBackend.when('GET', '/api/v1/chart/my_med/' + drug + '/' + symptom)
+            .respond(donutResponse);
+
+        httpBackend.when('GET', '/api/v1/chart/any_med/' + drug + '/' + symptom)
+            .respond(donutResponse);
 
         scope.drug = drug;
         scope.symptom = symptom;
@@ -65,8 +78,14 @@ describe("Ads18fController", function () {
     });
 
     it("should display search results - hasSideEffectYesNo = 'No' and medicine guide should be hidden", function () {
-        var queryHandler = httpBackend.when('GET', DATA_PATHS.DRUG_SYMPTOM.replace('%drug%', drug).replace('%symptom%', symptom))
+        httpBackend.when('GET', DATA_PATHS.DRUG_SYMPTOM.replace('%drug%', drug).replace('%symptom%', symptom))
             .respond(notFoundResponse);
+
+        httpBackend.when('GET', '/api/v1/chart/my_med/' + drug + '/' + symptom)
+            .respond(donutResponse);
+
+        httpBackend.when('GET', '/api/v1/chart/any_med/' + drug + '/' + symptom)
+            .respond(donutResponse);
 
         scope.drug = drug;
         scope.symptom = symptom;
@@ -83,7 +102,7 @@ describe("Ads18fController", function () {
     });
 
     it("should clear search form and hide previous search when 'Search More Side Effects is clicked'", function () {
-        var queryHandler = httpBackend.when('GET', DATA_PATHS.DRUG_SYMPTOM.replace('%drug%', drug).replace('%symptom%', symptom))
+        httpBackend.when('GET', DATA_PATHS.DRUG_SYMPTOM.replace('%drug%', drug).replace('%symptom%', symptom))
             .respond(notFoundResponse);
 
         scope.drug = drug;

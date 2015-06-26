@@ -213,6 +213,7 @@ exports.parseDrugInteractionChart = function (data){
             chartData.all_drugs = curData.meta.results.total;
           }
         }
+        //console.log(chartData);
         resolve(chartData);
     }
     catch (e) {
@@ -241,14 +242,44 @@ exports.getDrugInteractionChart = function(drug, symptom){
                 {query: sBaseline}
             ];
         
-        console.log(evalList);
+        //console.log(evalList);
        return Promise.map(evalList, function(item){
         
         return new Promise(function(resolve, reject) {
           try {
             executeHttpClient(baseUrl, item.query)
             .then(function(data){
-              console.log(data);
+              //.log(data);
+              resolve(data);
+            })
+            }catch (e) {
+                // reject the promise with caught error
+                console.log(e);
+                reject(e);
+              }
+        })        
+      });     
+}
+
+exports.getInteractionChart = function(symptom){
+    
+    
+        var baseUrl = "api.fda.gov";
+        var sIndividual = '/drug/event.json?search=patient.reaction.reactionmeddrapt:' + encodeURI(symptom) + '&limit=1';
+        var sBaseline = '/drug/event.json?search=(patient.patientsex:0+OR+patient.patientsex:1+OR+patient.patientsex:2)';
+        var evalList = [
+                {query: sIndividual},
+                {query: sBaseline}
+            ];
+        
+        //console.log(evalList);
+       return Promise.map(evalList, function(item){
+        
+        return new Promise(function(resolve, reject) {
+          try {
+            executeHttpClient(baseUrl, item.query)
+            .then(function(data){
+              //console.log(data);
               resolve(data);
             })
             }catch (e) {

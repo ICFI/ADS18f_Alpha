@@ -66,18 +66,40 @@ module.exports = function(searchProxy, app) {
             })
         }else
         {
+            var drug = req.params.drug;
+            var symptom = req.params.symptom;
             switch(chartType)
             {
                 case 'my_med':
                     try{
-                        var drug = req.params.drug;
-                        var symptom = req.params.symptom;
+
                         searchProxy.getDrugInteractionChart(drug, symptom)
                         .then(searchProxy.parseDrugInteractionChart)
                         .then(function(result){
                             chartProxy.craftDrugInteractionResponse(drug, symptom, result)
                             .then(function(result){
-                                console.log(result)
+                                //console.log(result)
+                                res.send(result);      
+                            })
+                            .catch(function(e){
+                               res.send({"error":true, "message":e.message});
+                            })
+                        })
+                        .catch(function(e){
+                           res.send({"error":true, "message":e.message});
+                        });
+                    }catch(e){
+                        res.send({"error":true, "message":e.message});
+                    }
+                    break;
+                case 'any_med':
+                    try{
+                        searchProxy.getInteractionChart(symptom)
+                        .then(searchProxy.parseDrugInteractionChart)
+                        .then(function(result){
+                            chartProxy.craftInteractionResponse(symptom, result)
+                            .then(function(result){
+                                //console.log(result)
                                 res.send(result);      
                             })
                             .catch(function(e){

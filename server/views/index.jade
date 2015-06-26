@@ -5,7 +5,7 @@ html(lang="en-us")
         meta(http-equiv="x-ua-compatible" content="IE-edge")
         meta(name="viewport" content="width=device-width, initial-scale=1")
         meta(name="description" content="")
-        title medCheck.gov
+        title MedCheck.gov
         link(rel='stylesheet', href='/css/main.css')
         link(rel='stylesheet', href='/vendor/jquery-auto-complete/jquery.auto-complete.css')
         link(href='http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,600italic,400,600,700' rel='stylesheet' type='text/css')
@@ -31,29 +31,28 @@ html(lang="en-us")
     body(data-ng-app='ads18fApp')
         header(id="site-header" role="banner")
             .container
-                h1#logo-medCheck.text-hide medCheck.gov
+                h1#logo-medCheck.text-hide MedCheck.gov
         main(data-ng-controller='Ads18fController' role="main")
-            div.medlib-background
-                div.jumbotron.medlib
-                    form(novalidate role="search" class="container" name="drugCauseSymptom" data-ng-submit="submit()")
-                        p.form-group 
-                            | Can <fill-in-the-blank label="Enter Medicine" data-the-blank="drug" data-typeahead-query-field="DRUG"></fill-in-the-blank> cause <fill-in-the-blank label="Enter Symptom" data-the-blank="symptom" data-typeahead-query-field="SYMPTOM"></fill-in-the-blank>?
-                            button(type="submit" class="btn btn-lg btn-medCheck") Find Out
-                div.search-result-wrapper
-                    section(data-ng-class="{in: hasResult}" class="collapse container search-result")
-                        h2 <strong>{{hasSideEffectYesNo}}</strong>, {{resultDrug}} {{hasSideEffectText}} {{resultSymptom}}.
-                        div.row
-                            article(class="col-md-8" role="article")
-                                div(data-ng-bind-html="guide")
-                                footer
-                                    p.disclaimer <strong>Disclaimer:</strong> openFDA is a beta research project and is not for clinical use. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated.
-                                    a(data-ng-click="searchMore()" class="link-search-more") Search More Side Effects
-                            aside(role="complimentary" class="col-md-4")
-                                div
-                                    a(href="https://www.accessdata.fda.gov/scripts/medwatch/index.cfm?action=reporting.home" class="btn btn-medCheck") Report a Side Effect
-                                    chart(data-type="my_med" data-ng-if="hasSideEffect") How often have we seen {{resultDrug}} cause {{resultSymptom}}
-                                    chart(data-type="any_med" data-ng-if="hasSideEffect") How often does any medicine cause {{resultSymptom}}
-                                    chart(data-type="top_five" data-ng-if="!hasSideEffect") Top 5 most reported side effects from {{resultDrug}}
+            div.jumbotron.medlib
+                form(novalidate role="search" class="container" name="drugCauseSymptom" data-ng-submit="submit()")
+                    p.form-group 
+                        | Can <fill-in-the-blank label="Enter Medicine" data-the-blank="drug" data-typeahead-query-field="DRUG"></fill-in-the-blank> cause <fill-in-the-blank label="Enter Symptom" data-the-blank="symptom" data-typeahead-query-field="SYMPTOM"></fill-in-the-blank>?
+                        button(type="submit" class="btn btn-lg btn-medCheck") Find Out
+            div.search-result-wrapper
+                section(data-ng-class="{in: hasResult}" class="collapse container search-result")
+                    h2 <strong>{{hasSideEffectYesNo}}</strong>, {{resultDrug}} {{hasSideEffectText}} {{resultSymptom}}.
+                    div.row
+                        article(class="col-md-8" role="article")
+                            div(data-ng-bind-html="guide")
+                            footer
+                                p.disclaimer <strong>Disclaimer:</strong> openFDA is a beta research project and is not for clinical use. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated.
+                                a(data-ng-click="searchMore()" class="link-search-more") Search More Side Effects
+                        aside(role="complimentary" class="col-md-4")
+                            div
+                                a(href="https://www.accessdata.fda.gov/scripts/medwatch/index.cfm?action=reporting.home" class="btn btn-medCheck") Report a Side Effect
+                                chart(data-type="my_med" data-ng-if="hasSideEffect") How often have we seen {{resultDrug}} cause {{resultSymptom}}
+                                chart(data-type="any_med" data-ng-if="hasSideEffect") How often does any medicine cause {{resultSymptom}}
+                                chart(data-type="top_five" data-ng-if="!hasSideEffect") Top 5 most reported side effects from {{resultDrug}}
 
 
         footer(class="container" role="contentinfo" id="site-footer")

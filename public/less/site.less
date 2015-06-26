@@ -1,5 +1,6 @@
 #site-header {
     background-color: @brand-tertiary;
+    #gradient.vertical(@brand-tertiary, darken(@brand-tertiary, 5%), 93%, 100%);
     padding: @grid-gutter-width 0;
 }
 
@@ -7,16 +8,14 @@
     color: @brand-primary;
 }
 
-.medlib-background {
+main {
     background-color: @brand-tertiary;
-    #gradient.vertical(darken(@brand-tertiary, 5%), @brand-tertiary, 0%, 5%);
 }
 
 .medlib {
     background-image: url('/img/bg-med-libs.jpg');
     background-position: center bottom;
     background-repeat: repeat-x;
-    background-color: transparent;
 
     border-top: 1px solid #fff;
     border-bottom: 1px solid #fff;

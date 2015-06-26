@@ -46,7 +46,6 @@ module.exports = function(searchProxy, app) {
         var medicine = req.params.medicine;
         var elasticTemplate = new ElasticSearchQuery();
         var args = elasticTemplate.getCompoundDrugTypeAhead();
-        
         args.query.bool.must[0].match.capitalized_case = medicine.toLowerCase();
         args.query.bool.should[0].prefix.official_name.value = medicine.toLowerCase();
         //console.log("REST-CLIENT-SERVICE" + JSON.stringify(args));

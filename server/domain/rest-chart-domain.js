@@ -88,9 +88,11 @@ exports.parseTopFiveChart = function (drug, data){
         chartData.columns = [];
         chartData.columns[0]=[];
         chartData.columns[0][0]="Side Effects"
+        chartData.categories=[];
         var n = 0;
         while(n++ < data.results.length){
           chartData.columns[0][n]=data.results[n-1].count;
+          chartData.categories[n-1]=data.results[n-1].term;
         }
         //console.log(chartData);
         resolve(chartData);

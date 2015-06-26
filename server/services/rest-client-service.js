@@ -42,7 +42,7 @@ module.exports = function(searchProxy, app) {
         })
     })
     
-    app.get('/api/v1/drug/typeahead/:medicine?', function(req, res) {
+    app.get('/api/v1/medicine/typeahead/:medicine?', function(req, res) {
         var medicine = req.params.medicine;
         var elasticTemplate = new ElasticSearchQuery();
         var args = elasticTemplate.getCompoundDrugTypeAhead();

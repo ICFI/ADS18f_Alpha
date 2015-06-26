@@ -194,3 +194,68 @@ function executeHttpClient(url, path){
         }
     });
 }
+
+exports.parseDrugInteractionChart = function (data){
+  
+  return new Promise(function(resolve, reject){
+    try{
+        var chartData = {};
+        for(var n in data){
+          var curData = data[n];
+          if(data[n].error){
+              if(data[n].error.code == 'NOT_FOUND'){
+                  throw 'Service error';
+              }
+          }
+          if(n==0){
+            chartData.current_drug = curData.meta.results.total;
+          }else{
+            chartData.all_drugs = curData.meta.results.total;
+          }
+        }
+        resolve(chartData);
+    }
+    catch (e) {
+      // reject the promise with caught error
+      reject(e);
+    }
+  });    
+}
+
+
+
+exports.getDrugInteractionChart = function(drug, symptom){
+    
+    //query - total
+    //https://api.fda.gov/drug/event.json? search=patient.drug.openfda.brand_name:oxycontin+AND+patient.reaction.reactionmeddrapt:Constipation&limit=1
+    //https://api.fda.gov/drug/event.json?search=patient.drug.openfda.brand_name:oxycontin&limit=1
+    //base URL:  https://api.fda.gov/drug/event.json
+    //iterate 1:  search=patient.drug.openfda.brand_name:oxycontin+AND+patient.reaction.reactionmeddrapt:Constipation&limit=1
+    //iterate 2:  search=patient.drug.openfda.brand_name:oxycontin&limit=1
+    
+        var baseUrl = "api.fda.gov";
+        var sIndividual = '/drug/event.json?search=patient.drug.openfda.brand_name:' + encodeURI(drug) + '+AND+patient.reaction.reactionmeddrapt:' + encodeURI(symptom) + '&limit=1';
+        var sBaseline = '/drug/event.json?search=patient.drug.openfda.brand_name:' + encodeURI(drug) + '&limit=1';
+        var evalList = [
+                {query: sIndividual},
+                {query: sBaseline}
+            ];
+        
+        console.log(evalList);
+       return Promise.map(evalList, function(item){
+        
+        return new Promise(function(resolve, reject) {
+          try {
+            executeHttpClient(baseUrl, item.query)
+            .then(function(data){
+              console.log(data);
+              resolve(data);
+            })
+            }catch (e) {
+                // reject the promise with caught error
+                console.log(e);
+                reject(e);
+              }
+        })        
+      });     
+}

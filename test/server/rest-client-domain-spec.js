@@ -5,13 +5,15 @@ var https = require('https');
 var ElasticSearchQuery = require("../../server/domain/essearch-query-template.js");
 
 var searchProxy = require("../../server/domain/rest-client-domain.js");
-var ChartInfo = require("../../server/domain/rest-chart-domain.js");
+var chartProxy = require("../../server/domain/rest-chart-domain.js");
 
 var rawResults = require("./oxy_dizzi_results_shim.js");
 var drugResults = require("./oxy_type_ahead_shim.js");
 var emptyResult = require("./empty_type_ahead.js");
 var emptyFdaResult = require("./empty_openfda.js");
 var compoundDrugResult = require("./compound_drug_results_type_ahead.js");
+var chartData = require("./chart-results-shim.js");
+
 var _test_url = 'api.fda.gov'
 
 describe("The FDA Prototype drug search API", function() {
@@ -332,13 +334,97 @@ describe("The Charting API", function(){
     
    it("should return a list of known charting types to support a manifest function", function(done){
        var chartList = [];
-       ChartInfo.getChartList()
+       chartProxy.getChartList()
        .then(function(result){
            expect(result.length).to.be.equal(3);
            done();
        });
    }); 
-   
+    it("should be able to query the OpenFDA Adverse Effects dataset and return a result", function(done){
+        var medicine="oxycontin";
+        var symptom = "constipation";
+        
+        var args = '/drug/event.json?search=patient.drug.openfda.brand_name:' + medicine + '+AND+patient.reaction.reactionmeddrapt:' + symptom + '&limit=1';
+        //search with live data
+        searchProxy.doHttpSearch(_test_url, args)
+        .then(function(res) {
+            expect(res.results.length).to.be.equal(1);
+            done();
+        }).catch(function(e){
+            console.error(e);
+        });        
+    })   
+
+    
+    it("should be able to create a list of URLs for evaluating in order to receive data to craft the response", function(done){
+        var drug = "oxycontin";
+        var symptom = "Constipation";
+        var baseUrl = "https://api.fda.gov/drug/event.json";
+        var sIndividual = 'search=patient.drug.openfda.brand_name:' + drug + '+AND+patient.reaction.reactionmeddrapt:' + symptom + '&limit=1';
+        var sBaseline = 'search=patient.drug.openfda.brand_name:' + drug + '&limit=1';
+        var evalList = [
+                {query: sIndividual},
+                {query: sBaseline}
+            ];
+        
+        expect(evalList.length).to.be.equal(2);
+        expect(evalList[0].query).to.be.equal(sIndividual);
+        expect(evalList[1].query).to.be.equal(sBaseline);
+        done()
+    });
+    it("should be able to call multiple iterations of the OpenFDA service to retrieve needed data", function(done){
+        var drug = "oxycontin";
+        var symptom = "Constipation";
+        //var data = chartData.getResultset();
+        searchProxy.getDrugInteractionChart(drug, symptom)
+        .then(searchProxy.parseDrugInteractionChart)
+        .then(function(result){
+            expect(result.current_drug).to.be.at.least(900);
+            expect(result.all_drugs).to.be.at.least(25000);
+            chartProxy.craftDrugInteractionResponse(drug, symptom, result)
+            .then(function(result){
+                console.log(result)
+                expect(result.title.indexOf(drug)).to.be.at.least(0);
+                expect(result.title.indexOf(symptom)).to.be.at.least(0);
+               // expect(result.me).to.be.at.least(900);
+                //expect(result.all_drugs).to.be.at.least(25000);                
+            done();
+            })
+        })
+    });
+    
+    it("should return gracefully if no data is found to retrieve needed data", function(done){
+        var drug = "oxycontin";
+        var symptom = "pox";
+        //var data = chartData.getResultset();
+        searchProxy.getDrugInteractionChart(drug, symptom)
+        .then(searchProxy.parseDrugInteractionChart)
+        .then(function(result){
+            expect(result.current_drug).to.be.at.least(900);
+            expect(result.all_drugs).to.be.at.least(25000);
+            chartProxy.craftDrugInteractionResponse(drug, symptom, result)
+            .then(function(result){
+                console.log(result)     
+            })
+            .catch(function(e){
+                console.log("an error has occurred");
+                done();
+            })
+        })
+        .catch(function(e){
+            console.log("an error has occurred");
+            done();
+        })
+    });    
+    
+    /*it("should be able to parse the results into a format appropriate to the d3 chart library", function(done){
+        var data = chartData.getResultset();
+        chartInfo.parseChartResults(data)
+        .then(function(result){
+            
+        })
+    });*/
+    
    it("should return return data for a specific chart type when requests")
    it("should return a graceful error when a chart is requested which does not exist")
 });

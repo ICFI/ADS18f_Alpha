@@ -2,7 +2,7 @@
 
 var bodyParser = require("body-parser");
 var ElasticSearchQuery = require("../domain/essearch-query-template.js");
-var chartInfo = require("../domain/rest-chart-domain.js");
+var chartProxy = require("../domain/rest-chart-domain.js");
 
 var _url = 'api.fda.gov'
 
@@ -57,17 +57,44 @@ module.exports = function(searchProxy, app) {
         })
     })
     
-    app.get('/api/v1/chart/:type?', function(req, res){
+    app.get('/api/v1/chart/:type?/:drug?/:symptom?', function(req, res){
         var chartType=req.params.type;
         if(!chartType)
         {
-            chartInfo.getChartList()
+            chartProxy.getChartList()
             .then(function(result){
                 res.send(result);
             })
         }else
         {
-            res.send("IN PROGRESS")
+            switch(chartType)
+            {
+                case 'my_med':
+                    try{
+                        var drug = req.params.drug;
+                        var symptom = req.params.symptom;
+                        searchProxy.getDrugInteractionChart(drug, symptom)
+                        .then(searchProxy.parseDrugInteractionChart)
+                        .then(function(result){
+                            chartProxy.craftDrugInteractionResponse(drug, symptom, result)
+                            .then(function(result){
+                                console.log(result)
+                                res.send(result);      
+                            })
+                            .catch(function(e){
+                               res.send({"error":true, "message":e.message});
+                            })
+                        })
+                        .catch(function(e){
+                           res.send({"error":true, "message":e.message});
+                        });
+                    }catch(e){
+                        res.send({"error":true, "message":e.message});
+                    }
+                    break;
+                default:
+                    res.send("IN PROGRESS")
+            }
         }
     });
 

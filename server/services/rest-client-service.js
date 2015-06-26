@@ -42,11 +42,10 @@ module.exports = function(searchProxy, app) {
         })
     })
     
-    app.get('/api/v1/drug/typeahead/:medicine?', function(req, res) {
+    app.get('/api/v1/medicine/typeahead/:medicine?', function(req, res) {
         var medicine = req.params.medicine;
         var elasticTemplate = new ElasticSearchQuery();
         var args = elasticTemplate.getCompoundDrugTypeAhead();
-        
         args.query.bool.must[0].match.capitalized_case = medicine.toLowerCase();
         args.query.bool.should[0].prefix.official_name.value = medicine.toLowerCase();
         //console.log("REST-CLIENT-SERVICE" + JSON.stringify(args));

@@ -52,8 +52,8 @@
                             bindto: chartElement[0],
                             data: {
                                 columns: [
-                                    ['searchTerm', 44484],
-                                    ['others', 4284098]
+                                    ['Headaches reported', 44484],
+                                    ['All other adverse effects reported', 4284098]
                                 ],
                                 type : 'donut'
                             },
@@ -70,7 +70,7 @@
                             bindto: chartElement[0],
                             data: {
                                 columns: [
-                                    ['sideEffects', 44484, 39012, 23012, 1711, 92]
+                                    ['Side Effects', 44484, 39012, 23012, 1711, 92]
                                 ],
                                 type : 'bar',
                             },

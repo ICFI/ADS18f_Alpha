@@ -28,6 +28,10 @@
                                 scope.theBlank = term;
                             });
                         }
+                    }).on('blur', function () {
+                        if (scope.theBlank !== this.value) {
+                            scope.theBlank = this.value;
+                        }
                     });
                 }
             };

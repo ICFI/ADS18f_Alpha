@@ -1,9 +1,9 @@
 /*global describe, expect, beforeEach, it, inject*/
 describe("test factories", function () {
-    describe("factory: doesDrugCauseSymptom", function () {
+    describe("factory: doesMedicineCauseReaction", function () {
         var DATA_PATHS,
             MESSAGES,
-            doesDrugCauseSymptom,
+            doesMedicineCauseReaction,
             $httpBackend,
             queryHandler,
             drug         = "oxycodone",
@@ -18,9 +18,9 @@ describe("test factories", function () {
 
         beforeEach(module('ads18fApp'));
 
-        beforeEach(inject(function (_doesDrugCauseSymptom_, _$httpBackend_, _DATA_PATHS_, _MESSAGES_) {
+        beforeEach(inject(function (_doesMedicineCauseReaction_, _$httpBackend_, _DATA_PATHS_, _MESSAGES_) {
             $httpBackend         = _$httpBackend_;
-            doesDrugCauseSymptom = _doesDrugCauseSymptom_;
+            doesMedicineCauseReaction = _doesMedicineCauseReaction_;
             DATA_PATHS           = _DATA_PATHS_;
             MESSAGES             = _MESSAGES_;
             queryHandler = $httpBackend.when('GET', DATA_PATHS.DRUG_SYMPTOM.replace('%drug%', drug).replace('%symptom%', symptom))
@@ -30,7 +30,7 @@ describe("test factories", function () {
         it("should fetch data from API", function () {
             var results;
 
-            doesDrugCauseSymptom.get({
+            doesMedicineCauseReaction.get({
                 'drug'    : drug,
                 'symptom' : symptom
             }).then(
@@ -51,7 +51,7 @@ describe("test factories", function () {
 
             queryHandler.respond(401, '');
 
-            doesDrugCauseSymptom.get({
+            doesMedicineCauseReaction.get({
                 'drug'    : drug,
                 'symptom' : symptom
             }).then(
@@ -68,71 +68,71 @@ describe("test factories", function () {
         });
     });
 
-    describe("factory: typeAhead", function () {
+    describe("factory: getChartData", function () {
         var DATA_PATHS,
-            typeAhead,
+            MESSAGES,
+            getChartData,
+            queryHandler,
             $httpBackend,
-            drugResponse = [
-                {"key"    : "Oxycodone"},
-                {"key"    : "Oxycontin"},
-                {"key"    : "Oxyfast"},
-                {"key"    : "Oxymetazoline"},
-                {"key"    : "Oxymorphone"}
-            ],
-            symptomResponse = [
-                {"key"    : "Diaper Rash"},
-                {"key"    : "Diarrhea"},
-                {"key"    : "Difficulty swallowing"},
-                {"key"    : "Diplopia"},
-                {"key"    : "Dizziness"}
-            ];
+            params = {
+                'type'      : 'my_med',
+                'drug'      : 'tylenol',
+                'symptom'   : 'dizziness'
+            },
+            path,
+            donutResponse = {
+                'title': 'Headaches make up 3% of reported adverse effects for Advil',
+                'data': [
+                    ['Headaches reported', 985],
+                    ['All other adverse effects reported', 24000]
+                ]
+            };
 
         beforeEach(module('ads18fApp'));
 
-        beforeEach(inject(function (_typeAhead_, _$httpBackend_, _DATA_PATHS_) {
-            $httpBackend         = _$httpBackend_;
-            typeAhead            = _typeAhead_;
+        beforeEach(inject(function (_getChartData_, _$httpBackend_, _DATA_PATHS_, _MESSAGES_) {
             DATA_PATHS           = _DATA_PATHS_;
+            path = DATA_PATHS.CHART
+                       .replace('%type%', params.type)
+                       .replace('%drug%', params.drug)
+                       .replace('%symptom%', params.symptom);
+            $httpBackend         = _$httpBackend_;
+            getChartData            = _getChartData_;
+            MESSAGES             = _MESSAGES_;
+            queryHandler = $httpBackend.when('GET', path)
+                .respond(donutResponse);
         }));
 
-        it("should get drug results when typing in drug field", function () {
-            var results,
-                query = "oxy",
-                field = "DRUG",
-                queryHandler = $httpBackend.when('GET', DATA_PATHS.TYPEAHEAD_DRUG + query)
-                    .respond(drugResponse);
+        it("should get chart data", function () {
+            var results;
 
-            typeAhead.get({
-                'field' : field,
-                'query' : query
-            }).then(
+            getChartData.get(params).then(
                 function (queryResults) {
                     results = queryResults;
                 }
             );
             $httpBackend.flush();
 
-            expect(results.length).to.equal(5);
+            expect(results.data.length).to.equal(2);
         });
 
-        it("should get symptom results when typing in symptom field", function () {
-            var results,
-                query = "Di",
-                field = "SYMPTOM",
-                queryHandler = $httpBackend.when('GET', DATA_PATHS.TYPEAHEAD_SYMPTOM + query)
-                    .respond(symptomResponse);
+        it("should return error message on failure", function () {
+            var message;
 
-            typeAhead.get({
-                'field' : field,
-                'query' : query
-            }).then(
+            queryHandler.respond(401, '');
+
+            getChartData.get(params).then(
                 function (queryResults) {
-                    results = queryResults;
+                    console.log("this shouldn't work", queryResults);
+                },
+                function (errorMessage) {
+                    message = errorMessage;
                 }
             );
+
             $httpBackend.flush();
 
-            expect(results.length).to.equal(5);
+            expect(message).to.equal(MESSAGES.SERVER_ERRROR);
         });
     });
 });

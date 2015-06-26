@@ -40,8 +40,8 @@
                 transclude  : true,
                 template    : '<div class="chart-wrapper"><h3><ng-transclude></ng-transclude></h3><div class="chart"></div></div>',
                 scope       : {
-                    type                : '@',
-                    typeaheadQueryField : '@'
+                    type    : '@',
+                    columns : '='
                 },
                 link        : function (scope, element) {
                     var chartElement = element.find('.chart'),
@@ -51,19 +51,19 @@
                         chartGenerate = c3.generate({
                             bindto: chartElement[0],
                             data: {
-                                columns: [
-                                    ['Headaches reported', 44484],
-                                    ['All other adverse effects reported', 4284098]
-                                ],
+                                columns: [],
                                 type : 'donut'
-                            },
-                            names: {
-                                searchTerm: 'Side Effect Count',
-                                others: 'All Other Side Effects'
                             },
                             size: {
                                 width: 235
                             }
+                        });
+
+                        scope.$watch('columns', function (newColumns) {
+                            chartGenerate.unload();
+                            chartGenerate.load({
+                                columns: newColumns
+                            });
                         });
                     } else {
                         chartGenerate = c3.generate({

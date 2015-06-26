@@ -49,10 +49,10 @@ html(lang="en-us")
                                 a(data-ng-click="searchMore()" class="link-search-more") Search More Side Effects
                         aside(role="complimentary" class="col-md-4")
                             div
-                                a(href="https://www.accessdata.fda.gov/scripts/medwatch/index.cfm?action=reporting.home" class="btn btn-medCheck") Report a Side Effect
-                                chart(data-type="my_med" data-ng-if="hasSideEffect") How often have we seen {{resultDrug}} cause {{resultSymptom}}
-                                chart(data-type="any_med" data-ng-if="hasSideEffect") How often does any medicine cause {{resultSymptom}}
-                                chart(data-type="top_five" data-ng-if="!hasSideEffect") Top 5 most reported side effects from {{resultDrug}}
+                                a(href="https://www.accessdata.fda.gov/scripts/medwatch/index.cfm?action=reporting.home" class="btn btn-large btn-medCheck") Report a Side Effect
+                                chart(data-type="my_med" data-columns="myMedChartData" data-ng-if="hasSideEffect") {{myMedChartTitle}}
+                                chart(data-type="any_med" data-columns="anyMedChartData" data-ng-if="hasSideEffect") {{anyMedChartTitle}}
+                                chart(data-type="top_five" data-columns="topFiveChartData" data-ng-if="!hasSideEffect") Top 5 most reported side effects from {{resultDrug}}
 
 
         footer(class="container" role="contentinfo" id="site-footer")

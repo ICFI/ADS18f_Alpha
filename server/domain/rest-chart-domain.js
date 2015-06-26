@@ -36,10 +36,35 @@ exports.craftDrugInteractionResponse = function(drug, symptom, data){
                 ]
         }
         */
-        
         var chartData = {};
         chartData.title= symptom + ' make(s) up ' + percentIncidence(data.current_drug, data.all_drugs) + '% of reported adverse effects for ' + drug;
+        chartData.data=[];
+        chartData.data[0] = symptom + ' reported: ' + data.current_drug;
+        chartData.data[1] = 'All other adverse effects reported: ' + data.all_drugs;
 
+        resolve(chartData);
+    }
+    catch (e) {
+      // reject the promise with caught error
+      reject(e);
+    }
+  });  
+}
+
+exports.craftInteractionResponse = function(symptom, data){
+    return new Promise(function(resolve, reject){
+    try{
+        /*
+        {
+          'title': 'Headaches make up 3% of reported adverse effects for Advil',
+          'data': [
+                  ['Headaches reported': 985],
+                  ['All other adverse effects reported': 24000]
+                ]
+        }
+        */
+        var chartData = {};
+        chartData.title= symptom + ' make(s) up ' + percentIncidence(data.current_drug, data.all_drugs) + '% of all reported adverse effects';
         chartData.data=[];
         chartData.data[0] = symptom + ' reported: ' + data.current_drug;
         chartData.data[1] = 'All other adverse effects reported: ' + data.all_drugs;

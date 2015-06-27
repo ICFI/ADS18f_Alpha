@@ -34,7 +34,10 @@ exports.parseDrugLabel = function(resultSet) {
                     retVal.brand_name=resultSet.results[0].openfda.brand_name[0];
                     retVal.generic_name=resultSet.results[0].openfda.generic_name[0];
                     retVal.substance_name=resultSet.results[0].openfda.substance_name[0];
-                    retVal.spl_medguide=resultSet.results[0].spl_medguide;
+                    //console.log(resultSet.results[0].indications_and_usage)
+                    //retVal.spl_medguide=resultSet.results[0].spl_medguide
+                    retVal.spl_medguide=resultSet.results[0].indications_and_usage;
+                    retVal.message=resultSet.results[0].indications_and_usage;
                 }else {
                     retVal.found = false;
                 } 

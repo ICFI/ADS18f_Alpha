@@ -2899,6 +2899,7 @@ main {
 }
 .medlib input {
   font-weight: normal;
+  border-radius: 0;
 }
 .medlib .btn-medCheck {
   margin-left: 30px;
@@ -3021,7 +3022,7 @@ footer#site-footer .logo {
 }
 @media (max-width: 799px) {
   .row {
-    padding: 0 15px;
+    margin: 0;
   }
   .page-container {
     width: 100%;

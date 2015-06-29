@@ -1,3 +1,9 @@
+.page-container {
+    width: @screen-lg;
+    padding: 0 @grid-gutter-width;
+    margin: 0 auto;
+}
+
 #site-header {
     background-color: @brand-tertiary;
     #gradient.vertical(@brand-tertiary, darken(@brand-tertiary, 5%), 93%, 100%);
@@ -19,12 +25,13 @@ main {
 
     border-top: 1px solid #fff;
     border-bottom: 1px solid #fff;
-    padding-bottom: 200px;
+    padding: @grid-gutter-width / 2 0 200px;
     margin-bottom: 0;
 
     p {
         font-size: @font-size-h1;
         font-weight: 300;
+        .transition(font-size 125ms);
     }
 
     input {
@@ -98,6 +105,9 @@ main {
     .chart-wrapper {
         margin: @grid-gutter-width 0;
     }
+    .chart {
+        text-align: center;
+    }
 
     .disclaimer {
         margin: @grid-gutter-width 0;
@@ -143,7 +153,59 @@ footer#site-footer {
     #logo-openFDA {
        .sprite-retina('/img/logo-openFDA.2x.png',@logo-openFDA-width,@logo-openFDA-height); 
     }
-    // #logo-icf {
-    //    .sprite-retina('/img/logo-icf.2x.png',@logo-icf-width,@logo-icf-height); 
-    // }
+}
+
+@media (max-width: @screen-md-max) {
+    .row { padding: 0 @grid-gutter-width / 2; }
+    .page-container {
+        width: 100%;
+    }
+
+    .medlib p {
+        font-size: @font-size-h1 * .75;
+    }
+
+    .btn.btn-medCheck {
+        font-size: @font-size-base;
+        display: block;
+        margin: @grid-gutter-width / 2 auto 0;
+    }
+}
+
+@media (max-width: @screen-sm-max) {
+    .medlib {
+        background-image: url('/img/bg-med-libs.sm.jpg');
+        padding-bottom: 100px;
+    }
+    h2,
+    .medlib p {
+        font-size: @font-size-h1 * .6;
+    }
+
+    #logo-medCheck {
+        .sprite('/img/logo-medCheck.sm.png', @logo-medCheck-width / 2, @logo-medCheck-height / 2);
+        margin: 0;
+    }
+
+    #site-footer { font-size: @font-size-small; }
+    #logo-openFDA {
+        .sprite('/img/logo-openFDA.sm.gif', @logo-openFDA-width / 2, @logo-openFDA-height / 2);
+    }
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+        #logo-medCheck {
+           .sprite-retina('/img/logo-medCheck.png',@logo-medCheck-width / 2, @logo-medCheck-height / 2); 
+        }
+        #logo-openFDA {
+           .sprite-retina('/img/logo-openFDA.png',@logo-openFDA-width / 2, @logo-openFDA-height / 2); 
+        }
+    }
+    .autocomplete-suggestion {
+        padding: 5px 0;
+    }
+}
+
+@media (max-width: @screen-xs-max) {
+    h2,
+    .medlib p { font-size: @font-size-large; }
+    .fill-in-the-blank .blank-label { font-size: .75em; }
 }

@@ -37,6 +37,8 @@
             };
         },
 
+        chartWidth = 220,
+
         makeDonut = function (columns, chartElement) {
             var chart = c3.generate({
                 bindto: chartElement,
@@ -45,7 +47,7 @@
                     type : 'donut'
                 },
                 size: {
-                    width: 235
+                    width: chartWidth
                 }
             });
 
@@ -61,7 +63,7 @@
                     type : 'bar',
                 },
                 size: {
-                    width: 235
+                    width: chartWidth
                 },
                 axis: {
                     rotated: true,

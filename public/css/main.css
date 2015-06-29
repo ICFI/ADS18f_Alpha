@@ -479,7 +479,7 @@ p {
   font-weight: 300;
   line-height: 1.4;
 }
-@media (min-width: 640px) {
+@media (min-width: 480px) {
   .lead {
     font-size: 24px;
   }
@@ -625,7 +625,7 @@ dt {
 dd {
   margin-left: 0;
 }
-@media (min-width: 640px) {
+@media (min-width: 480px) {
   .dl-horizontal dt {
     float: left;
     width: 160px;
@@ -707,17 +707,17 @@ address {
   padding-left: 15px;
   padding-right: 15px;
 }
-@media (min-width: 640px) {
+@media (min-width: 480px) {
   .container {
     width: 510px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 640px) {
   .container {
     width: 670px;
   }
 }
-@media (min-width: 940px) {
+@media (min-width: 800px) {
   .container {
     width: 830px;
   }
@@ -894,7 +894,7 @@ address {
 .col-xs-offset-0 {
   margin-left: 0%;
 }
-@media (min-width: 640px) {
+@media (min-width: 480px) {
   .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
     float: left;
   }
@@ -1052,7 +1052,7 @@ address {
     margin-left: 0%;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 640px) {
   .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
     float: left;
   }
@@ -1210,7 +1210,7 @@ address {
     margin-left: 0%;
   }
 }
-@media (min-width: 940px) {
+@media (min-width: 800px) {
   .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
     float: left;
   }
@@ -1785,7 +1785,7 @@ select[multiple].form-group-lg .form-control {
   margin-bottom: 10px;
   color: #a6a6a6;
 }
-@media (min-width: 640px) {
+@media (min-width: 480px) {
   .form-inline .form-group {
     display: inline-block;
     margin-bottom: 0;
@@ -1851,7 +1851,7 @@ select[multiple].form-group-lg .form-control {
   margin-left: -15px;
   margin-right: -15px;
 }
-@media (min-width: 640px) {
+@media (min-width: 480px) {
   .form-horizontal .control-label {
     text-align: right;
     margin-bottom: 0;
@@ -1861,12 +1861,12 @@ select[multiple].form-group-lg .form-control {
 .form-horizontal .has-feedback .form-control-feedback {
   right: 15px;
 }
-@media (min-width: 640px) {
+@media (min-width: 480px) {
   .form-horizontal .form-group-lg .control-label {
     padding-top: 14.333333px;
   }
 }
-@media (min-width: 640px) {
+@media (min-width: 480px) {
   .form-horizontal .form-group-sm .control-label {
     padding-top: 6px;
   }
@@ -2314,7 +2314,7 @@ tbody.collapse.in {
 .jumbotron .container {
   max-width: 100%;
 }
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 480px) {
   .jumbotron {
     padding: 48px 0;
   }
@@ -2674,7 +2674,7 @@ a.list-group-item-danger.active:focus {
 .visible-lg-inline-block {
   display: none !important;
 }
-@media (max-width: 639px) {
+@media (max-width: 479px) {
   .visible-xs {
     display: block !important;
   }
@@ -2689,22 +2689,22 @@ a.list-group-item-danger.active:focus {
     display: table-cell !important;
   }
 }
-@media (max-width: 639px) {
+@media (max-width: 479px) {
   .visible-xs-block {
     display: block !important;
   }
 }
-@media (max-width: 639px) {
+@media (max-width: 479px) {
   .visible-xs-inline {
     display: inline !important;
   }
 }
-@media (max-width: 639px) {
+@media (max-width: 479px) {
   .visible-xs-inline-block {
     display: inline-block !important;
   }
 }
-@media (min-width: 640px) and (max-width: 767px) {
+@media (min-width: 480px) and (max-width: 639px) {
   .visible-sm {
     display: block !important;
   }
@@ -2719,22 +2719,22 @@ a.list-group-item-danger.active:focus {
     display: table-cell !important;
   }
 }
-@media (min-width: 640px) and (max-width: 767px) {
+@media (min-width: 480px) and (max-width: 639px) {
   .visible-sm-block {
     display: block !important;
   }
 }
-@media (min-width: 640px) and (max-width: 767px) {
+@media (min-width: 480px) and (max-width: 639px) {
   .visible-sm-inline {
     display: inline !important;
   }
 }
-@media (min-width: 640px) and (max-width: 767px) {
+@media (min-width: 480px) and (max-width: 639px) {
   .visible-sm-inline-block {
     display: inline-block !important;
   }
 }
-@media (min-width: 768px) and (max-width: 939px) {
+@media (min-width: 640px) and (max-width: 799px) {
   .visible-md {
     display: block !important;
   }
@@ -2749,22 +2749,22 @@ a.list-group-item-danger.active:focus {
     display: table-cell !important;
   }
 }
-@media (min-width: 768px) and (max-width: 939px) {
+@media (min-width: 640px) and (max-width: 799px) {
   .visible-md-block {
     display: block !important;
   }
 }
-@media (min-width: 768px) and (max-width: 939px) {
+@media (min-width: 640px) and (max-width: 799px) {
   .visible-md-inline {
     display: inline !important;
   }
 }
-@media (min-width: 768px) and (max-width: 939px) {
+@media (min-width: 640px) and (max-width: 799px) {
   .visible-md-inline-block {
     display: inline-block !important;
   }
 }
-@media (min-width: 940px) {
+@media (min-width: 800px) {
   .visible-lg {
     display: block !important;
   }
@@ -2779,37 +2779,37 @@ a.list-group-item-danger.active:focus {
     display: table-cell !important;
   }
 }
-@media (min-width: 940px) {
+@media (min-width: 800px) {
   .visible-lg-block {
     display: block !important;
   }
 }
-@media (min-width: 940px) {
+@media (min-width: 800px) {
   .visible-lg-inline {
     display: inline !important;
   }
 }
-@media (min-width: 940px) {
+@media (min-width: 800px) {
   .visible-lg-inline-block {
     display: inline-block !important;
   }
 }
-@media (max-width: 639px) {
+@media (max-width: 479px) {
   .hidden-xs {
     display: none !important;
   }
 }
-@media (min-width: 640px) and (max-width: 767px) {
+@media (min-width: 480px) and (max-width: 639px) {
   .hidden-sm {
     display: none !important;
   }
 }
-@media (min-width: 768px) and (max-width: 939px) {
+@media (min-width: 640px) and (max-width: 799px) {
   .hidden-md {
     display: none !important;
   }
 }
-@media (min-width: 940px) {
+@media (min-width: 800px) {
   .hidden-lg {
     display: none !important;
   }
@@ -2861,6 +2861,11 @@ a.list-group-item-danger.active:focus {
     display: none !important;
   }
 }
+.page-container {
+  width: 800px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
 #site-header {
   background-color: #eeeeee;
   background-image: -webkit-linear-gradient(top, #eeeeee 93%, #e1e1e1 100%);
@@ -2882,12 +2887,15 @@ main {
   background-repeat: repeat-x;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
-  padding-bottom: 200px;
+  padding: 15px 0 200px;
   margin-bottom: 0;
 }
 .medlib p {
   font-size: 41px;
   font-weight: 300;
+  -webkit-transition: font-size 125ms;
+  -o-transition: font-size 125ms;
+  transition: font-size 125ms;
 }
 .medlib input {
   font-weight: normal;
@@ -2959,6 +2967,9 @@ main {
 .search-result .chart-wrapper {
   margin: 30px 0;
 }
+.search-result .chart {
+  text-align: center;
+}
 .search-result .disclaimer {
   margin: 30px 0;
   color: #999999;
@@ -3006,5 +3017,73 @@ footer#site-footer .logo {
   #logo-openFDA {
     background-image: url('/img/logo-openFDA.2x.png');
     background-size: 141px 25px;
+  }
+}
+@media (max-width: 799px) {
+  .row {
+    padding: 0 15px;
+  }
+  .page-container {
+    width: 100%;
+  }
+  .medlib p {
+    font-size: 30.75px;
+  }
+  .btn.btn-medCheck {
+    font-size: 16px;
+    display: block;
+    margin: 15px auto 0;
+  }
+}
+@media (max-width: 639px) {
+  .medlib {
+    background-image: url('/img/bg-med-libs.sm.jpg');
+    padding-bottom: 100px;
+  }
+  h2,
+  .medlib p {
+    font-size: 24.6px;
+  }
+  #logo-medCheck {
+    background-image: url('/img/logo-medCheck.sm.png');
+    width: 200px;
+    height: 33px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 200px 33px;
+    margin: 0;
+  }
+  #site-footer {
+    font-size: 14px;
+  }
+  #logo-openFDA {
+    background-image: url('/img/logo-openFDA.sm.gif');
+    width: 70.5px;
+    height: 12.5px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 70.5px 12.5px;
+  }
+  .autocomplete-suggestion {
+    padding: 5px 0;
+  }
+}
+@media (max-width: 639px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 639px) and (min-resolution: 192dpi) {
+  #logo-medCheck {
+    background-image: url('/img/logo-medCheck.png');
+    background-size: 200px 33px;
+  }
+  #logo-openFDA {
+    background-image: url('/img/logo-openFDA.png');
+    background-size: 70.5px 12.5px;
+  }
+}
+@media (max-width: 479px) {
+  h2,
+  .medlib p {
+    font-size: 20px;
+  }
+  .fill-in-the-blank .blank-label {
+    font-size: .75em;
   }
 }

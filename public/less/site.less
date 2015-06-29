@@ -76,8 +76,9 @@ main {
     }
 }
 
-.search-result-wrapper {
-    #gradient.vertical(@brand-tertiary, darken(@brand-tertiary, 5%), 95%, 100%);
+.end-gradient {
+    height: 15px;
+    #gradient.vertical(@brand-tertiary, darken(@brand-tertiary, 5%), 0, 100%);
 }
 
 .search-result {
@@ -85,6 +86,9 @@ main {
 
     h2 {
         margin: 0 0 @grid-gutter-width 0;
+        :focus{
+            outline: none;
+        }
     }
 
     h3 {

@@ -37,6 +37,59 @@
             };
         },
 
+        makeDonut = function (columns, chartElement) {
+            var chart = c3.generate({
+                bindto: chartElement,
+                data: {
+                    columns: columns,
+                    type : 'donut'
+                },
+                size: {
+                    width: 235
+                }
+            });
+
+            return chart;
+        },
+
+        makeBar = function (columns, categories, chartElement) {
+
+            var chart = c3.generate({
+                bindto: chartElement,
+                data: {
+                    columns: columns,
+                    type : 'bar',
+                },
+                size: {
+                    width: 235
+                },
+                axis: {
+                    rotated: true,
+                    x: {
+                        type: 'categorized',
+                        categories: categories
+                    },
+                    y: {
+                        show: false,
+                        ticks: {
+                            culling: {
+                                max: 1
+                            }
+                        }
+                    }
+                },
+                labels: true,
+                legend: {
+                    show: false
+                },
+                color: {
+                    pattern: ['#fb6509', '#fa3405', '#b7010c', '#700d10', '#000000']
+                }
+            });
+
+            return chart;
+        },
+
         chart = function () {
             return {
                 restrict    : 'E',
@@ -44,54 +97,31 @@
                 transclude  : true,
                 template    : '<div class="chart-wrapper"><h3><ng-transclude></ng-transclude></h3><div class="chart"></div></div>',
                 scope       : {
-                    type    : '@',
-                    columns : '='
+                    type      : '@',
+                    chartData : '='
                 },
                 link        : function (scope, element) {
-                    var chartElement = element.find('.chart'),
+                    var chartElement = element.find('.chart')[0],
                         chartGenerate;
 
                     if (scope.type !== 'top_five') {
-                        chartGenerate = c3.generate({
-                            bindto: chartElement[0],
-                            data: {
-                                columns: [],
-                                type : 'donut'
-                            },
-                            size: {
-                                width: 235
+                        scope.$watch('chartData', function (newchartData, oldchartData) {
+                            if (oldchartData.length) {
+                                chartGenerate.destroy();
+                            }
+
+                            if (newchartData.length) {
+                                chartGenerate = makeDonut(newchartData, chartElement);
                             }
                         });
-
-                        scope.$watch('columns', function (newColumns) {
-                            chartGenerate.unload();
-                            chartGenerate.load({
-                                columns: newColumns
-                            });
-                        });
                     } else {
-                        chartGenerate = c3.generate({
-                            bindto: chartElement[0],
-                            data: {
-                                columns: [
-                                    ['Side Effects', 44484, 39012, 23012, 1711, 92]
-                                ],
-                                type : 'bar',
-                            },
-                            size: {
-                                width: 235
-                            },
-                            axis: {
-                                rotated: true,
-                                y: {
-                                    show: false
-                                },
-                                x: {
-                                    show: false
-                                }
-                            },
-                            color: {
-                                pattern: ['#fb6509', '#fa3405', '#b7010c', '#700d10', '#000000']
+                        scope.$watch('chartData', function (newchartData, oldchartData) {
+                            if (!$.isEmptyObject(oldchartData)) {
+                                chartGenerate.destroy();
+                            }
+
+                            if (!$.isEmptyObject(newchartData)) {
+                                chartGenerate = makeBar(newchartData.columns, newchartData.categories, chartElement);
                             }
                         });
                     }

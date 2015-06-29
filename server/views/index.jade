@@ -8,6 +8,7 @@ html(lang="en-us")
         title MedCheck.gov
         link(rel='stylesheet', href='/css/main.css')
         link(rel='stylesheet', href='/vendor/jquery-auto-complete/jquery.auto-complete.css')
+        link(rel='stylesheet', href='/scripts/c3/c3.min.css')
         link(href='http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,600italic,400,600,700' rel='stylesheet' type='text/css')
 
         link(rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-touch-icon-57x57.png")
@@ -40,20 +41,20 @@ html(lang="en-us")
                         button(type="submit" class="btn btn-lg btn-medCheck") Find Out
             div.search-result-wrapper
                 section(data-ng-class="{in: hasResult}" class="collapse container search-result")
-                    h2 <strong>{{hasSideEffectYesNo}}</strong>, {{resultDrug}} {{hasSideEffectText}} {{resultSymptom}}.
+                    h2(tabindex="-1" id="search-result-header") <strong>{{hasSideEffectYesNo}}</strong>, {{resultDrug}} {{hasSideEffectText}} {{resultSymptom}}.
                     div.row
-                        article(class="col-md-8" role="article")
+                        article(class="col-md-7" role="article")
                             div(data-ng-bind-html="guide")
                             footer
                                 p.disclaimer <strong>Disclaimer:</strong> openFDA is a beta research project and is not for clinical use. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated.
                                 a(data-ng-click="searchMore()" class="link-search-more") Search More Side Effects
-                        aside(role="complimentary" class="col-md-4")
+                        aside(role="complimentary" class="col-md-5")
                             div
-                                a(href="https://www.accessdata.fda.gov/scripts/medwatch/index.cfm?action=reporting.home" class="btn btn-large btn-medCheck") Report a Side Effect
-                                chart(data-type="my_med" data-columns="myMedChartData" data-ng-if="hasSideEffect") {{myMedChartTitle}}
-                                chart(data-type="any_med" data-columns="anyMedChartData" data-ng-if="hasSideEffect") {{anyMedChartTitle}}
-                                chart(data-type="top_five" data-columns="topFiveChartData" data-ng-if="!hasSideEffect") Top 5 most reported side effects from {{resultDrug}}
-
+                                a(href="https://www.accessdata.fda.gov/scripts/medwatch/index.cfm?action=reporting.home" class="btn btn-lg btn-medCheck") Report a Side Effect
+                                chart(data-type="my_med" data-chart-data="myMedChartData" data-ng-if="hasSideEffect") {{myMedChartTitle}}
+                                chart(data-type="any_med" data-chart-data="anyMedChartData" data-ng-if="hasSideEffect") {{anyMedChartTitle}}
+                                chart(data-type="top_five" data-chart-data="topFiveChartData" data-ng-if="!hasSideEffect") {{topFiveChartTitle}}
+                div(data-ng-class="{in: hasResult}" class="collapse end-gradient")
 
         footer(class="container" role="contentinfo" id="site-footer")
             p powered by <a href="https://open.fda.gov/" id="logo-openFDA" class="logo text-hide">openFDA</a> &amp; <a href="http://www.icfi.com/" id="logo-icf" class="logo text-hide">ICF International</a>

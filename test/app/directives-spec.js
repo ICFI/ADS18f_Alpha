@@ -28,7 +28,9 @@ describe("test directives", function () {
         beforeEach(inject(function ($rootScope, $compile) {
             scope = $rootScope.$new();
 
-            element = '<chart></chart>';
+            scope.myMedChartData = [];
+
+            element = '<chart data-chart-data="myMedChartData"></chart>';
 
             element = $compile(element)(scope);
             scope.$digest();

@@ -17,7 +17,7 @@
                 $scope.hasSideEffect      = data.found;
                 $scope.hasSideEffectYesNo = ($scope.hasSideEffect) ? MESSAGES.YES : MESSAGES.NO;
                 $scope.hasSideEffectText  = ($scope.hasSideEffect) ? MESSAGES.YES_TEXT : MESSAGES.NO_TEXT;
-                $scope.guide              = data.spl_medguide;
+                $scope.guide              = data.message;
                 $scope.resultDrug         = $scope.drug;
                 $scope.resultSymptom      = $scope.symptom;
 
@@ -46,6 +46,22 @@
                     anyMedChartPromise.then(function (data) {
                         $scope.anyMedChartData = data.data;
                         $scope.anyMedChartTitle = data.title;
+                    });
+                } else {
+                    topFiveReactionsChartPromise = getChartData.get({
+                        'type'    : 'top_five',
+                        'drug'    : encodeURIComponent($scope.drug),
+                        'symptom' : encodeURIComponent($scope.symptom)
+                    });
+
+                    promiseArray.push(topFiveReactionsChartPromise);
+
+                    topFiveReactionsChartPromise.then(function (data) {
+                        $scope.topFiveChartTitle = data.title;
+                        $scope.topFiveChartData = {
+                            "columns" : data.columns,
+                            "categories" : data.categories
+                        };
                     });
                 }
 
@@ -82,7 +98,7 @@
 
         $scope.myMedChartData = [];
         $scope.anyMedChartData = [];
-        $scope.topFiveChartData = [];
+        $scope.topFiveChartData = {};
     };
 
     angular.module('ads18fApp').controller('Ads18fController', [

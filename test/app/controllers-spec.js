@@ -11,6 +11,7 @@ describe("Ads18fController", function () {
             "brand_name"     : "oxycodone",
             "generic_name"   : "oxycodone",
             "substance_name" : "oxycodone",
+            "message"        : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare, arcu in molestie ornare, tellus dui consequat urna, in cursus tortor libero at elit. Integer id diam sit amet mauris vulputate ornare. Praesent vel dignissim ligula. Nunc erat orci, volutpat sagittis vehicula ac, venenatis et neque. Curabitur consectetur in nisi vel placerat. Nam a risus lectus. Aliquam condimentum diam et erat dictum condimentum. Nam ornare turpis id pretium rhoncus.</p><p><p>Nam efficitur <span class=\"highlight\">oxycodone</span> quis posuere tristique. Vestibulum turpis ante, accumsan eu purus eget, posuere tempor dolor. Fusce sed fringilla enim. Sed tempus tristique varius. Vivamus cursus sed tortor et mattis. Vivamus varius finibus odio condimentum pulvinar. Phasellus vel arcu tincidunt, bibendum erat eu, sodales neque. Fusce rutrum iaculis dolor quis tincidunt.</p><p>Sed facilisis, enim ac convallis rhoncus, elit diam iaculis velit, eget tristique augue enim quis mauris. Fusce sed vehicula diam. Vestibulum enim metus, sodales eget aliquet eu, dapibus id erat. Ut tempor est sed pretium interdum. Nullam vel finibus orci. Etiam eget volutpat orci. Donec vel mauris vel massa eleifend dictum a in neque.</p>",
             "spl_medguide"   : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare, arcu in molestie ornare, tellus dui consequat urna, in cursus tortor libero at elit. Integer id diam sit amet mauris vulputate ornare. Praesent vel dignissim ligula. Nunc erat orci, volutpat sagittis vehicula ac, venenatis et neque. Curabitur consectetur in nisi vel placerat. Nam a risus lectus. Aliquam condimentum diam et erat dictum condimentum. Nam ornare turpis id pretium rhoncus.</p><p><p>Nam efficitur <span class=\"highlight\">oxycodone</span> quis posuere tristique. Vestibulum turpis ante, accumsan eu purus eget, posuere tempor dolor. Fusce sed fringilla enim. Sed tempus tristique varius. Vivamus cursus sed tortor et mattis. Vivamus varius finibus odio condimentum pulvinar. Phasellus vel arcu tincidunt, bibendum erat eu, sodales neque. Fusce rutrum iaculis dolor quis tincidunt.</p><p>Sed facilisis, enim ac convallis rhoncus, elit diam iaculis velit, eget tristique augue enim quis mauris. Fusce sed vehicula diam. Vestibulum enim metus, sodales eget aliquet eu, dapibus id erat. Ut tempor est sed pretium interdum. Nullam vel finibus orci. Etiam eget volutpat orci. Donec vel mauris vel massa eleifend dictum a in neque.</p>"
         },
         notFoundResponse = {
@@ -18,6 +19,7 @@ describe("Ads18fController", function () {
             "brand_name"     : "oxycodone",
             "generic_name"   : "oxycodone",
             "substance_name" : "oxycodone",
+            "message"        : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare, arcu in molestie ornare, tellus dui consequat urna, in cursus tortor libero at elit. Integer id diam sit amet mauris vulputate ornare. Praesent vel dignissim ligula. Nunc erat orci, volutpat sagittis vehicula ac, venenatis et neque. Curabitur consectetur in nisi vel placerat. Nam a risus lectus. Aliquam condimentum diam et erat dictum condimentum. Nam ornare turpis id pretium rhoncus.</p><p><p>Nam efficitur <span class=\"highlight\">oxycodone</span> quis posuere tristique. Vestibulum turpis ante, accumsan eu purus eget, posuere tempor dolor. Fusce sed fringilla enim. Sed tempus tristique varius. Vivamus cursus sed tortor et mattis. Vivamus varius finibus odio condimentum pulvinar. Phasellus vel arcu tincidunt, bibendum erat eu, sodales neque. Fusce rutrum iaculis dolor quis tincidunt.</p><p>Sed facilisis, enim ac convallis rhoncus, elit diam iaculis velit, eget tristique augue enim quis mauris. Fusce sed vehicula diam. Vestibulum enim metus, sodales eget aliquet eu, dapibus id erat. Ut tempor est sed pretium interdum. Nullam vel finibus orci. Etiam eget volutpat orci. Donec vel mauris vel massa eleifend dictum a in neque.</p>",
             "spl_medguide"   : ""
         },
         donutResponse = {
@@ -26,6 +28,11 @@ describe("Ads18fController", function () {
                 ['Headaches reported', 985],
                 ['All other adverse effects reported', 24000]
             ]
+        },
+        barResponse = {
+            'title': "Top 5 most reported side effects from Oxycontin",
+            'columns': [["Side Effects", 2750, 2350, 2233, 2130, 1386]],
+            'categories' : ["DRUG DEPENDENCE", "PAIN", "DRUG ABUSER", "NAUSEA", "VOMITING"]
         },
         drug         = "oxycodone",
         symptom      = "dizziness";
@@ -81,11 +88,8 @@ describe("Ads18fController", function () {
         httpBackend.when('GET', DATA_PATHS.DRUG_SYMPTOM.replace('%drug%', drug).replace('%symptom%', symptom))
             .respond(notFoundResponse);
 
-        httpBackend.when('GET', '/api/v1/chart/my_med/' + drug + '/' + symptom)
-            .respond(donutResponse);
-
-        httpBackend.when('GET', '/api/v1/chart/any_med/' + drug + '/' + symptom)
-            .respond(donutResponse);
+        httpBackend.when('GET', '/api/v1/chart/top_five/' + drug + '/' + symptom)
+            .respond(barResponse);
 
         scope.drug = drug;
         scope.symptom = symptom;
@@ -104,6 +108,9 @@ describe("Ads18fController", function () {
     it("should clear search form and hide previous search when 'Search More Side Effects is clicked'", function () {
         httpBackend.when('GET', DATA_PATHS.DRUG_SYMPTOM.replace('%drug%', drug).replace('%symptom%', symptom))
             .respond(notFoundResponse);
+
+        httpBackend.when('GET', '/api/v1/chart/top_five/' + drug + '/' + symptom)
+            .respond(barResponse);
 
         scope.drug = drug;
         scope.symptom = symptom;

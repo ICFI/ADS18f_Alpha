@@ -2908,7 +2908,7 @@ main {
   min-width: 200px;
 }
 .fill-in-the-blank {
-  display: inline;
+  display: inline-block;
   position: relative;
 }
 .fill-in-the-blank input {
@@ -2927,7 +2927,7 @@ main {
   text-align: center;
   font-size: .5em;
   color: #9a9a9a;
-  bottom: 5px;
+  bottom: 10px;
   opacity: 1;
   -webkit-transition: opacity 100ms;
   -o-transition: opacity 100ms;

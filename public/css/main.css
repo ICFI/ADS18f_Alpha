@@ -2936,10 +2936,11 @@ main {
 .fill-in-the-blank.blank-the-in-filled .blank-label {
   opacity: 0;
 }
-.search-result-wrapper {
-  background-image: -webkit-linear-gradient(top, #eeeeee 95%, #e1e1e1 100%);
-  background-image: -o-linear-gradient(top, #eeeeee 95%, #e1e1e1 100%);
-  background-image: linear-gradient(to bottom, #eeeeee 95%, #e1e1e1 100%);
+.end-gradient {
+  height: 15px;
+  background-image: -webkit-linear-gradient(top, #eeeeee 0, #e1e1e1 100%);
+  background-image: -o-linear-gradient(top, #eeeeee 0, #e1e1e1 100%);
+  background-image: linear-gradient(to bottom, #eeeeee 0, #e1e1e1 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffeeeeee', endColorstr='#ffe1e1e1', GradientType=0);
 }
@@ -2948,6 +2949,9 @@ main {
 }
 .search-result h2 {
   margin: 0 0 30px 0;
+}
+.search-result h2 :focus {
+  outline: none;
 }
 .search-result h3 {
   font-weight: bold;

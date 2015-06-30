@@ -3,7 +3,7 @@
 (function () {
     'use strict';
 
-    var Ads18fController = function ($scope, $q, doesMedicineCauseReaction, getChartData, MESSAGES) {
+    var Ads18fController = function ($scope, $q, $log, doesMedicineCauseReaction, getChartData, MESSAGES) {
         var formIsValid = function () {
                 return !$scope.drugCauseSymptom.$valid;
             },
@@ -17,7 +17,7 @@
                 $scope.hasSideEffect      = data.found;
                 $scope.hasSideEffectYesNo = ($scope.hasSideEffect) ? MESSAGES.YES : MESSAGES.NO;
                 $scope.hasSideEffectText  = ($scope.hasSideEffect) ? MESSAGES.YES_TEXT : MESSAGES.NO_TEXT;
-                $scope.guide              = data.message;
+                $scope.guide              = (data.message !== undefined) ? data.message[0] : '';
                 $scope.resultDrug         = $scope.drug;
                 $scope.resultSymptom      = $scope.symptom;
 
@@ -38,15 +38,27 @@
 
                     promiseArray.push(anyMedChartPromise);
 
-                    myMedChartPromise.then(function (data) {
-                        $scope.myMedChartData = data.data;
-                        $scope.myMedChartTitle = data.title;
-                    });
+                    myMedChartPromise.then(
+                        function (data) {
+                            $scope.myMedChartData = data.data;
+                            $scope.myMedChartTitle = data.title;
+                            $scope.myMedChartHasError = false;
+                        },
+                        function () {
+                            $scope.myMedChartHasError = true;
+                        }
+                    );
 
-                    anyMedChartPromise.then(function (data) {
-                        $scope.anyMedChartData = data.data;
-                        $scope.anyMedChartTitle = data.title;
-                    });
+                    anyMedChartPromise.then(
+                        function (data) {
+                            $scope.anyMedChartData = data.data;
+                            $scope.anyMedChartTitle = data.title;
+                            $scope.anyMedChartHasError = false;
+                        },
+                        function () {
+                            $scope.anyMedChartHasError = true;
+                        }
+                    );
                 } else {
                     topFiveReactionsChartPromise = getChartData.get({
                         'type'    : 'top_five',
@@ -56,18 +68,30 @@
 
                     promiseArray.push(topFiveReactionsChartPromise);
 
-                    topFiveReactionsChartPromise.then(function (data) {
-                        $scope.topFiveChartTitle = data.title;
-                        $scope.topFiveChartData = {
-                            "columns" : data.columns,
-                            "categories" : data.categories
-                        };
-                    });
+                    topFiveReactionsChartPromise.then(
+                        function (data) {
+                            $scope.topFiveChartTitle = data.title;
+                            $scope.topFiveChartData = {
+                                "columns" : data.columns,
+                                "categories" : data.categories
+                            };
+                            $scope.topFiveChartHasError = false;
+                        },
+                        function () {
+                            $scope.topFiveChartHasError = true;
+                        }
+                    );
                 }
 
-                $q.all(promiseArray).then(function () {
-                    $scope.hasResult          = true;
-                });
+                $q.all(promiseArray).then(
+                    function () {
+                        $scope.hasResult = true;
+                    },
+                    function () {
+                        $log.warn('there was an error loading chart data');
+                        $scope.hasResult = true;
+                    }
+                );
             },
 
             submit = function () {
@@ -96,14 +120,20 @@
         $scope.submit      = submit;
         $scope.searchMore  = searchMore;
 
+        $scope.myMedChartTitle = 'Percent of Reported Adverse Effects for Medicine';
         $scope.myMedChartData = [];
+
+        $scope.anyMedChartTitle = 'Percent of all Reported Adverse Effects';
         $scope.anyMedChartData = [];
+
+        $scope.topFiveChartTitle = 'Top Five Reported Adverse Effects';
         $scope.topFiveChartData = {};
     };
 
     angular.module('ads18fApp').controller('Ads18fController', [
         '$scope',
         '$q',
+        '$log',
         'doesMedicineCauseReaction',
         'getChartData',
         'MESSAGES',

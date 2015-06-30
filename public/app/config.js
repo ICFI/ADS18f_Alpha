@@ -11,6 +11,7 @@
         },
         MESSAGES = {
             'SERVER_ERROR'      : 'Something went awry.',
+            'CHART_DATA_ERROR'  : 'Chart data not available.',
             'YES'               : 'Yes',
             'NO'                : 'No',
             'YES_TEXT'          : 'can cause',

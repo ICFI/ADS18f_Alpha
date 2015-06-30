@@ -86,7 +86,8 @@ describe("test factories", function () {
                     ['Headaches reported', 985],
                     ['All other adverse effects reported', 24000]
                 ]
-            };
+            },
+            errorResponse = {"error": true};
 
         beforeEach(module('ads18fApp'));
 
@@ -116,7 +117,36 @@ describe("test factories", function () {
             expect(results.data.length).to.equal(2);
         });
 
-        it("should return error message on failure", function () {
+        it("should return error message on data error", function () {
+            var message,
+                errorParams = {
+                    'type'      : 'my_med',
+                    'drug'      : 'oxycodone',
+                    'symptom'   : 'rash'
+                },
+                errorPath = DATA_PATHS.CHART
+                       .replace('%type%', errorParams.type)
+                       .replace('%drug%', errorParams.drug)
+                       .replace('%symptom%', errorParams.symptom);
+
+            $httpBackend.when('GET', errorPath)
+                .respond(errorResponse);
+
+            getChartData.get(errorParams).then(
+                function (queryResults) {
+                    console.log("this shouldn't work", queryResults);
+                },
+                function (errorMessage) {
+                    message = errorMessage;
+                }
+            );
+
+            $httpBackend.flush();
+
+            expect(message).to.equal(MESSAGES.CHART_DATA_ERROR);
+        });
+
+        it("should return error message on server error", function () {
             var message;
 
             queryHandler.respond(401, '');

@@ -6,15 +6,17 @@ libraries are used for security handling and utility functions
 ## Prerequisites
 1. Install Node.js
 2. Install ElasticSearch (or use Bonsai.io)
-3. Ensure outbound traffic is allowed in your environment
+3. Ensure outbound traffic is allowed in your environment over 
 
 ## Components
 There are a couple of moving parts in this repository that you should
 know about before proceding:
 
 1. The server in `server.js` is an [Express] app that renders an
-   HTML page with the title, "Hello, world!".
-2. The test suite is a [Mocha] test script that uses the PhantomJS [WebDriver] API 
+   HTML page which serves as entry point for the application.
+2. The server also contains a series of accessible APIs which service the application
+   but can also service other modes of multichannel communication
+3. The test suite is a [Mocha] test script that uses the PhantomJS [WebDriver] API 
    to test APIs and supporting domain functions.
 
 
@@ -29,14 +31,15 @@ npm install
 
 ### Verify
 Next up, you can verify that the test server works by calling `node server.js`. This
-fires up an [Express] server that serves up a page with an HTML title, `"Hello,
-world!"`. You can confirm that it's running by visiting
+fires up an [Express] server that serves up a page with the entry point of the application. 
+You can confirm that it's running by visiting
 [http://localhost:3000](http://localhost:3000) in a web browser, or:
 
 ```sh
 curl -s http://localhost:3000
 ```
-For more robust installations, it is recommended to use a process service such as PM2
+For more robust installations, it is recommended to use a process service such as PM2.
+
 ### Configure ElasticSearch
 [STEVE - NEED SCRIPT TO POPULATE INDEX HERE]
 Before you can run the tests, you'll need to set some environment

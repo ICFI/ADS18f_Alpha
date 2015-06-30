@@ -42,6 +42,7 @@
                         function (data) {
                             $scope.myMedChartData = data.data;
                             $scope.myMedChartTitle = data.title;
+                            $scope.myMedChartHasError = false;
                         },
                         function () {
                             $scope.myMedChartHasError = true;
@@ -52,6 +53,7 @@
                         function (data) {
                             $scope.anyMedChartData = data.data;
                             $scope.anyMedChartTitle = data.title;
+                            $scope.anyMedChartHasError = false;
                         },
                         function () {
                             $scope.anyMedChartHasError = true;
@@ -73,6 +75,7 @@
                                 "columns" : data.columns,
                                 "categories" : data.categories
                             };
+                            $scope.topFiveChartHasError = false;
                         },
                         function () {
                             $scope.topFiveChartHasError = true;

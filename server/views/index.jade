@@ -40,8 +40,8 @@ html(lang="en-us")
                         | Can <fill-in-the-blank label="Enter Medicine" data-the-blank="drug" data-typeahead-query-field="DRUG"></fill-in-the-blank> cause <fill-in-the-blank label="Enter Symptom" data-the-blank="symptom" data-typeahead-query-field="SYMPTOM"></fill-in-the-blank>?
                         button(type="submit" class="btn btn-lg btn-medCheck") Find Out
             div.search-result-wrapper
-                section(data-ng-class="{in: hasResult}" class="collapse page-container search-result")
-                    h2(tabindex="-1" id="search-result-header" class="col-xs-12") <strong>{{hasSideEffectYesNo}}</strong>, {{resultDrug}} {{hasSideEffectText}} {{resultSymptom}}.
+                section(data-ng-class="{in: hasResult}" class="collapse page-container search-result" data-scroll-to data-scroll-on="{{hasResult}}" aria-labelled-by="search-result-header")
+                    h2(tabindex="-1" id="search-result-header" class="scroll-focus") <strong>{{hasSideEffectYesNo}}</strong>, {{resultDrug}} {{hasSideEffectText}} {{resultSymptom}}.
                     div.row
                         article(class="col-sm-12 col-md-7" role="article")
                             div(data-ng-bind-html="guide")

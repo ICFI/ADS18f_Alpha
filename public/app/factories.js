@@ -104,7 +104,11 @@
                         'method': 'GET',
                         'url'   : formatGetPath(params)
                     }).success(function (data) {
-                        deferred.resolve(data);
+                        if (data.error !== undefined && data.error === true) {
+                            deferred.reject(MESSAGES.CHART_DATA_ERROR);
+                        } else {
+                            deferred.resolve(data);
+                        }
                     }).error(function () {
                         deferred.reject(MESSAGES.SERVER_ERRROR);
                     });

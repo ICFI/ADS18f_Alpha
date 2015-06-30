@@ -704,39 +704,39 @@ address {
 .container {
   margin-right: auto;
   margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 @media (min-width: 480px) {
   .container {
-    width: 510px;
+    width: 530px;
   }
 }
 @media (min-width: 640px) {
   .container {
-    width: 670px;
+    width: 690px;
   }
 }
 @media (min-width: 800px) {
   .container {
-    width: 830px;
+    width: 850px;
   }
 }
 .container-fluid {
   margin-right: auto;
   margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 .row {
-  margin-left: -15px;
-  margin-right: -15px;
+  margin-left: -25px;
+  margin-right: -25px;
 }
 .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
   float: left;
@@ -1848,8 +1848,8 @@ select[multiple].form-group-lg .form-control {
   min-height: 29px;
 }
 .form-horizontal .form-group {
-  margin-left: -15px;
-  margin-right: -15px;
+  margin-left: -25px;
+  margin-right: -25px;
 }
 @media (min-width: 480px) {
   .form-horizontal .control-label {
@@ -1859,7 +1859,7 @@ select[multiple].form-group-lg .form-control {
   }
 }
 .form-horizontal .has-feedback .form-control-feedback {
-  right: 15px;
+  right: 25px;
 }
 @media (min-width: 480px) {
   .form-horizontal .form-group-lg .control-label {
@@ -2595,6 +2595,109 @@ a.list-group-item-danger.active:focus {
   padding: 9px;
   border-radius: 0;
 }
+.tooltip {
+  position: absolute;
+  z-index: 1070;
+  display: block;
+  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.4;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.tooltip.in {
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+}
+.tooltip.top {
+  margin-top: -3px;
+  padding: 5px 0;
+}
+.tooltip.right {
+  margin-left: 3px;
+  padding: 0 5px;
+}
+.tooltip.bottom {
+  margin-top: 3px;
+  padding: 5px 0;
+}
+.tooltip.left {
+  margin-left: -3px;
+  padding: 0 5px;
+}
+.tooltip-inner {
+  max-width: 200px;
+  padding: 3px 8px;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  background-color: #000000;
+  border-radius: 0;
+}
+.tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+.tooltip.top .tooltip-arrow {
+  bottom: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #000000;
+}
+.tooltip.top-left .tooltip-arrow {
+  bottom: 0;
+  right: 5px;
+  margin-bottom: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #000000;
+}
+.tooltip.top-right .tooltip-arrow {
+  bottom: 0;
+  left: 5px;
+  margin-bottom: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #000000;
+}
+.tooltip.right .tooltip-arrow {
+  top: 50%;
+  left: 0;
+  margin-top: -5px;
+  border-width: 5px 5px 5px 0;
+  border-right-color: #000000;
+}
+.tooltip.left .tooltip-arrow {
+  top: 50%;
+  right: 0;
+  margin-top: -5px;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #000000;
+}
+.tooltip.bottom .tooltip-arrow {
+  top: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: #000000;
+}
+.tooltip.bottom-left .tooltip-arrow {
+  top: 0;
+  right: 5px;
+  margin-top: -5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: #000000;
+}
+.tooltip.bottom-right .tooltip-arrow {
+  top: 0;
+  left: 5px;
+  margin-top: -5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: #000000;
+}
 .clearfix:before,
 .clearfix:after,
 .dl-horizontal dd:before,
@@ -2863,7 +2966,7 @@ a.list-group-item-danger.active:focus {
 }
 .page-container {
   width: 800px;
-  padding: 0 30px;
+  padding: 0 50px;
   margin: 0 auto;
 }
 #site-header {
@@ -2873,7 +2976,7 @@ a.list-group-item-danger.active:focus {
   background-image: linear-gradient(to bottom, #eeeeee 93%, #e1e1e1 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffeeeeee', endColorstr='#ffe1e1e1', GradientType=0);
-  padding: 30px 0;
+  padding: 25px 0;
 }
 .brand-color {
   color: #288ac9;
@@ -2881,12 +2984,36 @@ a.list-group-item-danger.active:focus {
 main {
   background-color: #eeeeee;
 }
+.btn.btn-primary {
+  color: #ffffff;
+  background: #286bb1;
+  background-image: -webkit-linear-gradient(top, #286bb1 0%, #1c5392 100%);
+  background-image: -o-linear-gradient(top, #286bb1 0%, #1c5392 100%);
+  background-image: linear-gradient(to bottom, #286bb1 0%, #1c5392 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff286bb1', endColorstr='#ff1c5392', GradientType=0);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  min-width: 180px;
+}
+.btn.btn-danger {
+  color: #ffffff;
+  background: #d30606;
+  background-image: -webkit-linear-gradient(top, #d30606 0%, #ae0404 100%);
+  background-image: -o-linear-gradient(top, #d30606 0%, #ae0404 100%);
+  background-image: linear-gradient(to bottom, #d30606 0%, #ae0404 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd30606', endColorstr='#ffae0404', GradientType=0);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  min-width: 180px;
+}
 .medlib {
   background-image: url('/img/bg-med-libs.jpg');
   background-position: center bottom;
   background-repeat: repeat-x;
   border-bottom: 1px solid #fff;
-  padding: 15px 0 200px;
+  padding: 25px 0 200px;
   margin-bottom: 0;
 }
 .medlib p {
@@ -2900,20 +3027,8 @@ main {
   font-weight: normal;
   border-radius: 0;
 }
-.medlib .btn-medCheck {
-  margin-left: 30px;
-}
-.btn.btn-medCheck {
-  color: #ffffff;
-  background: #41c747;
-  background-image: -webkit-linear-gradient(top, #00d57f 0%, #00a568 100%);
-  background-image: -o-linear-gradient(top, #00d57f 0%, #00a568 100%);
-  background-image: linear-gradient(to bottom, #00d57f 0%, #00a568 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff00d57f', endColorstr='#ff00a568', GradientType=0);
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
-  display: inline-block;
-  min-width: 180px;
+.medlib .btn {
+  margin-left: 25px;
 }
 .fill-in-the-blank {
   display: inline-block;
@@ -2935,7 +3050,7 @@ main {
   width: 100%;
   text-align: center;
   font-size: .5em;
-  color: #9a9a9a;
+  color: #;
   bottom: 10px;
   opacity: 1;
   -webkit-transition: opacity 100ms;
@@ -2954,10 +3069,10 @@ main {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffeeeeee', endColorstr='#ffe1e1e1', GradientType=0);
 }
 .search-result {
-  padding: 30px 0;
+  padding: 50px 0;
 }
 .search-result h2 {
-  margin: 0 0 30px 0;
+  margin: 0 0 50px 0;
 }
 .search-result h2:focus {
   outline: none;
@@ -2965,25 +3080,32 @@ main {
 .search-result h3 {
   font-weight: bold;
 }
+.search-result .guide {
+  font-size: 18px;
+  line-height: 1.8em;
+}
 .search-result .chart-wrapper {
-  margin: 30px 0;
+  margin: 50px 0;
 }
 .search-result .chart {
   text-align: center;
 }
 .search-result .disclaimer {
-  margin: 30px 0;
-  color: #999999;
+  margin: 50px 0;
+  color: #5b5b5b;
   font-size: 14px;
+}
+.search-result aside {
+  border-left: 1px solid #cdcdcd;
 }
 footer#site-footer {
   text-align: center;
-  padding: 30px 0;
+  padding: 25px 0;
 }
 footer#site-footer .logo {
   vertical-align: middle;
   display: inline-block;
-  margin: 0 10px;
+  margin: 0 16.66666667px;
 }
 #logo-medCheck {
   background-image: url('/img/logo-medCheck.png');
@@ -3027,6 +3149,9 @@ footer#site-footer .logo {
   .page-container {
     width: 100%;
   }
+  #search-result-header {
+    padding: 0 25px;
+  }
   .medlib p {
     font-size: 30.75px;
   }
@@ -3052,7 +3177,10 @@ footer#site-footer .logo {
   .btn.btn-medCheck {
     font-size: 16px;
     display: block;
-    margin: 15px auto 0;
+    margin: 25px auto 0;
+  }
+  .search-result aside {
+    border-left: none;
   }
   #site-footer {
     font-size: 14px;

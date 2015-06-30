@@ -7,7 +7,7 @@
 #site-header {
     background-color: @brand-tertiary;
     #gradient.vertical(@brand-tertiary, darken(@brand-tertiary, 5%), 93%, 100%);
-    padding: @grid-gutter-width 0;
+    padding: @grid-gutter-width / 2 0;
 }
 
 .brand-color {
@@ -16,6 +16,24 @@
 
 main {
     background-color: @brand-tertiary;
+}
+
+.btn.btn-primary {
+    color: #ffffff;
+    background: #286bb1;
+    #gradient.vertical(#286bb1, #1c5392);
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+    display: inline-block;
+    min-width: 180px;
+}
+
+.btn.btn-danger {
+    color: #ffffff;
+    background: #d30606;
+    #gradient.vertical(#d30606, #ae0404);
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+    display: inline-block;
+    min-width: 180px;
 }
 
 .medlib {
@@ -38,18 +56,9 @@ main {
         border-radius: 0;
     }
 
-    .btn-medCheck {
-        margin-left: @grid-gutter-width;
+    .btn {
+        margin-left: @grid-gutter-width / 2;
     }
-}
-
-.btn.btn-medCheck {
-    color: #ffffff;
-    background: #41c747;
-    #gradient.vertical(#00d57f, #00a568);
-    box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
-    display: inline-block;
-    min-width: 180px;
 }
 
 .fill-in-the-blank {
@@ -73,7 +82,7 @@ main {
         width: 100%;
         text-align: center;
         font-size: .5em;
-        color: #9a9a9a;
+        color: #;
         bottom: 10px;
         opacity: 1;
         .transition(opacity 100ms);
@@ -104,6 +113,11 @@ main {
         font-weight: bold;
     }
 
+    .guide {
+        font-size: 18px;
+        line-height: 1.8em;
+    }
+
     .chart-wrapper {
         margin: @grid-gutter-width 0;
     }
@@ -113,14 +127,18 @@ main {
 
     .disclaimer {
         margin: @grid-gutter-width 0;
-        color: lighten(@gray-base, 60%);
+        color: #5b5b5b;
         font-size: @font-size-small;
+    }
+
+    aside {
+        border-left: 1px solid #cdcdcd;
     }
 }
 
 footer#site-footer {
     text-align: center;
-    padding: @grid-gutter-width 0;
+    padding: @grid-gutter-width / 2 0;
 
     .logo {
         vertical-align: middle;
@@ -163,6 +181,10 @@ footer#site-footer {
         width: 100%;
     }
 
+    #search-result-header {
+        padding: 0 @grid-gutter-width / 2;
+    }
+
     .medlib p {
         font-size: @font-size-h1 * .75;
     }
@@ -187,6 +209,10 @@ footer#site-footer {
         font-size: @font-size-base;
         display: block;
         margin: @grid-gutter-width / 2 auto 0;
+    }
+
+    .search-result aside {
+        border-left: none;
     }
 
     #site-footer { font-size: @font-size-small; }

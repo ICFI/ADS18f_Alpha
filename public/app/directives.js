@@ -96,7 +96,7 @@
                 restrict    : 'E',
                 replace     : true,
                 transclude  : true,
-                template    : '<div class="chart-wrapper"><h3><ng-transclude></ng-transclude></h3><div class="chart"></div></div>',
+                template    : '<div class="chart-wrapper" aria-hidden="true"><h3 class="chart-header"><ng-transclude></ng-transclude></h3><div class="chart"></div></div>',
                 scope       : {
                     type      : '@',
                     chartData : '='
@@ -109,20 +109,24 @@
                         scope.$watch('chartData', function (newchartData, oldchartData) {
                             if (oldchartData.length) {
                                 chartGenerate.destroy();
+                                element.attr('aria-hidden', true);
                             }
 
                             if (newchartData.length) {
                                 chartGenerate = makeDonut(newchartData, chartElement);
+                                element.attr('aria-hidden', false);
                             }
                         });
                     } else {
                         scope.$watch('chartData', function (newchartData, oldchartData) {
                             if (!$.isEmptyObject(oldchartData)) {
                                 chartGenerate.destroy();
+                                element.attr('aria-hidden', true);
                             }
 
                             if (!$.isEmptyObject(newchartData)) {
                                 chartGenerate = makeBar(newchartData.columns, newchartData.categories, chartElement);
+                                element.attr('aria-hidden', false);
                             }
                         });
                     }
@@ -151,9 +155,19 @@
                     });
                 }
             };
+        },
+
+        tooltip = function () {
+            return {
+                restrict    : 'A',
+                link        : function (scope, element) {
+                    element.tooltip();
+                }
+            };
         };
 
     angular.module('ads18fApp').directive('fillInTheBlank', ['typeAhead', fillInTheBlank])
                                .directive('chart', [chart])
-                               .directive('scrollTo', ['$timeout', scrollTo]);
+                               .directive('scrollTo', ['$timeout', scrollTo])
+                               .directive('tooltip', [tooltip]);
 }());

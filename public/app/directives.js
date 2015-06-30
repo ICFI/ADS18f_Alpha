@@ -37,62 +37,61 @@
             };
         },
 
-        chartWidth = 220,
-
-        makeDonut = function (columns, chartElement) {
-            var chart = c3.generate({
-                bindto: chartElement,
-                data: {
-                    columns: columns,
-                    type : 'donut'
-                },
-                size: {
-                    width: chartWidth
-                }
-            });
-
-            return chart;
-        },
-
-        makeBar = function (columns, categories, chartElement) {
-
-            var chart = c3.generate({
-                bindto: chartElement,
-                data: {
-                    columns: columns,
-                    type : 'bar',
-                },
-                size: {
-                    width: chartWidth
-                },
-                axis: {
-                    rotated: true,
-                    x: {
-                        type: 'categorized',
-                        categories: categories
-                    },
-                    y: {
-                        show: false,
-                        ticks: {
-                            culling: {
-                                max: 1
-                            }
-                        }
-                    }
-                },
-                labels: true,
-                legend: {
-                    show: false
-                },
-                color: {
-                    pattern: ['#fb6509', '#fa3405', '#b7010c', '#700d10', '#000000']
-                }
-            });
-
-            return chart;
-        },
-
         chart = function () {
+            var chartWidth = 220,
+
+                makeDonut = function (columns, chartElement) {
+                    var chartGenerate = c3.generate({
+                        bindto: chartElement,
+                        data: {
+                            columns: columns,
+                            type : 'donut'
+                        },
+                        size: {
+                            width: chartWidth
+                        }
+                    });
+
+                    return chartGenerate;
+                },
+
+                makeBar = function (columns, categories, chartElement) {
+                    var chartGenerate = c3.generate({
+                        bindto: chartElement,
+                        data: {
+                            columns: columns,
+                            type : 'bar',
+                        },
+                        size: {
+                            width: chartWidth
+                        },
+                        axis: {
+                            rotated: true,
+                            x: {
+                                type: 'categorized',
+                                categories: categories
+                            },
+                            y: {
+                                show: false,
+                                ticks: {
+                                    culling: {
+                                        max: 1
+                                    }
+                                }
+                            }
+                        },
+                        labels: true,
+                        legend: {
+                            show: false
+                        },
+                        color: {
+                            pattern: ['#fb6509', '#fa3405', '#b7010c', '#700d10', '#000000']
+                        }
+                    });
+
+                    return chartGenerate;
+                };
+
             return {
                 restrict    : 'E',
                 replace     : true,
@@ -129,8 +128,32 @@
                     }
                 }
             };
+        },
+
+        scrollTo = function ($timeout) {
+            return {
+                restrict    : 'A',
+                link        : function (scope, element, attrs) {
+                    attrs.$observe('scrollOn', function (newValue) {
+                        var scrollFocus,
+                            scrollTop;
+
+                        if (newValue === 'true') {
+                            $timeout(function () {
+                                scrollFocus = element.find('.scroll-focus').eq(0);
+                                scrollTop = scrollFocus.offset().top;
+
+                                scrollFocus.focus();
+
+                                $("html, body").animate({ scrollTop: scrollTop + "px" }, 200);
+                            });
+                        }
+                    });
+                }
+            };
         };
 
     angular.module('ads18fApp').directive('fillInTheBlank', ['typeAhead', fillInTheBlank])
-                               .directive('chart', [chart]);
+                               .directive('chart', [chart])
+                               .directive('scrollTo', ['$timeout', scrollTo]);
 }());

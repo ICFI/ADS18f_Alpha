@@ -2885,7 +2885,6 @@ main {
   background-image: url('/img/bg-med-libs.jpg');
   background-position: center bottom;
   background-repeat: repeat-x;
-  border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
   padding: 15px 0 200px;
   margin-bottom: 0;
@@ -2914,7 +2913,7 @@ main {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff00d57f', endColorstr='#ff00a568', GradientType=0);
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
   display: inline-block;
-  min-width: 200px;
+  min-width: 180px;
 }
 .fill-in-the-blank {
   display: inline-block;
@@ -2926,6 +2925,7 @@ main {
   border-bottom: 2px solid #288ac9;
   position: relative;
   z-index: 2;
+  max-width: 375px;
 }
 .fill-in-the-blank .blank-label {
   position: absolute;
@@ -2959,7 +2959,7 @@ main {
 .search-result h2 {
   margin: 0 0 30px 0;
 }
-.search-result h2 :focus {
+.search-result h2:focus {
   outline: none;
 }
 .search-result h3 {
@@ -2995,7 +2995,7 @@ footer#site-footer .logo {
   margin: 0;
 }
 #logo-openFDA {
-  background-image: url('/img/logo-openFDA.gif');
+  background-image: url('/img/logo-openFDA.png');
   width: 141px;
   height: 25px;
   background-position: 0 0;
@@ -3030,11 +3030,6 @@ footer#site-footer .logo {
   .medlib p {
     font-size: 30.75px;
   }
-  .btn.btn-medCheck {
-    font-size: 16px;
-    display: block;
-    margin: 15px auto 0;
-  }
 }
 @media (max-width: 639px) {
   .medlib {
@@ -3053,6 +3048,11 @@ footer#site-footer .logo {
     background-repeat: no-repeat;
     background-size: 200px 33px;
     margin: 0;
+  }
+  .btn.btn-medCheck {
+    font-size: 16px;
+    display: block;
+    margin: 15px auto 0;
   }
   #site-footer {
     font-size: 14px;

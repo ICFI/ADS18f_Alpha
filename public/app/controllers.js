@@ -87,8 +87,8 @@
                 $("body").scrollTop(0);
             };
 
-        $scope.drug              = 'Oxycontin';
-        $scope.symptom           = 'Constipation';
+        $scope.drug              = '';
+        $scope.symptom           = '';
 
         $scope.formIsValid       = formIsValid;
         $scope.hasResult         = false;
@@ -97,8 +97,6 @@
 
         $scope.submit            = submit;
         $scope.searchMore        = searchMore;
-
-        submit();
 
         $scope.myMedChartTitle   = 'Percent of Reported Adverse Effects for Medicine';
         $scope.myMedChartData    = [];

@@ -1,4 +1,4 @@
-/*globals angular, google, c3 */
+/*globals angular, google, c3, Modernizr */
 
 (function () {
     'use strict';
@@ -24,6 +24,7 @@
                         },
                         minChars : 1,
                         onSelect: function (event, term) {
+                            console.log(term);
                             scope.$apply(function () {
                                 scope.theBlank = term;
                             });
@@ -53,43 +54,6 @@
                     });
 
                     return chartGenerate;
-                },
-
-                makeBar = function (columns, categories, chartElement) {
-                    var chartGenerate = c3.generate({
-                        bindto: chartElement,
-                        data: {
-                            columns: columns,
-                            type : 'bar',
-                        },
-                        size: {
-                            width: chartWidth
-                        },
-                        axis: {
-                            rotated: true,
-                            x: {
-                                type: 'categorized',
-                                categories: categories
-                            },
-                            y: {
-                                show: false,
-                                ticks: {
-                                    culling: {
-                                        max: 1
-                                    }
-                                }
-                            }
-                        },
-                        labels: true,
-                        legend: {
-                            show: false
-                        },
-                        color: {
-                            pattern: ['#fb6509', '#fa3405', '#b7010c', '#700d10', '#000000']
-                        }
-                    });
-
-                    return chartGenerate;
                 };
 
             return {
@@ -98,38 +62,23 @@
                 transclude  : true,
                 template    : '<div class="chart-wrapper" aria-hidden="true"><h3 class="chart-header"><ng-transclude></ng-transclude></h3><div class="chart"></div></div>',
                 scope       : {
-                    type      : '@',
                     chartData : '='
                 },
                 link        : function (scope, element) {
                     var chartElement = element.find('.chart')[0],
                         chartGenerate;
 
-                    if (scope.type !== 'top_five') {
-                        scope.$watch('chartData', function (newchartData, oldchartData) {
-                            if (oldchartData.length) {
-                                chartGenerate.destroy();
-                                element.attr('aria-hidden', true);
-                            }
+                    scope.$watch('chartData', function (newchartData, oldchartData) {
+                        if (oldchartData.length) {
+                            chartGenerate.destroy();
+                            element.attr('aria-hidden', true);
+                        }
 
-                            if (newchartData.length) {
-                                chartGenerate = makeDonut(newchartData, chartElement);
-                                element.attr('aria-hidden', false);
-                            }
-                        });
-                    } else {
-                        scope.$watch('chartData', function (newchartData, oldchartData) {
-                            if (!$.isEmptyObject(oldchartData)) {
-                                chartGenerate.destroy();
-                                element.attr('aria-hidden', true);
-                            }
-
-                            if (!$.isEmptyObject(newchartData)) {
-                                chartGenerate = makeBar(newchartData.columns, newchartData.categories, chartElement);
-                                element.attr('aria-hidden', false);
-                            }
-                        });
-                    }
+                        if (newchartData.length) {
+                            chartGenerate = makeDonut(newchartData, chartElement);
+                            element.attr('aria-hidden', false);
+                        }
+                    });
                 }
             };
         },
@@ -161,7 +110,9 @@
             return {
                 restrict    : 'A',
                 link        : function (scope, element) {
-                    element.tooltip();
+                    if (!Modernizr.touch) {
+                        element.tooltip();
+                    }
                 }
             };
         };

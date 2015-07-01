@@ -1,6 +1,5 @@
 .page-container {
     width: @screen-lg;
-    padding: 0 @grid-gutter-width;
     margin: 0 auto;
 }
 
@@ -27,13 +26,20 @@ main {
     min-width: 180px;
 }
 
+.btn {
+    font-weight: 600;
+}
+.btn-lg {
+    font-size: @font-size-base;
+    padding: 13px 16px;
+}
 .btn.btn-danger {
     color: #ffffff;
     background: #d30606;
     #gradient.vertical(#d30606, #ae0404);
     box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
     display: inline-block;
-    min-width: 180px;
+    min-width: 150px;
 }
 
 .medlib {
@@ -49,6 +55,10 @@ main {
         font-size: @font-size-h1;
         font-weight: 300;
         .transition(font-size 125ms);
+    }
+
+    form {
+        padding: 0 @grid-gutter-width / 2;
     }
 
     input {
@@ -114,7 +124,6 @@ main {
     }
 
     .guide {
-        font-size: 18px;
         line-height: 1.8em;
     }
 
@@ -134,6 +143,12 @@ main {
     aside {
         border-left: 1px solid #cdcdcd;
     }
+}
+
+.bg-emergency {
+    padding: 10px;
+    margin-bottom: @grid-gutter-width / 2;
+    .bg-variant(#ffffff);
 }
 
 footer#site-footer {
@@ -175,12 +190,29 @@ footer#site-footer {
     }
 }
 
-@media (max-width: @screen-md-max) {
+@media (max-width: (@screen-md-max + @grid-gutter-width)) {
+    #site-header {
+        padding: 10px @grid-gutter-width / 2;
+    }
+
     .row { margin: 0; }
     .page-container {
         width: 100%;
     }
 
+    #search-result-header {
+        padding: 0 @grid-gutter-width / 2;
+    }
+
+    .medlib form {
+        padding: 0 @grid-gutter-width;
+    }
+    .medlib p {
+        font-size: @font-size-h1 * .75;
+    }
+}
+
+@media (max-width: @screen-md-max) {
     #search-result-header {
         padding: 0 @grid-gutter-width / 2;
     }
@@ -194,8 +226,17 @@ footer#site-footer {
     .medlib {
         background-image: url('/img/bg-med-libs.sm.jpg');
         padding-bottom: 100px;
+
+        .btn {
+            font-size: @font-size-small;
+            display: block;
+            margin: @grid-gutter-width / 2 auto 0;
+        }
     }
-    h2,
+
+    h2 {
+        font-size: @font-size-h1 * .6;
+    }
     .medlib p {
         font-size: @font-size-h1 * .6;
     }
@@ -205,14 +246,17 @@ footer#site-footer {
         margin: 0;
     }
 
-    .btn.btn-medCheck {
-        font-size: @font-size-base;
-        display: block;
-        margin: @grid-gutter-width / 2 auto 0;
-    }
+    .search-result {
+        .bg-emergency,
+        .guide {
+            font-size: @font-size-small;
+        }
 
-    .search-result aside {
-        border-left: none;
+        aside {
+            border-left: none;
+            margin-top: @grid-gutter-width/2;
+            padding-top: @grid-gutter-width/2;
+        }
     }
 
     #site-footer { font-size: @font-size-small; }
@@ -233,7 +277,6 @@ footer#site-footer {
 }
 
 @media (max-width: @screen-xs-max) {
-    h2,
     .medlib p { font-size: @font-size-large; }
     .fill-in-the-blank .blank-label { font-size: .75em; }
 }

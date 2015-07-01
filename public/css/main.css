@@ -270,7 +270,7 @@ html {
 }
 body {
   font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.42857143;
   color: #666666;
   background-color: #ffffff;
@@ -328,8 +328,8 @@ img {
   border-radius: 50%;
 }
 hr {
-  margin-top: 22px;
-  margin-bottom: 22px;
+  margin-top: 25px;
+  margin-bottom: 25px;
   border: 0;
   border-top: 1px solid #eeeeee;
 }
@@ -406,8 +406,8 @@ h2,
 .h2,
 h3,
 .h3 {
-  margin-top: 22px;
-  margin-bottom: 11px;
+  margin-top: 25px;
+  margin-bottom: 12.5px;
 }
 h1 small,
 .h1 small,
@@ -429,8 +429,8 @@ h5,
 .h5,
 h6,
 .h6 {
-  margin-top: 11px;
-  margin-bottom: 11px;
+  margin-top: 12.5px;
+  margin-bottom: 12.5px;
 }
 h4 small,
 .h4 small,
@@ -448,45 +448,45 @@ h6 .small,
 }
 h1,
 .h1 {
-  font-size: 41px;
+  font-size: 39px;
 }
 h2,
 .h2 {
-  font-size: 41px;
+  font-size: 39px;
 }
 h3,
 .h3 {
-  font-size: 16px;
+  font-size: 18px;
 }
 h4,
 .h4 {
-  font-size: 20px;
+  font-size: 23px;
 }
 h5,
 .h5 {
-  font-size: 16px;
+  font-size: 18px;
 }
 h6,
 .h6 {
-  font-size: 14px;
+  font-size: 16px;
 }
 p {
-  margin: 0 0 11px;
+  margin: 0 0 12.5px;
 }
 .lead {
-  margin-bottom: 22px;
-  font-size: 18px;
+  margin-bottom: 25px;
+  font-size: 20px;
   font-weight: 300;
   line-height: 1.4;
 }
 @media (min-width: 480px) {
   .lead {
-    font-size: 24px;
+    font-size: 27px;
   }
 }
 small,
 .small {
-  font-size: 87%;
+  font-size: 77%;
 }
 mark,
 .mark {
@@ -582,14 +582,14 @@ a.bg-danger:hover {
   background-color: #e4b9b9;
 }
 .page-header {
-  padding-bottom: 10px;
-  margin: 44px 0 22px;
+  padding-bottom: 11.5px;
+  margin: 50px 0 25px;
   border-bottom: 1px solid #eeeeee;
 }
 ul,
 ol {
   margin-top: 0;
-  margin-bottom: 11px;
+  margin-bottom: 12.5px;
 }
 ul ul,
 ol ul,
@@ -613,7 +613,7 @@ ol ol {
 }
 dl {
   margin-top: 0;
-  margin-bottom: 22px;
+  margin-bottom: 25px;
 }
 dt,
 dd {
@@ -649,9 +649,9 @@ abbr[data-original-title] {
   text-transform: uppercase;
 }
 blockquote {
-  padding: 11px 22px;
-  margin: 0 0 22px;
-  font-size: 20px;
+  padding: 12.5px 25px;
+  margin: 0 0 25px;
+  font-size: 22.5px;
   border-left: 5px solid #eeeeee;
 }
 blockquote p:last-child,
@@ -697,7 +697,7 @@ blockquote.pull-right .small:after {
   content: '\00A0 \2014';
 }
 address {
-  margin-bottom: 22px;
+  margin-bottom: 25px;
   font-style: normal;
   line-height: 1.42857143;
 }
@@ -1378,8 +1378,8 @@ legend {
   display: block;
   width: 100%;
   padding: 0;
-  margin-bottom: 22px;
-  font-size: 24px;
+  margin-bottom: 25px;
+  font-size: 27px;
   line-height: inherit;
   color: #333333;
   border: 0;
@@ -1423,16 +1423,16 @@ input[type="checkbox"]:focus {
 output {
   display: block;
   padding-top: 7px;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.42857143;
   color: #555555;
 }
 .form-control {
   display: block;
   width: 100%;
-  height: 36px;
+  height: 39px;
   padding: 6px 12px;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.42857143;
   color: #555555;
   background-color: #ffffff;
@@ -1482,7 +1482,7 @@ input[type="search"] {
   input[type="time"],
   input[type="datetime-local"],
   input[type="month"] {
-    line-height: 36px;
+    line-height: 39px;
   }
   input[type="date"].input-sm,
   input[type="time"].input-sm,
@@ -1517,7 +1517,7 @@ input[type="search"] {
 }
 .radio label,
 .checkbox label {
-  min-height: 22px;
+  min-height: 25px;
   padding-left: 20px;
   margin-bottom: 0;
   font-weight: normal;
@@ -1574,7 +1574,7 @@ fieldset[disabled] .checkbox label {
   padding-top: 7px;
   padding-bottom: 7px;
   margin-bottom: 0;
-  min-height: 38px;
+  min-height: 43px;
 }
 .form-control-static.input-lg,
 .form-control-static.input-sm {
@@ -1616,7 +1616,7 @@ select[multiple].form-group-sm .form-control {
   padding: 5px 10px;
   font-size: 14px;
   line-height: 1.5;
-  min-height: 36px;
+  min-height: 39px;
 }
 .input-lg {
   height: 49px;
@@ -1653,13 +1653,13 @@ select[multiple].form-group-lg .form-control {
   padding: 10px 16px;
   font-size: 20px;
   line-height: 1.3333333;
-  min-height: 42px;
+  min-height: 45px;
 }
 .has-feedback {
   position: relative;
 }
 .has-feedback .form-control {
-  padding-right: 45px;
+  padding-right: 48.75px;
 }
 .form-control-feedback {
   position: absolute;
@@ -1667,9 +1667,9 @@ select[multiple].form-group-lg .form-control {
   right: 0;
   z-index: 2;
   display: block;
-  width: 36px;
-  height: 36px;
-  line-height: 36px;
+  width: 39px;
+  height: 39px;
+  line-height: 39px;
   text-align: center;
   pointer-events: none;
 }
@@ -1774,7 +1774,7 @@ select[multiple].form-group-lg .form-control {
   color: #a94442;
 }
 .has-feedback label ~ .form-control-feedback {
-  top: 27px;
+  top: 30px;
 }
 .has-feedback label.sr-only ~ .form-control-feedback {
   top: 0;
@@ -1845,7 +1845,7 @@ select[multiple].form-group-lg .form-control {
 }
 .form-horizontal .radio,
 .form-horizontal .checkbox {
-  min-height: 29px;
+  min-height: 32px;
 }
 .form-horizontal .form-group {
   margin-left: -25px;
@@ -1883,7 +1883,7 @@ select[multiple].form-group-lg .form-control {
   border: 1px solid transparent;
   white-space: nowrap;
   padding: 6px 12px;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.42857143;
   border-radius: 0;
   -webkit-user-select: none;
@@ -2301,7 +2301,7 @@ tbody.collapse.in {
 }
 .jumbotron p {
   margin-bottom: 15px;
-  font-size: 24px;
+  font-size: 27px;
   font-weight: 200;
 }
 .jumbotron > hr {
@@ -2325,12 +2325,12 @@ tbody.collapse.in {
   }
   .jumbotron h1,
   .jumbotron .h1 {
-    font-size: 72px;
+    font-size: 81px;
   }
 }
 .alert {
   padding: 15px;
-  margin-bottom: 22px;
+  margin-bottom: 25px;
   border: 1px solid transparent;
   border-radius: 0;
 }
@@ -2966,7 +2966,6 @@ a.list-group-item-danger.active:focus {
 }
 .page-container {
   width: 800px;
-  padding: 0 50px;
   margin: 0 auto;
 }
 #site-header {
@@ -2996,6 +2995,13 @@ main {
   display: inline-block;
   min-width: 180px;
 }
+.btn {
+  font-weight: 600;
+}
+.btn-lg {
+  font-size: 18px;
+  padding: 13px 16px;
+}
 .btn.btn-danger {
   color: #ffffff;
   background: #d30606;
@@ -3006,7 +3012,7 @@ main {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd30606', endColorstr='#ffae0404', GradientType=0);
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
   display: inline-block;
-  min-width: 180px;
+  min-width: 150px;
 }
 .medlib {
   background-image: url('/img/bg-med-libs.jpg');
@@ -3017,11 +3023,14 @@ main {
   margin-bottom: 0;
 }
 .medlib p {
-  font-size: 41px;
+  font-size: 39px;
   font-weight: 300;
   -webkit-transition: font-size 125ms;
   -o-transition: font-size 125ms;
   transition: font-size 125ms;
+}
+.medlib form {
+  padding: 0 25px;
 }
 .medlib input {
   font-weight: normal;
@@ -3081,7 +3090,6 @@ main {
   font-weight: bold;
 }
 .search-result .guide {
-  font-size: 18px;
   line-height: 1.8em;
 }
 .search-result .chart-wrapper {
@@ -3097,6 +3105,14 @@ main {
 }
 .search-result aside {
   border-left: 1px solid #cdcdcd;
+}
+.bg-emergency {
+  padding: 10px;
+  margin-bottom: 25px;
+  background-color: #ffffff;
+}
+a.bg-emergency:hover {
+  background-color: #e6e6e6;
 }
 footer#site-footer {
   text-align: center;
@@ -3142,7 +3158,10 @@ footer#site-footer .logo {
     background-size: 141px 25px;
   }
 }
-@media (max-width: 799px) {
+@media (max-width: 849px) {
+  #site-header {
+    padding: 10px 25px;
+  }
   .row {
     margin: 0;
   }
@@ -3152,8 +3171,19 @@ footer#site-footer .logo {
   #search-result-header {
     padding: 0 25px;
   }
+  .medlib form {
+    padding: 0 50px;
+  }
   .medlib p {
-    font-size: 30.75px;
+    font-size: 29.25px;
+  }
+}
+@media (max-width: 799px) {
+  #search-result-header {
+    padding: 0 25px;
+  }
+  .medlib p {
+    font-size: 29.25px;
   }
 }
 @media (max-width: 639px) {
@@ -3161,9 +3191,16 @@ footer#site-footer .logo {
     background-image: url('/img/bg-med-libs.sm.jpg');
     padding-bottom: 100px;
   }
-  h2,
+  .medlib .btn {
+    font-size: 14px;
+    display: block;
+    margin: 25px auto 0;
+  }
+  h2 {
+    font-size: 23.4px;
+  }
   .medlib p {
-    font-size: 24.6px;
+    font-size: 23.4px;
   }
   #logo-medCheck {
     background-image: url('/img/logo-medCheck.sm.png');
@@ -3174,13 +3211,14 @@ footer#site-footer .logo {
     background-size: 200px 33px;
     margin: 0;
   }
-  .btn.btn-medCheck {
-    font-size: 16px;
-    display: block;
-    margin: 25px auto 0;
+  .search-result .bg-emergency,
+  .search-result .guide {
+    font-size: 14px;
   }
   .search-result aside {
     border-left: none;
+    margin-top: 25px;
+    padding-top: 25px;
   }
   #site-footer {
     font-size: 14px;
@@ -3208,7 +3246,6 @@ footer#site-footer .logo {
   }
 }
 @media (max-width: 479px) {
-  h2,
   .medlib p {
     font-size: 20px;
   }

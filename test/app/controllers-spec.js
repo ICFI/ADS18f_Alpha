@@ -6,6 +6,7 @@ describe("Ads18fController", function () {
         element,
         httpBackend,
         DATA_PATHS,
+        MESSAGES,
         foundResponse = {
             "found"          : true,
             "brand_name"     : "oxycodone",
@@ -34,7 +35,7 @@ describe("Ads18fController", function () {
 
     beforeEach(module('ads18fApp'));
 
-    beforeEach(inject(function ($controller, $rootScope, $compile, $httpBackend, _DATA_PATHS_) {
+    beforeEach(inject(function ($controller, $rootScope, $compile, $httpBackend, _DATA_PATHS_, _MESSAGES_) {
         scope       = $rootScope.$new();
         controller  = $controller('Ads18fController', {
             $scope: scope
@@ -43,6 +44,7 @@ describe("Ads18fController", function () {
         element     = $compile(element)(scope);
         httpBackend = $httpBackend;
         DATA_PATHS  = _DATA_PATHS_;
+        MESSAGES  = _MESSAGES_;
     }));
 
     it("should have no search criteria", function () {
@@ -74,7 +76,7 @@ describe("Ads18fController", function () {
 
         httpBackend.flush();
 
-        expect(scope.hasSideEffectYesNo).to.equal('Yes');
+        expect(scope.hasSideEffectYesNo).to.equal(MESSAGES.YES);
         expect(scope.hasResult).to.be.true;
         expect(scope.hasSideEffect).to.be.true;
     });
@@ -82,6 +84,9 @@ describe("Ads18fController", function () {
     it("should clear search form and hide previous search when 'Search More Side Effects is clicked'", function () {
         httpBackend.when('GET', DATA_PATHS.DRUG_SYMPTOM.replace('%drug%', drug).replace('%symptom%', symptom))
             .respond(notFoundResponse);
+
+        httpBackend.when('GET', '/api/v1/chart/any_med/' + drug + '/' + symptom)
+            .respond(donutResponse);
 
         scope.drug = drug;
         scope.symptom = symptom;
@@ -92,7 +97,7 @@ describe("Ads18fController", function () {
 
         httpBackend.flush();
 
-        expect(scope.hasSideEffectYesNo).to.equal('No');
+        expect(scope.hasSideEffectYesNo).to.equal(MESSAGES.NO);
         expect(scope.hasResult).to.be.true;
         expect(scope.hasSideEffect).to.be.false;
 

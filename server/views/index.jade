@@ -42,7 +42,7 @@ html(lang="en-us")
                         button(type="submit" class="btn btn-lg btn-primary") Find Out
             div.search-result-wrapper
                 section(data-ng-class="{in: hasResult}" class="collapse page-container search-result" data-scroll-to data-scroll-on="{{setFocus}}")
-                    h2(tabindex="-1" id="search-result-header" class="scroll-focus") <strong>{{hasSideEffectYesNo}}</strong>, {{resultDrug}} {{hasSideEffectText}} {{resultSymptom}}.
+                    h2(tabindex="-1" id="search-result-header" class="scroll-focus") <span ng-bind-html="hasSideEffectYesNo"></span>, {{resultDrug}} {{hasSideEffectText}} {{resultSymptom}}.
                     div.row
                         div(class="col-sm-12 col-md-7")
                             p(class="bg-emergency") Everyone reacts differently to medication. Always check with your doctor or healthcare professional for medical advice. <strong><em>If this is a medical emergency, call 911 immediately.</em></strong>
@@ -53,7 +53,7 @@ html(lang="en-us")
                         aside(class="col-sm-12 col-md-5")
                             a(href="https://www.accessdata.fda.gov/scripts/medwatch/index.cfm?action=reporting.home" class="btn btn-lg btn-danger" data-tooltip="data-tooltip" data-toggle="tooltip" data-placement="top" title="When you report a side effect to the FDA, you help make medicine safer for everyone.") Report a Side Effect
                             chart(data-chart-data="myMedChartData" data-ng-class="{'collapse' : (!hasResult || !hasSideEffect || myMedChartHasError)}") {{myMedChartTitle}}
-                            chart(data-chart-data="anyMedChartData" data-ng-class="{'collapse' : (!hasResult || !hasSideEffect || anyMedChartHasError)}") {{anyMedChartTitle}}
+                            chart(data-chart-data="anyMedChartData" data-ng-class="{'collapse' : (!hasResult || anyMedChartHasError)}") {{anyMedChartTitle}}
                 div(data-ng-class="{in: hasResult}" class="collapse end-gradient")
 
         footer(class="page-container" role="contentinfo" id="site-footer")

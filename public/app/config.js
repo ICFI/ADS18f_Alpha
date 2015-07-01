@@ -12,10 +12,10 @@
         MESSAGES = {
             'SERVER_ERROR'      : 'Something went awry.',
             'CHART_DATA_ERROR'  : 'Chart data not available.',
-            'YES'               : 'Yes',
-            'NO'                : 'No',
+            'YES'               : '<strong>Yes</strong>',
+            'NO'                : '<strong>Sorry,</strong> we don’t know if',
             'YES_TEXT'          : 'can cause',
-            'NO_TEXT'           : 'is not known to cause'
+            'NO_TEXT'           : 'causes'
         };
 
     angular.module('ads18fApp')

@@ -98,7 +98,7 @@
 
                                 scrollFocus.focus();
 
-                                $("html, body").animate({ scrollTop: scrollTop + "px" }, 200);
+                                $("html, body").animate({ scrollTop: scrollTop + "px" }, 150);
                             });
                         }
                     });

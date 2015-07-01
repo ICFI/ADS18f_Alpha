@@ -29,14 +29,6 @@
 
                     promiseArray.push(myMedChartPromise);
 
-                    anyMedChartPromise = getChartData.get({
-                        'type'    : 'any_med',
-                        'drug'    : encodeURIComponent($scope.drug),
-                        'symptom' : encodeURIComponent($scope.symptom)
-                    });
-
-                    promiseArray.push(anyMedChartPromise);
-
                     myMedChartPromise.then(
                         function (data) {
                             $scope.myMedChartData = data.data;
@@ -47,22 +39,31 @@
                             $scope.myMedChartHasError = true;
                         }
                     );
-
-                    anyMedChartPromise.then(
-                        function (data) {
-                            $scope.anyMedChartData = data.data;
-                            $scope.anyMedChartTitle = data.title;
-                            $scope.anyMedChartHasError = false;
-                        },
-                        function () {
-                            $scope.anyMedChartHasError = true;
-                        }
-                    );
                 }
+
+                anyMedChartPromise = getChartData.get({
+                    'type'    : 'any_med',
+                    'drug'    : encodeURIComponent($scope.drug),
+                    'symptom' : encodeURIComponent($scope.symptom)
+                });
+
+                promiseArray.push(anyMedChartPromise);
+
+                anyMedChartPromise.then(
+                    function (data) {
+                        $scope.anyMedChartData = data.data;
+                        $scope.anyMedChartTitle = data.title;
+                        $scope.anyMedChartHasError = false;
+                    },
+                    function () {
+                        $scope.anyMedChartHasError = true;
+                    }
+                );
 
                 $q.all(promiseArray).then(
                     function () {
                         $scope.hasResult = true;
+                        $scope.setFocus = true;
                     },
                     function () {
                         $log.warn('there was an error loading chart data');
@@ -72,6 +73,7 @@
             },
 
             submit = function () {
+                $scope.setFocus = false;
                 var params = {
                         'drug'    : encodeURIComponent($scope.drug),
                         'symptom' : encodeURIComponent($scope.symptom)

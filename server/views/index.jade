@@ -28,6 +28,7 @@ html(lang="en-us")
         meta(name="msapplication-TileColor" content="#da532c")
         meta(name="msapplication-TileImage" content="/favicon/mstile-144x144.png")
         meta(name="theme-color" content="#ffffff")
+        script(src='/vendor/modernizr.custom.js')
 
     body(data-ng-app='ads18fApp')
         header(id="site-header" role="banner")
@@ -40,20 +41,19 @@ html(lang="en-us")
                         | Can <fill-in-the-blank label="Enter Medicine" data-the-blank="drug" data-typeahead-query-field="DRUG"></fill-in-the-blank> cause <fill-in-the-blank label="Enter Symptom" data-the-blank="symptom" data-typeahead-query-field="SYMPTOM"></fill-in-the-blank>?
                         button(type="submit" class="btn btn-lg btn-primary") Find Out
             div.search-result-wrapper
-                section(data-ng-class="{in: hasResult}" class="collapse page-container search-result" data-scroll-to data-scroll-on="{{hasResult}}")
+                section(data-ng-class="{in: hasResult}" class="collapse page-container search-result" data-scroll-to data-scroll-on="{{setFocus}}")
                     h2(tabindex="-1" id="search-result-header" class="scroll-focus") <strong>{{hasSideEffectYesNo}}</strong>, {{resultDrug}} {{hasSideEffectText}} {{resultSymptom}}.
                     div.row
                         div(class="col-sm-12 col-md-7")
-                            p(class="guide") <strong>Additional Information:</strong> {{guide}}
+                            p(class="bg-emergency") Everyone reacts differently to medication. Always check with your doctor or healthcare professional for medical advice. <strong><em>If this is a medical emergency, call 911 immediately.</em></strong>
+                            p(class="guide" data-ng-class="{'collapse' : (guide === undefined || guide.length === 0)}") <strong>Additional Information:</strong> {{guide}}
                             footer
                                 p.disclaimer <strong>Disclaimer:</strong> openFDA is a beta research project and is not for clinical use. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated.
                                 a(data-ng-click="searchMore()" class="link-search-more btn btn-lg btn-primary") Search More Side Effects
                         aside(class="col-sm-12 col-md-5")
-                            div
-                                a(href="https://www.accessdata.fda.gov/scripts/medwatch/index.cfm?action=reporting.home" class="btn btn-lg btn-danger" data-tooltip="data-tooltip" data-toggle="tooltip" data-placement="top" title="When you report a side effect to the FDA, you help make medicine safer for everyone.") Report a Side Effect
-                                chart(data-type="my_med" data-chart-data="myMedChartData" data-ng-class="{'collapse' : (!hasResult || !hasSideEffect || myMedChartHasError)}") {{myMedChartTitle}}
-                                chart(data-type="any_med" data-chart-data="anyMedChartData" data-ng-class="{'collapse' : (!hasResult || !hasSideEffect || anyMedChartHasError)}") {{anyMedChartTitle}}
-                                chart(data-type="top_five" data-chart-data="topFiveChartData" data-ng-class="{'collapse' : (!hasResult || hasSideEffect || topFiveChartHasError)}") {{topFiveChartTitle}}
+                            a(href="https://www.accessdata.fda.gov/scripts/medwatch/index.cfm?action=reporting.home" class="btn btn-lg btn-danger" data-tooltip="data-tooltip" data-toggle="tooltip" data-placement="top" title="When you report a side effect to the FDA, you help make medicine safer for everyone.") Report a Side Effect
+                            chart(data-chart-data="myMedChartData" data-ng-class="{'collapse' : (!hasResult || !hasSideEffect || myMedChartHasError)}") {{myMedChartTitle}}
+                            chart(data-chart-data="anyMedChartData" data-ng-class="{'collapse' : (!hasResult || !hasSideEffect || anyMedChartHasError)}") {{anyMedChartTitle}}
                 div(data-ng-class="{in: hasResult}" class="collapse end-gradient")
 
         footer(class="page-container" role="contentinfo" id="site-footer")

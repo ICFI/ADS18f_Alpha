@@ -29,11 +29,6 @@ describe("Ads18fController", function () {
                 ['All other adverse effects reported', 24000]
             ]
         },
-        barResponse = {
-            'title': "Top 5 most reported side effects from Oxycontin",
-            'columns': [["Side Effects", 2750, 2350, 2233, 2130, 1386]],
-            'categories' : ["DRUG DEPENDENCE", "PAIN", "DRUG ABUSER", "NAUSEA", "VOMITING"]
-        },
         drug         = "oxycodone",
         symptom      = "dizziness";
 
@@ -84,33 +79,9 @@ describe("Ads18fController", function () {
         expect(scope.hasSideEffect).to.be.true;
     });
 
-    it("should display search results - hasSideEffectYesNo = 'No' and medicine guide should be hidden", function () {
-        httpBackend.when('GET', DATA_PATHS.DRUG_SYMPTOM.replace('%drug%', drug).replace('%symptom%', symptom))
-            .respond(notFoundResponse);
-
-        httpBackend.when('GET', '/api/v1/chart/top_five/' + drug + '/' + symptom)
-            .respond(barResponse);
-
-        scope.drug = drug;
-        scope.symptom = symptom;
-
-        scope.$digest();
-
-        scope.submit();
-
-        httpBackend.flush();
-
-        expect(scope.hasSideEffectYesNo).to.equal('No');
-        expect(scope.hasResult).to.be.true;
-        expect(scope.hasSideEffect).to.be.false;
-    });
-
     it("should clear search form and hide previous search when 'Search More Side Effects is clicked'", function () {
         httpBackend.when('GET', DATA_PATHS.DRUG_SYMPTOM.replace('%drug%', drug).replace('%symptom%', symptom))
             .respond(notFoundResponse);
-
-        httpBackend.when('GET', '/api/v1/chart/top_five/' + drug + '/' + symptom)
-            .respond(barResponse);
 
         scope.drug = drug;
         scope.symptom = symptom;

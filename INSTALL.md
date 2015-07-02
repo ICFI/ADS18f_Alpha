@@ -38,7 +38,7 @@ You can confirm that it's running by visiting
 ```sh
 curl -s http://localhost:3000
 ```
-For more robust installations, it is recommended to use a process service such as PM2.
+For productioninstallations, it is recommended to use a process service such as PM2.
 
 ### Configure ElasticSearch
 [STEVE - NEED SCRIPT TO POPULATE INDEX HERE]

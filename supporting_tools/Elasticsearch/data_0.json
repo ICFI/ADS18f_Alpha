@@ -1,0 +1,22 @@
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-25"}
+{"official_side_effect" : "Back pain", "capitalized_case" : "Back pain",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-50"}
+{"official_side_effect" : "Cerebral hemorrhage", "capitalized_case" : "Cerebral hemorrhage",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-75"}
+{"official_side_effect" : "Diarrhea", "capitalized_case" : "Diarrhea",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-100"}
+{"official_side_effect" : "Expulsion, complete or partial", "capitalized_case" : "Expulsion, complete or partial",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-125"}
+{"official_side_effect" : "hemoptysis", "capitalized_case" : "hemoptysis",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-150"}
+{"official_side_effect" : "jaundice (yellowing of the skin or eyes)", "capitalized_case" : "jaundice (yellowing of the skin or eyes)",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-175"}
+{"official_side_effect" : "Nasal congestion", "capitalized_case" : "Nasal congestion",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-200"}
+{"official_side_effect" : "Pelvic pain", "capitalized_case" : "Pelvic pain",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-225"}
+{"official_side_effect" : "redness of the skin", "capitalized_case" : "redness of the skin",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-250"}
+{"official_side_effect" : "sour stomach", "capitalized_case" : "sour stomach",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-275"}
+{"official_side_effect" : "trouble sleeping", "capitalized_case" : "trouble sleeping",  "dc_title" : " - ", "dc_description" : ""}

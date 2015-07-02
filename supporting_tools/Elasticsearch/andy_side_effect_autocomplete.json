@@ -1,0 +1,26 @@
+{ "size": 0,
+  "aggs": {
+    "autocomplete": {
+      "terms": {
+        "field": "capitalized_case.raw",
+        "order": {
+          "_term": "asc"
+        },
+        "include": {
+		          "pattern": "[lL][oO][wW].*"
+        },
+        "size" : 5
+      }
+    }
+  },
+  "query": {
+
+        "bool": {
+		  "must" : [
+		  				{ "prefix": {"capitalized_case": {"value": "low"}} },
+		  				{ "match" : {"_type" : "side_effect" }}
+		  			]
+        }
+
+  }
+}

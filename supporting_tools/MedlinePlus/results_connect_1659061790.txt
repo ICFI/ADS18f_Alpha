@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xml:base="http://apps.nlm.nih.gov/medlineplus/services/" xml:lang="en" xmlns="http://www.w3.org/2005/Atom" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><title type="text">MedlinePlus Connect</title><subtitle type="text">MedlinePlus Connect results for NDC 1659061790</subtitle><author><name>U.S. National Library of Medicine</name><uri>http://www.nlm.nih.gov</uri></author><updated>2015-06-30T07:06:40Z</updated><category scheme="mainSearchCriteria.v.c" term="1659061790"/><category scheme="mainSearchCriteria.v.cs" term="2.16.840.1.113883.6.69"/><category scheme="mainSearchCriteria.v.dn" term=""/><category scheme="informationRecipient" term="PAT"/><id></id><entry><title>Oxycodone</title><link href="http://www.nlm.nih.gov/medlineplus/druginfo/meds/a682132.html" rel="alternate"/><id>tag: nlm.nih.gov, 2015-30-06:/medlineplus/druginfo/meds/a682132.html</id><updated>2015-06-30T07:06:40Z</updated><summary></summary><author><name>American Society of Health-System Pharmacists</name></author></entry></feed>
+ 
+
+
+
+

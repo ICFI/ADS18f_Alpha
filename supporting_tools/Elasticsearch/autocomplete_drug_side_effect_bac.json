@@ -1,0 +1,27 @@
+{
+  "size": 0,
+  "aggs": {
+    "autocomplete": {
+      "terms": {
+        "field": "capitalized_case.raw",
+        "order": {
+          "_term": "asc"
+        },
+        "include": {
+		          "pattern": "[bB][aA][cC].*"
+        },
+        "size" : 5
+      }
+    }
+  },
+  "query": {
+
+        "bool": {
+		  "must" : [
+		  				{ "prefix": {"capitalized_case": {"value": "bac"}} },
+		  				{ "match" : {"_type" : "side_effect" }}
+		  			]
+        }
+
+  }
+}

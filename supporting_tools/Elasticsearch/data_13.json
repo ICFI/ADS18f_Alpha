@@ -1,0 +1,24 @@
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-13"}
+{"official_side_effect" : "amnesia", "capitalized_case" : "amnesia",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-38"}
+{"official_side_effect" : "bloody urine", "capitalized_case" : "bloody urine",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-63"}
+{"official_side_effect" : "Cough, persistent cough", "capitalized_case" : "Cough, persistent cough",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-88"}
+{"official_side_effect" : "dyspepsia", "capitalized_case" : "dyspepsia",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-113"}
+{"official_side_effect" : "frequent urge to urinate", "capitalized_case" : "frequent urge to urinate",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-138"}
+{"official_side_effect" : "Injection site ecchymosis", "capitalized_case" : "Injection site ecchymosis",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-163"}
+{"official_side_effect" : "loss of voice", "capitalized_case" : "loss of voice",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-188"}
+{"official_side_effect" : "oozing rash", "capitalized_case" : "oozing rash",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-213"}
+{"official_side_effect" : "Post-treatment sepsis", "capitalized_case" : "Post-treatment sepsis",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-238"}
+{"official_side_effect" : "Shortness of breath", "capitalized_case" : "Shortness of breath",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-263"}
+{"official_side_effect" : "syncope", "capitalized_case" : "syncope",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-288"}
+{"official_side_effect" : "venous leak", "capitalized_case" : "venous leak",  "dc_title" : " - ", "dc_description" : ""}

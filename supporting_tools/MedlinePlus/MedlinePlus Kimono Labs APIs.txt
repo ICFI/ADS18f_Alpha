@@ -1,0 +1,19 @@
+http://www.kimonolabs.com/api/ondemand/4goub78a?&kimpath1=medlineplus&kimpath2=druginfo&kimpath3=meds&kimpath4=a682132.html
+
+
+https://www.kimonolabs.com/api/ondemand/4goub78a?&kimpath1=medlineplus&kimpath2=druginfo&kimpath3=meds&kimpath4=a681004.html
+
+
+Drug list
+https://www.kimonolabs.com/api/2axrvtbm?apikey=ccd6193622ff57abba820615e71ac026
+https://www.kimonolabs.com/api/2axrvtbm?apikey=ccd6193622ff57abba820615e71ac026&kimoffset=2500
+
+Drug Details
+https://www.kimonolabs.com/api/27usqi04?apikey=ccd6193622ff57abba820615e71ac026&kimhash=1&kimwithurl=1
+https://www.kimonolabs.com/api/27usqi04?apikey=ccd6193622ff57abba820615e71ac026&kimhash=1&kimwithurl=1&kimoffset=2500
+https://www.kimonolabs.com/api/27usqi04?apikey=ccd6193622ff57abba820615e71ac026&kimhash=1&kimwithurl=1&kimoffset=5000
+https://www.kimonolabs.com/api/27usqi04?apikey=ccd6193622ff57abba820615e71ac026&kimhash=1&kimwithurl=1&kimoffset=7500
+https://www.kimonolabs.com/api/27usqi04?apikey=ccd6193622ff57abba820615e71ac026&kimhash=1&kimwithurl=1&kimoffset=10000
+
+
+

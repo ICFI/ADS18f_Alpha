@@ -1,0 +1,298 @@
+official_side_effect	capitalized_case
+abdominal pain	abdominal pain
+Abnormal dreams	Abnormal dreams
+abnormal gait	abnormal gait
+abnormal thinking	abnormal thinking
+abrasions	abrasions
+Abscess	Abscess
+acid	acid
+acne	acne
+Agitation	Agitation
+allergic reaction	allergic reaction
+Allergy	Allergy
+amnesia	amnesia
+Anemia	Anemia
+Angina Pectoris/Chest Pain	Angina Pectoris/Chest Pain
+anorexia	anorexia
+Anxiety	Anxiety
+apnea	apnea
+appetite disorder	appetite disorder
+Arrhythmia	Arrhythmia
+Arthralgia	Arthralgia
+Arthrosis	Arthrosis
+asthenia	asthenia
+auditory disturbance	auditory disturbance
+Back pain	Back pain
+Backache	Backache
+bad taste in mouth	bad taste in mouth
+balance disorder	balance disorder
+being forgetful	being forgetful
+belching	belching
+binge eating	binge eating
+Bitter Taste	Bitter Taste
+Bladder pain	Bladder pain
+Bleeding	Bleeding
+bloated	bloated
+Blood in stool	Blood in stool
+bloody nose	bloody nose
+bloody urine	bloody urine
+blurred vision	blurred vision
+Body ache	Body ache
+Body pain	Body pain
+Brain abscess	Brain abscess
+Brain cyst	Brain cyst
+breast enlargement 	breast enlargement 
+Breast pain	Breast pain
+bronchitis	bronchitis
+burning urination	burning urination
+Cardiovascular Flushing	Cardiovascular Flushing
+Cerebral edema	Cerebral edema
+Cerebral hemorrhage	Cerebral hemorrhage
+change in sense of taste	change in sense of taste
+Change in sleep pattern	Change in sleep pattern
+changes in vision	changes in vision
+Chest discomfort Tightness in chest Pressure in chest	Chest discomfort Tightness in chest Pressure in chest
+Chest pain	Chest pain
+chills	chills
+cloudy urine	cloudy urine
+confusion	confusion
+congestion	congestion
+Constipation	Constipation
+Cough	Cough
+Cough 	Cough 
+Cough, persistent cough	Cough, persistent cough
+Coughing	Coughing
+cramps	cramps
+dark urine	dark urine
+decrease in appetite	decrease in appetite
+Decrease in sexual desire	Decrease in sexual desire
+decreased appetite	decreased appetite
+Decreased hearing	Decreased hearing
+Decreased interest in sexual intercourse	Decreased interest in sexual intercourse
+decreased libido	decreased libido
+depression	depression
+Dermatologic Pruritus Rash	Dermatologic Pruritus Rash
+Diarrhea	Diarrhea
+difficulty having a bowel movement	difficulty having a bowel movement
+Difficulty swallowing	Difficulty swallowing
+Digestive	Digestive
+discoloration of penile head	discoloration of penile head
+dislocations	dislocations
+Dizziness	Dizziness
+Dizziness 	Dizziness 
+drowsiness	drowsiness
+dry mouth	dry mouth
+dry throat	dry throat
+Dysmenorrhea	Dysmenorrhea
+Dyspareunia	Dyspareunia
+dyspepsia	dyspepsia
+Dyspnea	Dyspnea
+ear congestion	ear congestion
+ear discomfort	ear discomfort
+ear disorder	ear disorder
+Earache	Earache
+edema	edema
+ejaculatory disturbances	ejaculatory disturbances
+Epistaxis	Epistaxis
+erythema	erythema
+euphoria	euphoria
+Expulsion	Expulsion
+Expulsion, complete or partial	Expulsion, complete or partial
+Eye discomfort and redness	Eye discomfort and redness
+Fatigue	Fatigue
+feeling of warmth	feeling of warmth
+feeling sad	feeling sad
+Fever	Fever
+flatulence	flatulence
+Flu syndrome 	Flu syndrome 
+flu-like symptoms	flu-like symptoms
+flushing	flushing
+Foot pain or ankle pain	Foot pain or ankle pain
+Foot swelling or leg swelling	Foot swelling or leg swelling
+fractures	fractures
+frequent urge to urinate	frequent urge to urinate
+frequent urination	frequent urination
+full feeling	full feeling
+gas	gas
+Gum hyperplasia	Gum hyperplasia
+hair loss	hair loss
+hallucinations	hallucinations
+Headaches	Headaches
+Heart palpitations	Heart palpitations
+heartburn	heartburn
+Hematuria (miscroscopic)	Hematuria (miscroscopic)
+Hemic and Lymphatic	Hemic and Lymphatic
+hemoptysis	hemoptysis
+hiccups	hiccups
+Hip pain	Hip pain
+Hives	Hives
+hoarseness	hoarseness
+Hyperglycemia	Hyperglycemia
+Hypertension	Hypertension
+Hypertension 	Hypertension 
+hypoventilation	hypoventilation
+inability to keep an erection	inability to keep an erection
+incontinence	incontinence
+increased appetite	increased appetite
+indigestion	indigestion
+Injection site ecchymosis	Injection site ecchymosis
+Injection site hematoma	Injection site hematoma
+Injection site reaction	Injection site reaction
+insomnia	insomnia
+Intracranial hemorrhage	Intracranial hemorrhage
+Intracranial hypertension	Intracranial hypertension
+irregular heartbeat	irregular heartbeat
+irregular pulse	irregular pulse
+irritation	irritation
+itch at tip of penis	itch at tip of penis
+itching	itching
+itchy eyes	itchy eyes
+jaundice (yellowing of the skin or eyes)	jaundice (yellowing of the skin or eyes)
+jaw discomfort	jaw discomfort
+Joint pain	Joint pain
+Knee pain	Knee pain
+labored breathing	labored breathing
+lacerations	lacerations
+lack of strength	lack of strength
+Leukorrhea	Leukorrhea
+lightheadedness	lightheadedness
+loss in sexual desire	loss in sexual desire
+loss of appetite	loss of appetite
+loss of interest	loss of interest
+loss of strength	loss of strength
+loss of voice	loss of voice
+Low back pain	Low back pain
+lower back pain	lower back pain
+Malaise	Malaise
+menstrual pain	menstrual pain
+metallic taste in the mouth	metallic taste in the mouth
+muscle aches	muscle aches
+Muscle Spasms	Muscle Spasms
+Musculoskeletal Arthritis	Musculoskeletal Arthritis
+Musculoskeletal pain	Musculoskeletal pain
+Myalgia	Myalgia
+Nasal Burning	Nasal Burning
+Nasal congestion	Nasal congestion
+Nasal congestion 	Nasal congestion 
+Nasopharyngitis	Nasopharyngitis
+nausea	nausea
+Nausea and emesis	Nausea and emesis
+Neck pain	Neck pain
+neck stiffness	neck stiffness
+Necrotizing enterocolitis	Necrotizing enterocolitis
+Nervous	Nervous
+Nervousness	Nervousness
+Nonurticarial Rash or Erythema	Nonurticarial Rash or Erythema
+Numbness and tingling	Numbness and tingling
+Numbness or tingling in hands	Numbness or tingling in hands
+oozing rash	oozing rash
+Pain	Pain
+Pain in extremity	Pain in extremity
+pain or tenderness around the eyes and cheekbones	pain or tenderness around the eyes and cheekbones
+painful urination	painful urination
+Palpitation	Palpitation
+papules	papules
+Paraesthesia	Paraesthesia
+paranoid reaction	paranoid reaction
+paresthesia	paresthesia
+Parosmia	Parosmia
+passing gas	passing gas
+Pelvic pain	Pelvic pain
+Penile edema	Penile edema
+Penile fibrosis	Penile fibrosis
+Penile pain	Penile pain
+Penile rash	Penile rash
+penile skin tear	penile skin tear
+Penis numbness	Penis numbness
+Peripheral Edema	Peripheral Edema
+pharyngitis	pharyngitis
+Pharyngolaryngeal pain	Pharyngolaryngeal pain
+phimosis	phimosis
+Pneumonia	Pneumonia
+Post-treatment infection	Post-treatment infection
+Post-treatment sepsis	Post-treatment sepsis
+pounding heartbeat	pounding heartbeat
+problems with urinating	problems with urinating
+Prolonged erection	Prolonged erection
+pruritus	pruritus
+Pulmonary air leaks	Pulmonary air leaks
+Pulmonary hemorrhage	Pulmonary hemorrhage
+Pulmonary interstitial emphysema	Pulmonary interstitial emphysema
+rash	rash
+Red face	Red face
+Red neck	Red neck
+Red skin	Red skin
+redness of the skin	redness of the skin
+rhinitis	rhinitis
+runny nose	runny nose
+runny or stuffy nose	runny or stuffy nose
+Scotoma	Scotoma
+sensation of spinning	sensation of spinning
+sensitivity	sensitivity
+sensitivity to sunlight	sensitivity to sunlight
+Sensory Disturbance	Sensory Disturbance
+Severe apnea	Severe apnea
+Severe intracranial hemorrhage	Severe intracranial hemorrhage
+sexual problems	sexual problems
+shaky speech	shaky speech
+Shortness of breath	Shortness of breath
+Shoulder pain	Shoulder pain
+side pain	side pain
+Sinusitis 	Sinusitis 
+Skin rashes	Skin rashes
+Skin Sweating	Skin Sweating
+sleepiness	sleepiness
+slurred speech	slurred speech
+sneezing	sneezing
+Somnolence	Somnolence
+Sore throat	Sore throat
+sores in the mouth	sores in the mouth
+sour stomach	sour stomach
+speech disorder	speech disorder
+spinning sensation	spinning sensation
+stomachache	stomachache
+Stomatitis ulcerative	Stomatitis ulcerative
+strange feeling of penis	strange feeling of penis
+stuffy nose	stuffy nose
+suicidal thoughts	suicidal thoughts
+Suicide	Suicide
+suicide attempts	suicide attempts
+sweating	sweating
+Swelling	Swelling
+swollen glands in the neck	swollen glands in the neck
+syncope	syncope
+Taste Perversion	Taste Perversion
+tender glands	tender glands
+tenderness around eyes	tenderness around eyes
+Tendinitis	Tendinitis
+Tooth disorder	Tooth disorder
+Toothache	Toothache
+Trauma	Trauma
+trembling	trembling
+tremor,abnormal coordination	tremor,abnormal coordination
+Trismus	Trismus
+trouble concentrating	trouble concentrating
+trouble sleeping	trouble sleeping
+trouble swallowing	trouble swallowing
+ulcers	ulcers
+Upper respiratory infection 	Upper respiratory infection 
+upper respiratory tract infection	upper respiratory tract infection
+upset stomach	upset stomach
+Urinary problems	Urinary problems
+Urinary Retention	Urinary Retention
+Urinary tract infection	Urinary tract infection
+Urogenital	Urogenital
+Urogenital System	Urogenital System
+Urticaria	Urticaria
+Vasodilation	Vasodilation
+venous leak	venous leak
+vertigo	vertigo
+Vision problems	Vision problems
+voice changes	voice changes
+vomiting	vomiting
+vomiting of blood	vomiting of blood
+warm skin	warm skin
+Weight Increase	Weight Increase
+weight loss	weight loss
+Wheezing	Wheezing
+yeast infection	yeast infection

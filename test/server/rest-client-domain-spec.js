@@ -126,7 +126,8 @@ describe("The FDA Prototype drug search API", function() {
         searchProxy.parseDrugLabel(result)
         .then(function(result){
             //console.log("**********:" + result.collection);
-            expect(result.showError).to.be.equal(true);
+            //expect(result.showError).to.be.equal(true);
+            expect(result.found).to.be.equal(false);
             done();
         })
         .catch(function(e) {

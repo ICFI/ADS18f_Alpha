@@ -44,7 +44,8 @@ exports.parseDrugLabel = function(resultSet) {
                 
             }else{
                 //console.log("parseDrugLabel:  error is undefined")
-                retVal.showError=true;
+                retVal.found = false;
+                //retVal.showError=true;
             }
             resolve(retVal);
         }catch (e) {

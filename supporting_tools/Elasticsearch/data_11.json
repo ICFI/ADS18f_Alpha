@@ -1,0 +1,24 @@
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-11"}
+{"official_side_effect" : "allergic reaction", "capitalized_case" : "allergic reaction",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-36"}
+{"official_side_effect" : "Blood in stool", "capitalized_case" : "Blood in stool",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-61"}
+{"official_side_effect" : "Cough", "capitalized_case" : "Cough",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-86"}
+{"official_side_effect" : "Dysmenorrhea", "capitalized_case" : "Dysmenorrhea",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-111"}
+{"official_side_effect" : "Foot swelling or leg swelling", "capitalized_case" : "Foot swelling or leg swelling",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-136"}
+{"official_side_effect" : "increased appetite", "capitalized_case" : "increased appetite",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-161"}
+{"official_side_effect" : "loss of interest", "capitalized_case" : "loss of interest",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-186"}
+{"official_side_effect" : "Numbness and tingling", "capitalized_case" : "Numbness and tingling",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-211"}
+{"official_side_effect" : "Pneumonia", "capitalized_case" : "Pneumonia",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-236"}
+{"official_side_effect" : "sexual problems", "capitalized_case" : "sexual problems",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-261"}
+{"official_side_effect" : "Swelling", "capitalized_case" : "Swelling",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-286"}
+{"official_side_effect" : "Urticaria", "capitalized_case" : "Urticaria",  "dc_title" : " - ", "dc_description" : ""}

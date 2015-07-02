@@ -1,0 +1,24 @@
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-14"}
+{"official_side_effect" : "Anemia", "capitalized_case" : "Anemia",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-39"}
+{"official_side_effect" : "blurred vision", "capitalized_case" : "blurred vision",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-64"}
+{"official_side_effect" : "Coughing", "capitalized_case" : "Coughing",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-89"}
+{"official_side_effect" : "Dyspnea", "capitalized_case" : "Dyspnea",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-114"}
+{"official_side_effect" : "frequent urination", "capitalized_case" : "frequent urination",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-139"}
+{"official_side_effect" : "Injection site hematoma", "capitalized_case" : "Injection site hematoma",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-164"}
+{"official_side_effect" : "Low back pain", "capitalized_case" : "Low back pain",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-189"}
+{"official_side_effect" : "Pain", "capitalized_case" : "Pain",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-214"}
+{"official_side_effect" : "pounding heartbeat", "capitalized_case" : "pounding heartbeat",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-239"}
+{"official_side_effect" : "Shoulder pain", "capitalized_case" : "Shoulder pain",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-264"}
+{"official_side_effect" : "Taste Perversion", "capitalized_case" : "Taste Perversion",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-289"}
+{"official_side_effect" : "vertigo", "capitalized_case" : "vertigo",  "dc_title" : " - ", "dc_description" : ""}

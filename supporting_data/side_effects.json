@@ -1,0 +1,594 @@
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-25"}
+{"official_side_effect" : "Back pain", "capitalized_case" : "Back pain",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-50"}
+{"official_side_effect" : "Cerebral hemorrhage", "capitalized_case" : "Cerebral hemorrhage",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-75"}
+{"official_side_effect" : "Diarrhea", "capitalized_case" : "Diarrhea",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-100"}
+{"official_side_effect" : "Expulsion, complete or partial", "capitalized_case" : "Expulsion, complete or partial",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-125"}
+{"official_side_effect" : "hemoptysis", "capitalized_case" : "hemoptysis",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-150"}
+{"official_side_effect" : "jaundice (yellowing of the skin or eyes)", "capitalized_case" : "jaundice (yellowing of the skin or eyes)",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-175"}
+{"official_side_effect" : "Nasal congestion", "capitalized_case" : "Nasal congestion",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-200"}
+{"official_side_effect" : "Pelvic pain", "capitalized_case" : "Pelvic pain",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-225"}
+{"official_side_effect" : "redness of the skin", "capitalized_case" : "redness of the skin",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-250"}
+{"official_side_effect" : "sour stomach", "capitalized_case" : "sour stomach",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-275"}
+{"official_side_effect" : "trouble sleeping", "capitalized_case" : "trouble sleeping",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-26"}
+{"official_side_effect" : "Backache", "capitalized_case" : "Backache",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-51"}
+{"official_side_effect" : "change in sense of taste", "capitalized_case" : "change in sense of taste",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-76"}
+{"official_side_effect" : "difficulty having a bowel movement", "capitalized_case" : "difficulty having a bowel movement",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-101"}
+{"official_side_effect" : "Eye discomfort and redness", "capitalized_case" : "Eye discomfort and redness",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-126"}
+{"official_side_effect" : "hiccups", "capitalized_case" : "hiccups",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-151"}
+{"official_side_effect" : "jaw discomfort", "capitalized_case" : "jaw discomfort",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-176"}
+{"official_side_effect" : "Nasal congestion ", "capitalized_case" : "Nasal congestion ",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-201"}
+{"official_side_effect" : "Penile edema", "capitalized_case" : "Penile edema",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-226"}
+{"official_side_effect" : "rhinitis", "capitalized_case" : "rhinitis",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-251"}
+{"official_side_effect" : "speech disorder", "capitalized_case" : "speech disorder",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-276"}
+{"official_side_effect" : "trouble swallowing", "capitalized_case" : "trouble swallowing",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-10"}
+{"official_side_effect" : "Agitation", "capitalized_case" : "Agitation",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-35"}
+{"official_side_effect" : "bloated", "capitalized_case" : "bloated",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-60"}
+{"official_side_effect" : "Constipation", "capitalized_case" : "Constipation",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-85"}
+{"official_side_effect" : "dry throat", "capitalized_case" : "dry throat",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-110"}
+{"official_side_effect" : "Foot pain or ankle pain", "capitalized_case" : "Foot pain or ankle pain",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-135"}
+{"official_side_effect" : "incontinence", "capitalized_case" : "incontinence",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-160"}
+{"official_side_effect" : "loss of appetite", "capitalized_case" : "loss of appetite",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-185"}
+{"official_side_effect" : "Nonurticarial Rash or Erythema", "capitalized_case" : "Nonurticarial Rash or Erythema",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-210"}
+{"official_side_effect" : "phimosis", "capitalized_case" : "phimosis",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-235"}
+{"official_side_effect" : "Severe intracranial hemorrhage", "capitalized_case" : "Severe intracranial hemorrhage",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-260"}
+{"official_side_effect" : "sweating", "capitalized_case" : "sweating",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-285"}
+{"official_side_effect" : "Urogenital System", "capitalized_case" : "Urogenital System",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-11"}
+{"official_side_effect" : "allergic reaction", "capitalized_case" : "allergic reaction",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-36"}
+{"official_side_effect" : "Blood in stool", "capitalized_case" : "Blood in stool",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-61"}
+{"official_side_effect" : "Cough", "capitalized_case" : "Cough",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-86"}
+{"official_side_effect" : "Dysmenorrhea", "capitalized_case" : "Dysmenorrhea",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-111"}
+{"official_side_effect" : "Foot swelling or leg swelling", "capitalized_case" : "Foot swelling or leg swelling",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-136"}
+{"official_side_effect" : "increased appetite", "capitalized_case" : "increased appetite",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-161"}
+{"official_side_effect" : "loss of interest", "capitalized_case" : "loss of interest",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-186"}
+{"official_side_effect" : "Numbness and tingling", "capitalized_case" : "Numbness and tingling",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-211"}
+{"official_side_effect" : "Pneumonia", "capitalized_case" : "Pneumonia",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-236"}
+{"official_side_effect" : "sexual problems", "capitalized_case" : "sexual problems",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-261"}
+{"official_side_effect" : "Swelling", "capitalized_case" : "Swelling",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-286"}
+{"official_side_effect" : "Urticaria", "capitalized_case" : "Urticaria",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-12"}
+{"official_side_effect" : "Allergy", "capitalized_case" : "Allergy",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-37"}
+{"official_side_effect" : "bloody nose", "capitalized_case" : "bloody nose",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-62"}
+{"official_side_effect" : "Cough ", "capitalized_case" : "Cough ",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-87"}
+{"official_side_effect" : "Dyspareunia", "capitalized_case" : "Dyspareunia",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-112"}
+{"official_side_effect" : "fractures", "capitalized_case" : "fractures",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-137"}
+{"official_side_effect" : "indigestion", "capitalized_case" : "indigestion",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-162"}
+{"official_side_effect" : "loss of strength", "capitalized_case" : "loss of strength",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-187"}
+{"official_side_effect" : "Numbness or tingling in hands", "capitalized_case" : "Numbness or tingling in hands",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-212"}
+{"official_side_effect" : "Post-treatment infection", "capitalized_case" : "Post-treatment infection",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-237"}
+{"official_side_effect" : "shaky speech", "capitalized_case" : "shaky speech",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-262"}
+{"official_side_effect" : "swollen glands in the neck", "capitalized_case" : "swollen glands in the neck",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-287"}
+{"official_side_effect" : "Vasodilation", "capitalized_case" : "Vasodilation",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-13"}
+{"official_side_effect" : "amnesia", "capitalized_case" : "amnesia",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-38"}
+{"official_side_effect" : "bloody urine", "capitalized_case" : "bloody urine",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-63"}
+{"official_side_effect" : "Cough, persistent cough", "capitalized_case" : "Cough, persistent cough",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-88"}
+{"official_side_effect" : "dyspepsia", "capitalized_case" : "dyspepsia",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-113"}
+{"official_side_effect" : "frequent urge to urinate", "capitalized_case" : "frequent urge to urinate",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-138"}
+{"official_side_effect" : "Injection site ecchymosis", "capitalized_case" : "Injection site ecchymosis",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-163"}
+{"official_side_effect" : "loss of voice", "capitalized_case" : "loss of voice",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-188"}
+{"official_side_effect" : "oozing rash", "capitalized_case" : "oozing rash",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-213"}
+{"official_side_effect" : "Post-treatment sepsis", "capitalized_case" : "Post-treatment sepsis",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-238"}
+{"official_side_effect" : "Shortness of breath", "capitalized_case" : "Shortness of breath",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-263"}
+{"official_side_effect" : "syncope", "capitalized_case" : "syncope",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-288"}
+{"official_side_effect" : "venous leak", "capitalized_case" : "venous leak",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-14"}
+{"official_side_effect" : "Anemia", "capitalized_case" : "Anemia",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-39"}
+{"official_side_effect" : "blurred vision", "capitalized_case" : "blurred vision",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-64"}
+{"official_side_effect" : "Coughing", "capitalized_case" : "Coughing",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-89"}
+{"official_side_effect" : "Dyspnea", "capitalized_case" : "Dyspnea",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-114"}
+{"official_side_effect" : "frequent urination", "capitalized_case" : "frequent urination",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-139"}
+{"official_side_effect" : "Injection site hematoma", "capitalized_case" : "Injection site hematoma",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-164"}
+{"official_side_effect" : "Low back pain", "capitalized_case" : "Low back pain",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-189"}
+{"official_side_effect" : "Pain", "capitalized_case" : "Pain",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-214"}
+{"official_side_effect" : "pounding heartbeat", "capitalized_case" : "pounding heartbeat",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-239"}
+{"official_side_effect" : "Shoulder pain", "capitalized_case" : "Shoulder pain",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-264"}
+{"official_side_effect" : "Taste Perversion", "capitalized_case" : "Taste Perversion",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-289"}
+{"official_side_effect" : "vertigo", "capitalized_case" : "vertigo",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-15"}
+{"official_side_effect" : "Angina Pectoris/Chest Pain", "capitalized_case" : "Angina Pectoris/Chest Pain",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-40"}
+{"official_side_effect" : "Body ache", "capitalized_case" : "Body ache",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-65"}
+{"official_side_effect" : "cramps", "capitalized_case" : "cramps",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-90"}
+{"official_side_effect" : "ear congestion", "capitalized_case" : "ear congestion",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-115"}
+{"official_side_effect" : "full feeling", "capitalized_case" : "full feeling",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-140"}
+{"official_side_effect" : "Injection site reaction", "capitalized_case" : "Injection site reaction",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-165"}
+{"official_side_effect" : "lower back pain", "capitalized_case" : "lower back pain",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-190"}
+{"official_side_effect" : "Pain in extremity", "capitalized_case" : "Pain in extremity",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-215"}
+{"official_side_effect" : "problems with urinating", "capitalized_case" : "problems with urinating",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-240"}
+{"official_side_effect" : "side pain", "capitalized_case" : "side pain",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-265"}
+{"official_side_effect" : "tender glands", "capitalized_case" : "tender glands",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-290"}
+{"official_side_effect" : "Vision problems", "capitalized_case" : "Vision problems",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-16"}
+{"official_side_effect" : "anorexia", "capitalized_case" : "anorexia",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-41"}
+{"official_side_effect" : "Body pain", "capitalized_case" : "Body pain",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-66"}
+{"official_side_effect" : "dark urine", "capitalized_case" : "dark urine",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-91"}
+{"official_side_effect" : "ear discomfort", "capitalized_case" : "ear discomfort",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-116"}
+{"official_side_effect" : "gas", "capitalized_case" : "gas",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-141"}
+{"official_side_effect" : "insomnia", "capitalized_case" : "insomnia",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-166"}
+{"official_side_effect" : "Malaise", "capitalized_case" : "Malaise",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-191"}
+{"official_side_effect" : "pain or tenderness around the eyes and cheekbones", "capitalized_case" : "pain or tenderness around the eyes and cheekbones",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-216"}
+{"official_side_effect" : "Prolonged erection", "capitalized_case" : "Prolonged erection",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-241"}
+{"official_side_effect" : "Sinusitis ", "capitalized_case" : "Sinusitis ",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-266"}
+{"official_side_effect" : "tenderness around eyes", "capitalized_case" : "tenderness around eyes",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-291"}
+{"official_side_effect" : "voice changes", "capitalized_case" : "voice changes",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-17"}
+{"official_side_effect" : "Anxiety", "capitalized_case" : "Anxiety",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-42"}
+{"official_side_effect" : "Brain abscess", "capitalized_case" : "Brain abscess",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-67"}
+{"official_side_effect" : "decrease in appetite", "capitalized_case" : "decrease in appetite",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-92"}
+{"official_side_effect" : "ear disorder", "capitalized_case" : "ear disorder",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-117"}
+{"official_side_effect" : "Gum hyperplasia", "capitalized_case" : "Gum hyperplasia",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-142"}
+{"official_side_effect" : "Intracranial hemorrhage", "capitalized_case" : "Intracranial hemorrhage",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-167"}
+{"official_side_effect" : "menstrual pain", "capitalized_case" : "menstrual pain",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-192"}
+{"official_side_effect" : "painful urination", "capitalized_case" : "painful urination",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-217"}
+{"official_side_effect" : "pruritus", "capitalized_case" : "pruritus",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-242"}
+{"official_side_effect" : "Skin rashes", "capitalized_case" : "Skin rashes",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-267"}
+{"official_side_effect" : "Tendinitis", "capitalized_case" : "Tendinitis",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-292"}
+{"official_side_effect" : "vomiting", "capitalized_case" : "vomiting",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-18"}
+{"official_side_effect" : "apnea", "capitalized_case" : "apnea",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-43"}
+{"official_side_effect" : "Brain cyst", "capitalized_case" : "Brain cyst",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-68"}
+{"official_side_effect" : "Decrease in sexual desire", "capitalized_case" : "Decrease in sexual desire",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-93"}
+{"official_side_effect" : "Earache", "capitalized_case" : "Earache",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-118"}
+{"official_side_effect" : "hair loss", "capitalized_case" : "hair loss",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-143"}
+{"official_side_effect" : "Intracranial hypertension", "capitalized_case" : "Intracranial hypertension",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-168"}
+{"official_side_effect" : "metallic taste in the mouth", "capitalized_case" : "metallic taste in the mouth",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-193"}
+{"official_side_effect" : "Palpitation", "capitalized_case" : "Palpitation",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-218"}
+{"official_side_effect" : "Pulmonary air leaks", "capitalized_case" : "Pulmonary air leaks",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-243"}
+{"official_side_effect" : "Skin Sweating", "capitalized_case" : "Skin Sweating",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-268"}
+{"official_side_effect" : "Tooth disorder", "capitalized_case" : "Tooth disorder",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-293"}
+{"official_side_effect" : "vomiting of blood", "capitalized_case" : "vomiting of blood",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-19"}
+{"official_side_effect" : "appetite disorder", "capitalized_case" : "appetite disorder",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-44"}
+{"official_side_effect" : "breast enlargement ", "capitalized_case" : "breast enlargement ",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-69"}
+{"official_side_effect" : "decreased appetite", "capitalized_case" : "decreased appetite",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-94"}
+{"official_side_effect" : "edema", "capitalized_case" : "edema",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-119"}
+{"official_side_effect" : "hallucinations", "capitalized_case" : "hallucinations",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-144"}
+{"official_side_effect" : "irregular heartbeat", "capitalized_case" : "irregular heartbeat",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-169"}
+{"official_side_effect" : "muscle aches", "capitalized_case" : "muscle aches",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-194"}
+{"official_side_effect" : "papules", "capitalized_case" : "papules",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-219"}
+{"official_side_effect" : "Pulmonary hemorrhage", "capitalized_case" : "Pulmonary hemorrhage",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-244"}
+{"official_side_effect" : "sleepiness", "capitalized_case" : "sleepiness",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-269"}
+{"official_side_effect" : "Toothache", "capitalized_case" : "Toothache",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-294"}
+{"official_side_effect" : "warm skin", "capitalized_case" : "warm skin",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-2"}
+{"official_side_effect" : "abdominal pain", "capitalized_case" : "abdominal pain",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-27"}
+{"official_side_effect" : "bad taste in mouth", "capitalized_case" : "bad taste in mouth",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-52"}
+{"official_side_effect" : "Change in sleep pattern", "capitalized_case" : "Change in sleep pattern",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-77"}
+{"official_side_effect" : "Difficulty swallowing", "capitalized_case" : "Difficulty swallowing",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-102"}
+{"official_side_effect" : "Fatigue", "capitalized_case" : "Fatigue",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-127"}
+{"official_side_effect" : "Hip pain", "capitalized_case" : "Hip pain",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-152"}
+{"official_side_effect" : "Joint pain", "capitalized_case" : "Joint pain",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-177"}
+{"official_side_effect" : "Nasopharyngitis", "capitalized_case" : "Nasopharyngitis",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-202"}
+{"official_side_effect" : "Penile fibrosis", "capitalized_case" : "Penile fibrosis",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-227"}
+{"official_side_effect" : "runny nose", "capitalized_case" : "runny nose",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-252"}
+{"official_side_effect" : "spinning sensation", "capitalized_case" : "spinning sensation",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-277"}
+{"official_side_effect" : "ulcers", "capitalized_case" : "ulcers",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-20"}
+{"official_side_effect" : "Arrhythmia", "capitalized_case" : "Arrhythmia",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-45"}
+{"official_side_effect" : "Breast pain", "capitalized_case" : "Breast pain",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-70"}
+{"official_side_effect" : "Decreased hearing", "capitalized_case" : "Decreased hearing",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-95"}
+{"official_side_effect" : "ejaculatory disturbances", "capitalized_case" : "ejaculatory disturbances",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-120"}
+{"official_side_effect" : "Headaches", "capitalized_case" : "Headaches",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-145"}
+{"official_side_effect" : "irregular pulse", "capitalized_case" : "irregular pulse",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-170"}
+{"official_side_effect" : "Muscle Spasms", "capitalized_case" : "Muscle Spasms",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-195"}
+{"official_side_effect" : "Paraesthesia", "capitalized_case" : "Paraesthesia",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-220"}
+{"official_side_effect" : "Pulmonary interstitial emphysema", "capitalized_case" : "Pulmonary interstitial emphysema",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-245"}
+{"official_side_effect" : "slurred speech", "capitalized_case" : "slurred speech",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-270"}
+{"official_side_effect" : "Trauma", "capitalized_case" : "Trauma",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-295"}
+{"official_side_effect" : "Weight Increase", "capitalized_case" : "Weight Increase",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-21"}
+{"official_side_effect" : "Arthralgia", "capitalized_case" : "Arthralgia",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-46"}
+{"official_side_effect" : "bronchitis", "capitalized_case" : "bronchitis",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-71"}
+{"official_side_effect" : "Decreased interest in sexual intercourse", "capitalized_case" : "Decreased interest in sexual intercourse",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-96"}
+{"official_side_effect" : "Epistaxis", "capitalized_case" : "Epistaxis",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-121"}
+{"official_side_effect" : "Heart palpitations", "capitalized_case" : "Heart palpitations",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-146"}
+{"official_side_effect" : "irritation", "capitalized_case" : "irritation",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-171"}
+{"official_side_effect" : "Musculoskeletal Arthritis", "capitalized_case" : "Musculoskeletal Arthritis",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-196"}
+{"official_side_effect" : "paranoid reaction", "capitalized_case" : "paranoid reaction",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-221"}
+{"official_side_effect" : "rash", "capitalized_case" : "rash",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-246"}
+{"official_side_effect" : "sneezing", "capitalized_case" : "sneezing",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-271"}
+{"official_side_effect" : "trembling", "capitalized_case" : "trembling",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-296"}
+{"official_side_effect" : "weight loss", "capitalized_case" : "weight loss",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-22"}
+{"official_side_effect" : "Arthrosis", "capitalized_case" : "Arthrosis",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-47"}
+{"official_side_effect" : "burning urination", "capitalized_case" : "burning urination",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-72"}
+{"official_side_effect" : "decreased libido", "capitalized_case" : "decreased libido",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-97"}
+{"official_side_effect" : "erythema", "capitalized_case" : "erythema",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-122"}
+{"official_side_effect" : "heartburn", "capitalized_case" : "heartburn",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-147"}
+{"official_side_effect" : "itch at tip of penis", "capitalized_case" : "itch at tip of penis",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-172"}
+{"official_side_effect" : "Musculoskeletal pain", "capitalized_case" : "Musculoskeletal pain",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-197"}
+{"official_side_effect" : "paresthesia", "capitalized_case" : "paresthesia",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-222"}
+{"official_side_effect" : "Red face", "capitalized_case" : "Red face",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-247"}
+{"official_side_effect" : "Somnolence", "capitalized_case" : "Somnolence",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-272"}
+{"official_side_effect" : "tremor,abnormal coordination", "capitalized_case" : "tremor,abnormal coordination",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-297"}
+{"official_side_effect" : "Wheezing", "capitalized_case" : "Wheezing",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-23"}
+{"official_side_effect" : "asthenia", "capitalized_case" : "asthenia",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-48"}
+{"official_side_effect" : "Cardiovascular Flushing", "capitalized_case" : "Cardiovascular Flushing",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-73"}
+{"official_side_effect" : "depression", "capitalized_case" : "depression",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-98"}
+{"official_side_effect" : "euphoria", "capitalized_case" : "euphoria",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-123"}
+{"official_side_effect" : "Hematuria (miscroscopic)", "capitalized_case" : "Hematuria (miscroscopic)",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-148"}
+{"official_side_effect" : "itching", "capitalized_case" : "itching",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-173"}
+{"official_side_effect" : "Myalgia", "capitalized_case" : "Myalgia",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-198"}
+{"official_side_effect" : "Parosmia", "capitalized_case" : "Parosmia",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-223"}
+{"official_side_effect" : "Red neck", "capitalized_case" : "Red neck",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-248"}
+{"official_side_effect" : "Sore throat", "capitalized_case" : "Sore throat",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-273"}
+{"official_side_effect" : "Trismus", "capitalized_case" : "Trismus",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-298"}
+{"official_side_effect" : "yeast infection", "capitalized_case" : "yeast infection",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-24"}
+{"official_side_effect" : "auditory disturbance", "capitalized_case" : "auditory disturbance",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-49"}
+{"official_side_effect" : "Cerebral edema", "capitalized_case" : "Cerebral edema",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-74"}
+{"official_side_effect" : "Dermatologic Pruritus Rash", "capitalized_case" : "Dermatologic Pruritus Rash",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-99"}
+{"official_side_effect" : "Expulsion", "capitalized_case" : "Expulsion",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-124"}
+{"official_side_effect" : "Hemic and Lymphatic", "capitalized_case" : "Hemic and Lymphatic",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-149"}
+{"official_side_effect" : "itchy eyes", "capitalized_case" : "itchy eyes",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-174"}
+{"official_side_effect" : "Nasal Burning", "capitalized_case" : "Nasal Burning",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-199"}
+{"official_side_effect" : "passing gas", "capitalized_case" : "passing gas",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-224"}
+{"official_side_effect" : "Red skin", "capitalized_case" : "Red skin",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-249"}
+{"official_side_effect" : "sores in the mouth", "capitalized_case" : "sores in the mouth",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-274"}
+{"official_side_effect" : "trouble concentrating", "capitalized_case" : "trouble concentrating",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-3"}
+{"official_side_effect" : "Abnormal dreams", "capitalized_case" : "Abnormal dreams",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-28"}
+{"official_side_effect" : "balance disorder", "capitalized_case" : "balance disorder",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-53"}
+{"official_side_effect" : "changes in vision", "capitalized_case" : "changes in vision",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-78"}
+{"official_side_effect" : "Digestive", "capitalized_case" : "Digestive",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-103"}
+{"official_side_effect" : "feeling of warmth", "capitalized_case" : "feeling of warmth",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-128"}
+{"official_side_effect" : "Hives", "capitalized_case" : "Hives",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-153"}
+{"official_side_effect" : "Knee pain", "capitalized_case" : "Knee pain",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-178"}
+{"official_side_effect" : "nausea", "capitalized_case" : "nausea",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-203"}
+{"official_side_effect" : "Penile pain", "capitalized_case" : "Penile pain",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-228"}
+{"official_side_effect" : "runny or stuffy nose", "capitalized_case" : "runny or stuffy nose",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-253"}
+{"official_side_effect" : "stomachache", "capitalized_case" : "stomachache",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-278"}
+{"official_side_effect" : "Upper respiratory infection ", "capitalized_case" : "Upper respiratory infection ",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-4"}
+{"official_side_effect" : "abnormal gait", "capitalized_case" : "abnormal gait",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-29"}
+{"official_side_effect" : "being forgetful", "capitalized_case" : "being forgetful",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-54"}
+{"official_side_effect" : "Chest discomfort Tightness in chest Pressure in chest", "capitalized_case" : "Chest discomfort Tightness in chest Pressure in chest",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-79"}
+{"official_side_effect" : "discoloration of penile head", "capitalized_case" : "discoloration of penile head",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-104"}
+{"official_side_effect" : "feeling sad", "capitalized_case" : "feeling sad",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-129"}
+{"official_side_effect" : "hoarseness", "capitalized_case" : "hoarseness",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-154"}
+{"official_side_effect" : "labored breathing", "capitalized_case" : "labored breathing",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-179"}
+{"official_side_effect" : "Nausea and emesis", "capitalized_case" : "Nausea and emesis",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-204"}
+{"official_side_effect" : "Penile rash", "capitalized_case" : "Penile rash",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-229"}
+{"official_side_effect" : "Scotoma", "capitalized_case" : "Scotoma",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-254"}
+{"official_side_effect" : "Stomatitis ulcerative", "capitalized_case" : "Stomatitis ulcerative",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-279"}
+{"official_side_effect" : "upper respiratory tract infection", "capitalized_case" : "upper respiratory tract infection",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-5"}
+{"official_side_effect" : "abnormal thinking", "capitalized_case" : "abnormal thinking",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-30"}
+{"official_side_effect" : "belching", "capitalized_case" : "belching",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-55"}
+{"official_side_effect" : "Chest pain", "capitalized_case" : "Chest pain",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-80"}
+{"official_side_effect" : "dislocations", "capitalized_case" : "dislocations",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-105"}
+{"official_side_effect" : "Fever", "capitalized_case" : "Fever",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-130"}
+{"official_side_effect" : "Hyperglycemia", "capitalized_case" : "Hyperglycemia",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-155"}
+{"official_side_effect" : "lacerations", "capitalized_case" : "lacerations",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-180"}
+{"official_side_effect" : "Neck pain", "capitalized_case" : "Neck pain",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-205"}
+{"official_side_effect" : "penile skin tear", "capitalized_case" : "penile skin tear",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-230"}
+{"official_side_effect" : "sensation of spinning", "capitalized_case" : "sensation of spinning",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-255"}
+{"official_side_effect" : "strange feeling of penis", "capitalized_case" : "strange feeling of penis",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-280"}
+{"official_side_effect" : "upset stomach", "capitalized_case" : "upset stomach",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-6"}
+{"official_side_effect" : "abrasions", "capitalized_case" : "abrasions",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-31"}
+{"official_side_effect" : "binge eating", "capitalized_case" : "binge eating",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-56"}
+{"official_side_effect" : "chills", "capitalized_case" : "chills",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-81"}
+{"official_side_effect" : "Dizziness", "capitalized_case" : "Dizziness",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-106"}
+{"official_side_effect" : "flatulence", "capitalized_case" : "flatulence",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-131"}
+{"official_side_effect" : "Hypertension", "capitalized_case" : "Hypertension",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-156"}
+{"official_side_effect" : "lack of strength", "capitalized_case" : "lack of strength",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-181"}
+{"official_side_effect" : "neck stiffness", "capitalized_case" : "neck stiffness",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-206"}
+{"official_side_effect" : "Penis numbness", "capitalized_case" : "Penis numbness",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-231"}
+{"official_side_effect" : "sensitivity", "capitalized_case" : "sensitivity",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-256"}
+{"official_side_effect" : "stuffy nose", "capitalized_case" : "stuffy nose",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-281"}
+{"official_side_effect" : "Urinary problems", "capitalized_case" : "Urinary problems",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-7"}
+{"official_side_effect" : "Abscess", "capitalized_case" : "Abscess",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-32"}
+{"official_side_effect" : "Bitter Taste", "capitalized_case" : "Bitter Taste",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-57"}
+{"official_side_effect" : "cloudy urine", "capitalized_case" : "cloudy urine",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-82"}
+{"official_side_effect" : "Dizziness ", "capitalized_case" : "Dizziness ",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-107"}
+{"official_side_effect" : "Flu syndrome ", "capitalized_case" : "Flu syndrome ",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-132"}
+{"official_side_effect" : "Hypertension ", "capitalized_case" : "Hypertension ",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-157"}
+{"official_side_effect" : "Leukorrhea", "capitalized_case" : "Leukorrhea",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-182"}
+{"official_side_effect" : "Necrotizing enterocolitis", "capitalized_case" : "Necrotizing enterocolitis",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-207"}
+{"official_side_effect" : "Peripheral Edema", "capitalized_case" : "Peripheral Edema",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-232"}
+{"official_side_effect" : "sensitivity to sunlight", "capitalized_case" : "sensitivity to sunlight",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-257"}
+{"official_side_effect" : "suicidal thoughts", "capitalized_case" : "suicidal thoughts",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-282"}
+{"official_side_effect" : "Urinary Retention", "capitalized_case" : "Urinary Retention",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-8"}
+{"official_side_effect" : "acid", "capitalized_case" : "acid",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-33"}
+{"official_side_effect" : "Bladder pain", "capitalized_case" : "Bladder pain",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-58"}
+{"official_side_effect" : "confusion", "capitalized_case" : "confusion",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-83"}
+{"official_side_effect" : "drowsiness", "capitalized_case" : "drowsiness",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-108"}
+{"official_side_effect" : "flu-like symptoms", "capitalized_case" : "flu-like symptoms",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-133"}
+{"official_side_effect" : "hypoventilation", "capitalized_case" : "hypoventilation",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-158"}
+{"official_side_effect" : "lightheadedness", "capitalized_case" : "lightheadedness",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-183"}
+{"official_side_effect" : "Nervous", "capitalized_case" : "Nervous",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-208"}
+{"official_side_effect" : "pharyngitis", "capitalized_case" : "pharyngitis",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-233"}
+{"official_side_effect" : "Sensory Disturbance", "capitalized_case" : "Sensory Disturbance",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-258"}
+{"official_side_effect" : "Suicide", "capitalized_case" : "Suicide",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-283"}
+{"official_side_effect" : "Urinary tract infection", "capitalized_case" : "Urinary tract infection",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-9"}
+{"official_side_effect" : "acne", "capitalized_case" : "acne",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-34"}
+{"official_side_effect" : "Bleeding", "capitalized_case" : "Bleeding",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-59"}
+{"official_side_effect" : "congestion", "capitalized_case" : "congestion",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-84"}
+{"official_side_effect" : "dry mouth", "capitalized_case" : "dry mouth",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-109"}
+{"official_side_effect" : "flushing", "capitalized_case" : "flushing",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-134"}
+{"official_side_effect" : "inability to keep an erection", "capitalized_case" : "inability to keep an erection",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-159"}
+{"official_side_effect" : "loss in sexual desire", "capitalized_case" : "loss in sexual desire",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-184"}
+{"official_side_effect" : "Nervousness", "capitalized_case" : "Nervousness",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-209"}
+{"official_side_effect" : "Pharyngolaryngeal pain", "capitalized_case" : "Pharyngolaryngeal pain",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-234"}
+{"official_side_effect" : "Severe apnea", "capitalized_case" : "Severe apnea",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-259"}
+{"official_side_effect" : "suicide attempts", "capitalized_case" : "suicide attempts",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda", "_type":"side_effect", "_id":"side_effect-284"}
+{"official_side_effect" : "Urogenital", "capitalized_case" : "Urogenital",  "dc_title" : " - ", "dc_description" : ""}

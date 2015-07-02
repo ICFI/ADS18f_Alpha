@@ -1,0 +1,41 @@
+{
+  "facets": {
+    "terms": {
+      "terms": {
+        "field": "_type",
+        "size": 10,
+        "order": "term",
+        "exclude": []
+      },
+      "facet_filter": {
+        "fquery": {
+          "query": {
+            "filtered": {
+              "query": {
+                "bool": {
+                  "should": [
+                    {
+                      "query_string": {
+                        "query": "*"
+                      }
+                    }
+                  ]
+                }
+              },
+              "filter": {
+                "bool": {
+                  "must": [
+                    {
+                      "match_all": {}
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "size": 0
+}

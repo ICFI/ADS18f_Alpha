@@ -1,0 +1,24 @@
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-12"}
+{"official_side_effect" : "Allergy", "capitalized_case" : "Allergy",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-37"}
+{"official_side_effect" : "bloody nose", "capitalized_case" : "bloody nose",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-62"}
+{"official_side_effect" : "Cough ", "capitalized_case" : "Cough ",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-87"}
+{"official_side_effect" : "Dyspareunia", "capitalized_case" : "Dyspareunia",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-112"}
+{"official_side_effect" : "fractures", "capitalized_case" : "fractures",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-137"}
+{"official_side_effect" : "indigestion", "capitalized_case" : "indigestion",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-162"}
+{"official_side_effect" : "loss of strength", "capitalized_case" : "loss of strength",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-187"}
+{"official_side_effect" : "Numbness or tingling in hands", "capitalized_case" : "Numbness or tingling in hands",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-212"}
+{"official_side_effect" : "Post-treatment infection", "capitalized_case" : "Post-treatment infection",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-237"}
+{"official_side_effect" : "shaky speech", "capitalized_case" : "shaky speech",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-262"}
+{"official_side_effect" : "swollen glands in the neck", "capitalized_case" : "swollen glands in the neck",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-287"}
+{"official_side_effect" : "Vasodilation", "capitalized_case" : "Vasodilation",  "dc_title" : " - ", "dc_description" : ""}

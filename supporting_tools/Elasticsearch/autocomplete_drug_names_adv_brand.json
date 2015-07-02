@@ -1,0 +1,27 @@
+{
+  "size": 0,
+  "aggs": {
+    "autocomplete": {
+      "terms": {
+        "field": "capitalized_case.raw",
+        "order": {
+          "_term": "asc"
+        },
+        "include": {
+		          "pattern": "[aA][dD][vV].*"
+        },
+        "size" : 5
+      }
+    }
+  },
+  "query": {
+
+        "bool": {
+		  "must" : [	{ "query_string" : { "query" : "capitalized_case:adv*"}},
+		  				{ "prefix": {"capitalized_case": {"value": "adv"}} },
+		  				{ "match" : {"name_type" : "brand" }}
+		  			]
+        }
+
+  }
+}

@@ -1,0 +1,11 @@
+{ "size": 100,
+  "query": {
+
+        "bool": {
+		  "must" : [
+		  				{ "match" : {"url" : "http://www.nlm.nih.gov/medlineplus/druginfo/meds/a693050.html" }}
+		  			]
+        }
+
+  }
+}

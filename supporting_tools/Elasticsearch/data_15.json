@@ -1,0 +1,24 @@
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-15"}
+{"official_side_effect" : "Angina Pectoris/Chest Pain", "capitalized_case" : "Angina Pectoris/Chest Pain",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-40"}
+{"official_side_effect" : "Body ache", "capitalized_case" : "Body ache",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-65"}
+{"official_side_effect" : "cramps", "capitalized_case" : "cramps",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-90"}
+{"official_side_effect" : "ear congestion", "capitalized_case" : "ear congestion",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-115"}
+{"official_side_effect" : "full feeling", "capitalized_case" : "full feeling",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-140"}
+{"official_side_effect" : "Injection site reaction", "capitalized_case" : "Injection site reaction",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-165"}
+{"official_side_effect" : "lower back pain", "capitalized_case" : "lower back pain",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-190"}
+{"official_side_effect" : "Pain in extremity", "capitalized_case" : "Pain in extremity",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-215"}
+{"official_side_effect" : "problems with urinating", "capitalized_case" : "problems with urinating",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-240"}
+{"official_side_effect" : "side pain", "capitalized_case" : "side pain",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-265"}
+{"official_side_effect" : "tender glands", "capitalized_case" : "tender glands",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-290"}
+{"official_side_effect" : "Vision problems", "capitalized_case" : "Vision problems",  "dc_title" : " - ", "dc_description" : ""}

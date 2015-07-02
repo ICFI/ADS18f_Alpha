@@ -1,0 +1,24 @@
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-23"}
+{"official_side_effect" : "asthenia", "capitalized_case" : "asthenia",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-48"}
+{"official_side_effect" : "Cardiovascular Flushing", "capitalized_case" : "Cardiovascular Flushing",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-73"}
+{"official_side_effect" : "depression", "capitalized_case" : "depression",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-98"}
+{"official_side_effect" : "euphoria", "capitalized_case" : "euphoria",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-123"}
+{"official_side_effect" : "Hematuria (miscroscopic)", "capitalized_case" : "Hematuria (miscroscopic)",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-148"}
+{"official_side_effect" : "itching", "capitalized_case" : "itching",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-173"}
+{"official_side_effect" : "Myalgia", "capitalized_case" : "Myalgia",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-198"}
+{"official_side_effect" : "Parosmia", "capitalized_case" : "Parosmia",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-223"}
+{"official_side_effect" : "Red neck", "capitalized_case" : "Red neck",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-248"}
+{"official_side_effect" : "Sore throat", "capitalized_case" : "Sore throat",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-273"}
+{"official_side_effect" : "Trismus", "capitalized_case" : "Trismus",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-298"}
+{"official_side_effect" : "yeast infection", "capitalized_case" : "yeast infection",  "dc_title" : " - ", "dc_description" : ""}

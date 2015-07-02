@@ -1,0 +1,40 @@
+
+All Oxycontin & Constipation
+https://api.fda.gov/drug/event.json?search=patient.drug.openfda.brand_name:oxycontin+AND+patient.reaction.reactionmeddrapt:Constipation&limit=1
+987
+
+All AEs for Constipation
+https://api.fda.gov/drug/event.json?search=patient.drug.openfda.brand_name:oxycontin&limit=1
+26550
+
+= 26550 - 987 = 
+
+
+
+All Constipation for any drug
+https://api.fda.gov/drug/event.json?search=patient.reaction.reactionmeddrapt:Constipation&limit=1
+
+sex = 1 - 1612614
+
+
+
+
+
+
+
+
+
+Adderall	lower back pain
+https://api.fda.gov/drug/event.json?search=patient.drug.openfda.brand_name:Adderall+AND+patient.reaction.reactionmeddrapt:"lower back pain"&limit=1
+
+
+
+
+
+
+
+
+Top 5 side effects if missing
+https://api.fda.gov/drug/event.json?search=patient.drug.openfda.brand_name:oxycontin&count=patient.reaction.reactionmeddrapt.exact
+
+

@@ -1,0 +1,14 @@
+{
+    "drug": {
+        "properties": {
+            "official_name": {
+                "type":            "string"
+            },
+            "capitalized_case": {
+                "type":            "string",
+                "index_analyzer":  "autocomplete",
+                "search_analyzer": "standard"
+            }
+        }
+    }
+}

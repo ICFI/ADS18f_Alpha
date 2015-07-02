@@ -1,0 +1,27 @@
+{
+  "size": 0,
+  "aggs": {
+    "autocomplete": {
+      "terms": {
+        "field": "capitalized_case.raw",
+        "order": {
+          "_term": "asc"
+        },
+        "include": {
+		          "pattern": "[oO][xX][yY].*"
+        },
+        "size" : 5
+      }
+    }
+  },
+  "query": {
+
+        "bool": {
+		  "must" : [	{ "query_string" : { "query" : "capitalized_case:oxy*"}},
+		  				{ "prefix": {"capitalized_case": {"value": "oxy"}} },
+		  				{ "match" : {"name_type" : "brand" }}
+		  			]
+        }
+
+  }
+}

@@ -1,0 +1,24 @@
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-17"}
+{"official_side_effect" : "Anxiety", "capitalized_case" : "Anxiety",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-42"}
+{"official_side_effect" : "Brain abscess", "capitalized_case" : "Brain abscess",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-67"}
+{"official_side_effect" : "decrease in appetite", "capitalized_case" : "decrease in appetite",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-92"}
+{"official_side_effect" : "ear disorder", "capitalized_case" : "ear disorder",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-117"}
+{"official_side_effect" : "Gum hyperplasia", "capitalized_case" : "Gum hyperplasia",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-142"}
+{"official_side_effect" : "Intracranial hemorrhage", "capitalized_case" : "Intracranial hemorrhage",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-167"}
+{"official_side_effect" : "menstrual pain", "capitalized_case" : "menstrual pain",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-192"}
+{"official_side_effect" : "painful urination", "capitalized_case" : "painful urination",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-217"}
+{"official_side_effect" : "pruritus", "capitalized_case" : "pruritus",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-242"}
+{"official_side_effect" : "Skin rashes", "capitalized_case" : "Skin rashes",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-267"}
+{"official_side_effect" : "Tendinitis", "capitalized_case" : "Tendinitis",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-292"}
+{"official_side_effect" : "vomiting", "capitalized_case" : "vomiting",  "dc_title" : " - ", "dc_description" : ""}

@@ -1,0 +1,24 @@
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-10"}
+{"official_side_effect" : "Agitation", "capitalized_case" : "Agitation",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-35"}
+{"official_side_effect" : "bloated", "capitalized_case" : "bloated",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-60"}
+{"official_side_effect" : "Constipation", "capitalized_case" : "Constipation",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-85"}
+{"official_side_effect" : "dry throat", "capitalized_case" : "dry throat",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-110"}
+{"official_side_effect" : "Foot pain or ankle pain", "capitalized_case" : "Foot pain or ankle pain",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-135"}
+{"official_side_effect" : "incontinence", "capitalized_case" : "incontinence",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-160"}
+{"official_side_effect" : "loss of appetite", "capitalized_case" : "loss of appetite",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-185"}
+{"official_side_effect" : "Nonurticarial Rash or Erythema", "capitalized_case" : "Nonurticarial Rash or Erythema",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-210"}
+{"official_side_effect" : "phimosis", "capitalized_case" : "phimosis",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-235"}
+{"official_side_effect" : "Severe intracranial hemorrhage", "capitalized_case" : "Severe intracranial hemorrhage",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-260"}
+{"official_side_effect" : "sweating", "capitalized_case" : "sweating",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-285"}
+{"official_side_effect" : "Urogenital System", "capitalized_case" : "Urogenital System",  "dc_title" : " - ", "dc_description" : ""}

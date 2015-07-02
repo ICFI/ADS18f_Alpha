@@ -1,0 +1,24 @@
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-7"}
+{"official_side_effect" : "Abscess", "capitalized_case" : "Abscess",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-32"}
+{"official_side_effect" : "Bitter Taste", "capitalized_case" : "Bitter Taste",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-57"}
+{"official_side_effect" : "cloudy urine", "capitalized_case" : "cloudy urine",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-82"}
+{"official_side_effect" : "Dizziness ", "capitalized_case" : "Dizziness ",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-107"}
+{"official_side_effect" : "Flu syndrome ", "capitalized_case" : "Flu syndrome ",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-132"}
+{"official_side_effect" : "Hypertension ", "capitalized_case" : "Hypertension ",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-157"}
+{"official_side_effect" : "Leukorrhea", "capitalized_case" : "Leukorrhea",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-182"}
+{"official_side_effect" : "Necrotizing enterocolitis", "capitalized_case" : "Necrotizing enterocolitis",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-207"}
+{"official_side_effect" : "Peripheral Edema", "capitalized_case" : "Peripheral Edema",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-232"}
+{"official_side_effect" : "sensitivity to sunlight", "capitalized_case" : "sensitivity to sunlight",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-257"}
+{"official_side_effect" : "suicidal thoughts", "capitalized_case" : "suicidal thoughts",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-282"}
+{"official_side_effect" : "Urinary Retention", "capitalized_case" : "Urinary Retention",  "dc_title" : " - ", "dc_description" : ""}

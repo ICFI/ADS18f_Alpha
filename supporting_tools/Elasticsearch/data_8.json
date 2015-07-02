@@ -1,0 +1,24 @@
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-8"}
+{"official_side_effect" : "acid", "capitalized_case" : "acid",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-33"}
+{"official_side_effect" : "Bladder pain", "capitalized_case" : "Bladder pain",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-58"}
+{"official_side_effect" : "confusion", "capitalized_case" : "confusion",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-83"}
+{"official_side_effect" : "drowsiness", "capitalized_case" : "drowsiness",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-108"}
+{"official_side_effect" : "flu-like symptoms", "capitalized_case" : "flu-like symptoms",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-133"}
+{"official_side_effect" : "hypoventilation", "capitalized_case" : "hypoventilation",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-158"}
+{"official_side_effect" : "lightheadedness", "capitalized_case" : "lightheadedness",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-183"}
+{"official_side_effect" : "Nervous", "capitalized_case" : "Nervous",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-208"}
+{"official_side_effect" : "pharyngitis", "capitalized_case" : "pharyngitis",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-233"}
+{"official_side_effect" : "Sensory Disturbance", "capitalized_case" : "Sensory Disturbance",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-258"}
+{"official_side_effect" : "Suicide", "capitalized_case" : "Suicide",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-283"}
+{"official_side_effect" : "Urinary tract infection", "capitalized_case" : "Urinary tract infection",  "dc_title" : " - ", "dc_description" : ""}

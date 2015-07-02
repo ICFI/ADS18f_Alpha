@@ -1,0 +1,24 @@
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-2"}
+{"official_side_effect" : "abdominal pain", "capitalized_case" : "abdominal pain",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-27"}
+{"official_side_effect" : "bad taste in mouth", "capitalized_case" : "bad taste in mouth",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-52"}
+{"official_side_effect" : "Change in sleep pattern", "capitalized_case" : "Change in sleep pattern",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-77"}
+{"official_side_effect" : "Difficulty swallowing", "capitalized_case" : "Difficulty swallowing",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-102"}
+{"official_side_effect" : "Fatigue", "capitalized_case" : "Fatigue",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-127"}
+{"official_side_effect" : "Hip pain", "capitalized_case" : "Hip pain",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-152"}
+{"official_side_effect" : "Joint pain", "capitalized_case" : "Joint pain",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-177"}
+{"official_side_effect" : "Nasopharyngitis", "capitalized_case" : "Nasopharyngitis",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-202"}
+{"official_side_effect" : "Penile fibrosis", "capitalized_case" : "Penile fibrosis",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-227"}
+{"official_side_effect" : "runny nose", "capitalized_case" : "runny nose",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-252"}
+{"official_side_effect" : "spinning sensation", "capitalized_case" : "spinning sensation",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-277"}
+{"official_side_effect" : "ulcers", "capitalized_case" : "ulcers",  "dc_title" : " - ", "dc_description" : ""}

@@ -1,0 +1,24 @@
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-9"}
+{"official_side_effect" : "acne", "capitalized_case" : "acne",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-34"}
+{"official_side_effect" : "Bleeding", "capitalized_case" : "Bleeding",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-59"}
+{"official_side_effect" : "congestion", "capitalized_case" : "congestion",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-84"}
+{"official_side_effect" : "dry mouth", "capitalized_case" : "dry mouth",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-109"}
+{"official_side_effect" : "flushing", "capitalized_case" : "flushing",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-134"}
+{"official_side_effect" : "inability to keep an erection", "capitalized_case" : "inability to keep an erection",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-159"}
+{"official_side_effect" : "loss in sexual desire", "capitalized_case" : "loss in sexual desire",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-184"}
+{"official_side_effect" : "Nervousness", "capitalized_case" : "Nervousness",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-209"}
+{"official_side_effect" : "Pharyngolaryngeal pain", "capitalized_case" : "Pharyngolaryngeal pain",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-234"}
+{"official_side_effect" : "Severe apnea", "capitalized_case" : "Severe apnea",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-259"}
+{"official_side_effect" : "suicide attempts", "capitalized_case" : "suicide attempts",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-284"}
+{"official_side_effect" : "Urogenital", "capitalized_case" : "Urogenital",  "dc_title" : " - ", "dc_description" : ""}

@@ -1,0 +1,24 @@
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-20"}
+{"official_side_effect" : "Arrhythmia", "capitalized_case" : "Arrhythmia",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-45"}
+{"official_side_effect" : "Breast pain", "capitalized_case" : "Breast pain",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-70"}
+{"official_side_effect" : "Decreased hearing", "capitalized_case" : "Decreased hearing",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-95"}
+{"official_side_effect" : "ejaculatory disturbances", "capitalized_case" : "ejaculatory disturbances",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-120"}
+{"official_side_effect" : "Headaches", "capitalized_case" : "Headaches",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-145"}
+{"official_side_effect" : "irregular pulse", "capitalized_case" : "irregular pulse",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-170"}
+{"official_side_effect" : "Muscle Spasms", "capitalized_case" : "Muscle Spasms",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-195"}
+{"official_side_effect" : "Paraesthesia", "capitalized_case" : "Paraesthesia",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-220"}
+{"official_side_effect" : "Pulmonary interstitial emphysema", "capitalized_case" : "Pulmonary interstitial emphysema",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-245"}
+{"official_side_effect" : "slurred speech", "capitalized_case" : "slurred speech",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-270"}
+{"official_side_effect" : "Trauma", "capitalized_case" : "Trauma",  "dc_title" : " - ", "dc_description" : ""}
+{"index":{"_index":"fda_dev", "_type":"side_effect", "_id":"side_effect-295"}
+{"official_side_effect" : "Weight Increase", "capitalized_case" : "Weight Increase",  "dc_title" : " - ", "dc_description" : ""}

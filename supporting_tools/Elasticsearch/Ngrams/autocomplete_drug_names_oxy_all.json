@@ -1,0 +1,18 @@
+{
+  "query": {
+
+        "bool": {
+		  "must" : [
+		  				{ "match": {"capitalized_case": "tyl chi"} },
+		  				{ "match": {"_type": "drug"} }
+		  			],
+		  "should" : [
+		  				{"prefix" : { "official_name" :  { "value" : "yyl chi", "boost" : 2.0 } }}
+		  			]
+		  	}
+
+  },
+  "size": 5,
+  "fields" : ["capitalized_case"]
+}
+

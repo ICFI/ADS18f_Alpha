@@ -1,0 +1,5 @@
+{
+    "ES_USER":"secret_username_here",
+    "ES_PWD":"secret_password_here",
+    "Instructions":"If in an environment where you cannot read environment params, update this file, create an etc folder in your home path, and copy the file to that path and remote the .template extension"
+}

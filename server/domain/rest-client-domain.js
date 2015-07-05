@@ -10,9 +10,24 @@ var ElasticSearchQuery = require("./essearch-query-template.js");
 
 var BaseUrl = "https://18263339722.us-east-1.bonsai.io/fda/_search";
 
+var objAuth = {};
+(function(){
+    objAuth.user = process.env.ES_USER;
+    objAuth.pwd = process.env.ES_PWD;
+    console.log(process.env.ES_USER);
+    if( !objAuth.user){
+        var fs = require('fs');
+        var config = JSON.parse(fs.readFileSync(process.env.HOME+'/etc/config.js', 'utf8'));
+        //console.log("config = " + config.ES_USER);
+        objAuth.user = config.ES_USER;
+        objAuth.pwd = config.ES_PWD; 
+    }
+    console.log(objAuth)
+})();
+
 var options_auth={
-    user:process.env.ES_USER,
-    password:process.env.ES_PWD,
+    user:objAuth.user,
+    password:objAuth.pwd,
     mimetypes:{
     json:["application/json","application/json;charset=utf-8"]
   }

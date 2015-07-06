@@ -6,7 +6,7 @@ libraries are used for security handling and utility functions
 ## Prerequisites
 1. Install Node.js
 2. Install ElasticSearch (or use Bonsai.io)
-3. Ensure outbound traffic is allowed in your environment over 
+3. Ensure outbound traffic is allowed in your environment over ports 80/443
 
 ## Components
 There are a couple of moving parts in this repository that you should
@@ -41,15 +41,29 @@ curl -s http://localhost:3000
 For productioninstallations, it is recommended to use a process service such as PM2.
 
 ### Configure ElasticSearch
-[STEVE - NEED SCRIPT TO POPULATE INDEX HERE]
+Perform a base installation of Elasticsearch.
+
+* Create the "fda" index using the create_fda_index.json file here (
+from https://github.com/ICFI/ADS18f_Alpha/blob/master/supporting_tools/Elasticsearch/Ngrams/create_fda_index.json).
+Be sure to use the URL of your Elasticsearch instance
+:
+	http POST http://localhost:9200/fda < create_fda_index.jso
+
+* Load the data into Elasticsearch using the bulk format with the two data files (https://github.com/ICFI/ADS18f_Alpha/tree/master/supporting_data)
+	http POST http://localhost:9200/fda/_bulk < medicines.json
+	http POST http://localhost:9200/fda/_bulk < side_effects.json
+
 Before you can run the tests, you'll need to set some environment
 variables so that the scripts can pass your credentials along to ElasticSearch. The
-easiest way to do this is to execute the following commands in your shell environment.:
+easiest way to do this is to execute the following commands in your shell environment:
 
 ```sh
 export ES_USER="your-elasticsearch-username"
 export ES_PWD="your-elasticsearch-key"
 ```
+If your environment's security policy prevents your application to access environment params,
+you can copy the /server/config.js to the /home/{appuser}/etc/config.js and update credentials
+appropriately.
 
 ### Run the Tests
 If code modifications are made, you should re-run the unit tests.

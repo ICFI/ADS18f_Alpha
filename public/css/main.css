@@ -2151,8 +2151,8 @@ fieldset[disabled] .btn-warning.active {
 }
 .btn-danger {
   color: #ffffff;
-  background-color: #d9534f;
-  border-color: #d43f3a;
+  background-color: #d30606;
+  border-color: #ba0505;
 }
 .btn-danger:hover,
 .btn-danger:focus,
@@ -2161,8 +2161,8 @@ fieldset[disabled] .btn-warning.active {
 .btn-danger.active,
 .open > .dropdown-toggle.btn-danger {
   color: #ffffff;
-  background-color: #c9302c;
-  border-color: #ac2925;
+  background-color: #a10505;
+  border-color: #7f0404;
 }
 .btn-danger:active,
 .btn-danger.active,
@@ -2187,11 +2187,11 @@ fieldset[disabled] .btn-danger:active,
 .btn-danger.disabled.active,
 .btn-danger[disabled].active,
 fieldset[disabled] .btn-danger.active {
-  background-color: #d9534f;
-  border-color: #d43f3a;
+  background-color: #d30606;
+  border-color: #ba0505;
 }
 .btn-danger .badge {
-  color: #d9534f;
+  color: #d30606;
   background-color: #ffffff;
 }
 .btn-link {
@@ -3022,6 +3022,10 @@ main {
   padding: 25px 0 200px;
   margin-bottom: 0;
 }
+.medlib .status {
+  padding: 5px;
+  margin-bottom: 10px;
+}
 .medlib p {
   font-size: 39px;
   font-weight: 300;
@@ -3066,8 +3070,31 @@ main {
   -o-transition: opacity 100ms;
   transition: opacity 100ms;
 }
-.fill-in-the-blank.blank-the-in-filled .blank-label {
+.fill-in-the-blank .blank-label.blank-filled {
   opacity: 0;
+}
+.fill-in-the-blank .help-block {
+  color: #d30606;
+  font-size: 14px;
+  line-height: 14px;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  display: none;
+}
+.fill-in-the-blank.has-error {
+  margin-bottom: 14px;
+}
+.fill-in-the-blank.has-error .help-block {
+  display: block;
+}
+.fill-in-the-blank.has-error input {
+  border-bottom-color: #d30606;
+}
+.fill-in-the-blank.has-success input {
+  border-bottom-color: #5cb85c;
 }
 .end-gradient {
   height: 15px;
@@ -3182,6 +3209,9 @@ footer#site-footer .logo {
   #search-result-header {
     padding: 0 25px;
   }
+  .medlib .status {
+    font-size: 14px;
+  }
   .medlib p {
     font-size: 29.25px;
   }
@@ -3196,11 +3226,18 @@ footer#site-footer .logo {
     display: block;
     margin: 25px auto 0;
   }
-  h2 {
-    font-size: 23.4px;
+  .medlib form {
+    padding: 0 25px;
+  }
+  .medlib label {
+    display: block;
   }
   .medlib p {
     font-size: 23.4px;
+  }
+  #search-result-header {
+    font-size: 23.4px;
+    margin-bottom: 25px;
   }
   #logo-medCheck {
     background-image: url('/img/logo-medCheck.sm.png');
@@ -3210,6 +3247,9 @@ footer#site-footer .logo {
     background-repeat: no-repeat;
     background-size: 200px 33px;
     margin: 0;
+  }
+  .search-result {
+    padding: 25px 0;
   }
   .search-result .bg-emergency,
   .search-result .guide {

@@ -34,27 +34,14 @@ html(lang="en-us")
         header(id="site-header" role="banner")
             .page-container
                 h1#logo-medCheck.text-hide MedCheck.gov
-        main(data-ng-controller='Ads18fController' role="main")
-            div.medlib
+        main(role="main")
+            div(class="medlib" data-ng-controller='Ads18fController')
                 form(novalidate role="search" class="page-container" name="drugCauseSymptom" data-ng-submit="submit()")
+                    div(class="status collapse bg-danger" data-ng-class="{'in': (statusMessage !== '')}") {{statusMessage}}
                     p.form-group 
-                        | Can <fill-in-the-blank label="Enter Medicine" data-the-blank="drug" data-typeahead-query-field="DRUG"></fill-in-the-blank> cause <fill-in-the-blank label="Enter Symptom" data-the-blank="symptom" data-typeahead-query-field="SYMPTOM"></fill-in-the-blank>?
+                        | Can <fill-in-the-blank label="Medicine" data-the-blank="drug" data-input-name="drug" data-typeahead-query-field="DRUG" data-set-validity="drugCauseSymptom.drug.$setValidity(validationErrorKey, isValid)"></fill-in-the-blank> cause <fill-in-the-blank label="Symptom" data-the-blank="symptom" data-input-name="symptom" data-typeahead-query-field="SYMPTOM" data-set-validity="drugCauseSymptom.symptom.$setValidity(validationErrorKey, isValid)"></fill-in-the-blank>?
                         button(type="submit" class="btn btn-lg btn-primary") Find Out
-            div.search-result-wrapper
-                section(data-ng-class="{in: hasResult}" class="collapse page-container search-result" data-scroll-to data-scroll-on="{{setFocus}}")
-                    h2(tabindex="-1" id="search-result-header" class="scroll-focus") <span ng-bind-html="hasSideEffectYesNo"></span>, {{resultDrug}} {{hasSideEffectText}} {{resultSymptom}}.
-                    div.row
-                        div(class="col-sm-12 col-md-7")
-                            p(class="bg-emergency") Everyone reacts differently to medication. Always check with your doctor or healthcare professional for medical advice. <strong><em>If this is a medical emergency, call 911 immediately.</em></strong>
-                            p(class="guide" data-ng-class="{'collapse' : (guide === undefined || guide.length === 0)}") <strong>Additional Information:</strong> {{guide}}
-                            footer
-                                p.disclaimer <strong>Disclaimer:</strong> openFDA is a beta research project and is not for clinical use. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated.
-                                a(data-ng-click="searchMore()" class="link-search-more btn btn-lg btn-primary") Search More Side Effects
-                        aside(class="col-sm-12 col-md-5")
-                            a(href="https://www.accessdata.fda.gov/scripts/medwatch/index.cfm?action=reporting.home" class="btn btn-lg btn-danger" data-tooltip="data-tooltip" data-toggle="tooltip" data-placement="top" title="When you report a side effect to the FDA, you help make medicine safer for everyone.") Report a Side Effect
-                            chart(data-chart-data="myMedChartData" data-ng-class="{'collapse' : (!hasResult || !hasSideEffect || myMedChartHasError)}") {{myMedChartTitle}}
-                            chart(data-chart-data="anyMedChartData" data-ng-class="{'collapse' : (!hasResult || anyMedChartHasError)}") {{anyMedChartTitle}}
-                div(data-ng-class="{in: hasResult}" class="collapse end-gradient")
+            div(class="search-result-wrapper" data-ng-view="data-ng-view")
 
         footer(class="page-container" role="contentinfo" id="site-footer")
             p powered by <a href="https://open.fda.gov/" id="logo-openFDA" class="logo text-hide">openFDA</a> &amp; <a href="http://www.icfi.com/" id="logo-icf" class="logo text-hide">ICF International</a>
@@ -62,10 +49,11 @@ html(lang="en-us")
         script(src='/scripts/bootstrap/js/tooltip.js')
         script(src='/vendor/jquery-auto-complete/jquery.auto-complete.min.js')
         script(src='/scripts/angular/angular.min.js')
+        script(src='/scripts/angular-route/angular-route.min.js')
         script(src='/scripts/angular-sanitize/angular-sanitize.min.js')
         script(src='/scripts/angular-aria/angular-aria.min.js')
         script(src='/scripts/d3/d3.min.js')
-        script(src='/scripts/c3/c3.min.js')
+        script(src='/scripts/c3/c3.js')
         script(src='/app/app.js')
         script(src='/app/config.js')
         script(src='/app/factories.js')    

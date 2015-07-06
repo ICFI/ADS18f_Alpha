@@ -21,7 +21,7 @@ module.exports = function (config) {
       'public/scripts/c3/c3.min.js',
       'public/vendor/jquery-auto-complete/jquery.auto-complete.min.js',
       'public/scripts/angular/angular.js',
-      'public/scripts/angular-resource/angular-resource.js',
+      'public/scripts/angular-route/angular-route.js',
       'public/scripts/angular-mocks/angular-mocks.js',
       'test/app-test-init.js',
       'public/app/**/*.js',

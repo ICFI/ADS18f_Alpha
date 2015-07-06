@@ -1,3 +1,4 @@
-<div class="fill-in-the-blank" data-ng-class="{'blank-the-in-filled': (theBlank !== '' && theBlank !== undefined)}">
-    <label><span class="blank-label">{{label}}</span> <input autocorrect="off" type="text" required="required" data-ng-model="theBlank" /></label>
+<div class="fill-in-the-blank" data-ng-class="{'has-success' : (fieldStatus === true), 'has-error' : (fieldStatus === false)}">
+    <label><span class="blank-label" data-ng-class="{'blank-filled': (theBlank !== '' && theBlank !== undefined)}">Enter {{label}}</span> <input autocorrect="off" type="text" name="{{inputName}}" id="{{inputName}}" required="required" data-ng-model="theBlank" /></label>
+    <span class="help-block">{{label}} not found</span>
 </div>

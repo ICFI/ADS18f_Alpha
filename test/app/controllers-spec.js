@@ -1,13 +1,7 @@
 /*global describe, expect, beforeEach, it, inject*/
 
-describe("Ads18fController", function () {
-    var controller,
-        scope,
-        element,
-        httpBackend,
-        DATA_PATHS,
-        MESSAGES,
-        foundResponse = {
+describe("Controllers", function () {
+    var foundResponse = {
             "found"          : true,
             "brand_name"     : "oxycodone",
             "generic_name"   : "oxycodone",
@@ -33,80 +27,107 @@ describe("Ads18fController", function () {
         drug         = "oxycodone",
         symptom      = "dizziness";
 
-    beforeEach(module('ads18fApp'));
+    describe("Ads18fController", function () {
+        var scope,
+            controller,
+            element,
+            location,
+            route,
+            routeParams;
 
-    beforeEach(inject(function ($controller, $rootScope, $compile, $httpBackend, _DATA_PATHS_, _MESSAGES_) {
-        scope       = $rootScope.$new();
-        controller  = $controller('Ads18fController', {
-            $scope: scope
+        beforeEach(module('ads18fApp'));
+
+        beforeEach(inject(function ($rootScope, $controller, $compile, $location, $routeParams) {
+            scope       = $rootScope.$new();
+            controller  = $controller('Ads18fController', {
+                $scope: scope
+            });
+            element     = '<form name="drugCauseSymptom"><input required data-ng-model="drug" /><input required data-ng-model="symptom" /></form>';
+            element     = $compile(element)(scope);
+            location    = $location;
+            routeParams = $routeParams;
+        }));
+
+        it("should have no search criteria", function () {
+            expect(scope.drug).to.be.empty;
+            expect(scope.symptom).to.be.empty;
+            // expect(scope.formIsValid()).to.be.false;
         });
-        element     = '<form name="drugCauseSymptom"><input required data-ng-model="drug" /><input required data-ng-model="symptom" /></form>';
-        element     = $compile(element)(scope);
-        httpBackend = $httpBackend;
-        DATA_PATHS  = _DATA_PATHS_;
-        MESSAGES  = _MESSAGES_;
-    }));
 
-    it("should have no search criteria", function () {
-        expect(scope.drug).to.be.empty;
-        expect(scope.symptom).to.be.empty;
-        expect(scope.formIsValid()).to.be.false;
+        it("should clear search form and hide previous search when 'Search More Side Effects is clicked'");
     });
 
-    it("should have no results", function () {
-        expect(scope.hasResult).to.be.false;
+    describe("DrugSymptom", function () {
+        var scope,
+            controller,
+            routeParams,
+            element,
+            httpBackend,
+            DATA_PATHS,
+            MESSAGES;
+
+        beforeEach(module('ads18fApp'));
+
+        beforeEach(inject(function ($rootScope, $controller, $routeParams, $compile, $httpBackend, _DATA_PATHS_, _MESSAGES_) {
+            scope       = $rootScope.$new();
+            controller  = $controller('DrugSymptom', {
+                $scope: scope,
+                $routeParams: {
+                    'drug'    : drug,
+                    'symptom' : symptom
+                }
+            });
+            routeParams = $routeParams;
+            element     = '<form name="drugCauseSymptom"><input required data-ng-model="drug" /><input required data-ng-model="symptom" /></form>';
+            element     = $compile(element)(scope);
+            httpBackend = $httpBackend;
+            DATA_PATHS  = _DATA_PATHS_;
+            MESSAGES    = _MESSAGES_;
+        }));
+
+        it("should have no results", function () {
+            expect(scope.hasResult).to.be.false;
+        });
+
+        it("should display search results - hasSideEffectYesNo = 'Yes' and medicine guide should be visible", function () {
+            httpBackend.when('GET', DATA_PATHS.DRUG_SYMPTOM.replace('%drug%', drug).replace('%symptom%', symptom))
+                .respond(foundResponse);
+
+            httpBackend.when('GET', '/api/v1/chart/my_med/' + drug + '/' + symptom)
+                .respond(donutResponse);
+
+            httpBackend.when('GET', '/api/v1/chart/any_med/' + drug + '/' + symptom)
+                .respond(donutResponse);
+
+            httpBackend.flush();
+
+            expect(scope.hasSideEffectYesNo).to.equal(MESSAGES.YES);
+            expect(scope.hasResult).to.be.true;
+            expect(scope.hasSideEffect).to.be.true;
+        });
+
+        it("should display search results - hasSideEffectYesNo = 'No'");
     });
 
-    it("should display search results - hasSideEffectYesNo = 'Yes' and medicine guide should be visible", function () {
-        httpBackend.when('GET', DATA_PATHS.DRUG_SYMPTOM.replace('%drug%', drug).replace('%symptom%', symptom))
-            .respond(foundResponse);
+    describe("NotFound", function () {
+        var scope,
+            controller,
+            routeParams,
+            MESSAGES;
 
-        httpBackend.when('GET', '/api/v1/chart/my_med/' + drug + '/' + symptom)
-            .respond(donutResponse);
+        beforeEach(module('ads18fApp'));
 
-        httpBackend.when('GET', '/api/v1/chart/any_med/' + drug + '/' + symptom)
-            .respond(donutResponse);
+        beforeEach(inject(function ($rootScope, $controller, $routeParams, _MESSAGES_) {
+            scope       = $rootScope.$new();
+            controller  = $controller('NotFound', {
+                $scope: scope
+            });
+            routeParams = $routeParams;
+            MESSAGES  = _MESSAGES_;
+        }));
 
-        scope.drug = drug;
-        scope.symptom = symptom;
-
-        scope.$digest();
-
-        scope.submit();
-
-        httpBackend.flush();
-
-        expect(scope.hasSideEffectYesNo).to.equal(MESSAGES.YES);
-        expect(scope.hasResult).to.be.true;
-        expect(scope.hasSideEffect).to.be.true;
-    });
-
-    it("should clear search form and hide previous search when 'Search More Side Effects is clicked'", function () {
-        httpBackend.when('GET', DATA_PATHS.DRUG_SYMPTOM.replace('%drug%', drug).replace('%symptom%', symptom))
-            .respond(notFoundResponse);
-
-        httpBackend.when('GET', '/api/v1/chart/any_med/' + drug + '/' + symptom)
-            .respond(donutResponse);
-
-        scope.drug = drug;
-        scope.symptom = symptom;
-
-        scope.$digest();
-
-        scope.submit();
-
-        httpBackend.flush();
-
-        expect(scope.hasSideEffectYesNo).to.equal(MESSAGES.NO);
-        expect(scope.hasResult).to.be.true;
-        expect(scope.hasSideEffect).to.be.false;
-
-        scope.searchMore();
-
-        scope.$digest();
-
-        expect(scope.drug).to.equal('');
-        expect(scope.symptom).to.equal('');
-        expect(scope.hasResult).to.be.false;
+        it("should show fail message if drug is not valid term");
+        it("should show fail message if symptom is not valid term");
+        it("should show fail message if both drug and symptom are not valid terms");
     });
 });

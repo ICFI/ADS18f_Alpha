@@ -2,5 +2,9 @@
 (function () {
     'use strict';
 
-    angular.module('ads18fApp', ['ngAria', 'ngSanitize']);
+    angular.module('ads18fApp', [
+        'ngRoute',
+        'ngAria',
+        'ngSanitize'
+    ]);
 }());

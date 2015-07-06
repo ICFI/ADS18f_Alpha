@@ -9,16 +9,44 @@
             'DRUG_SYMPTOM'      : '/api/v1/drug/label/%drug%/%symptom%',
             'CHART'             : '/api/v1/chart/%type%/%drug%/%symptom%'
         },
+
         MESSAGES = {
             'SERVER_ERROR'      : 'Something went awry.',
             'CHART_DATA_ERROR'  : 'Chart data not available.',
-            'YES'               : '<strong>Yes</strong>',
+            'YES'               : '<strong>Yes</strong>,',
             'NO'                : '<strong>Sorry,</strong> we don’t know if',
             'YES_TEXT'          : 'can cause',
-            'NO_TEXT'           : 'causes'
+            'NO_TEXT'           : 'causes',
+            'INVALID_TERM'      : "We don't know %term%. Did you check your spelling?",
+            'INVALID_SEARCH'    : 'Please enter both a Medicine and a Symptom.'
+        },
+
+        routeConfig = function ($routeProvider) {
+            $routeProvider
+                .when('/drug-symptom/:drug/:symptom', {
+                    templateUrl: 'app/partials/drug-symptom.html',
+                    controller: 'DrugSymptom'
+                })
+                .when('/not-found/both/:drug/:symptom', {
+                    templateUrl: 'app/partials/form-error.html',
+                    controller: 'NotFound'
+                })
+                .when('/not-found/drug/:drug', {
+                    templateUrl: 'app/partials/form-error.html',
+                    controller: 'NotFound'
+                })
+                .when('/not-found/symptom/:symptom', {
+                    templateUrl: 'app/partials/form-error.html',
+                    controller: 'NotFound'
+                })
+                .when('/form-error/', {
+                    templateUrl: 'app/partials/form-error.html',
+                    controller: 'FormError'
+                });
         };
 
     angular.module('ads18fApp')
         .constant('DATA_PATHS', DATA_PATHS)
-        .constant('MESSAGES', MESSAGES);
+        .constant('MESSAGES', MESSAGES)
+        .config(['$routeProvider', routeConfig]);
 }());

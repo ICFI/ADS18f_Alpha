@@ -3,35 +3,80 @@
 (function () {
     'use strict';
     var fillInTheBlank = function (typeAhead) {
+            var termIsFound = function (value, options) {
+                    return options.indexOf(value) >= 0;
+                };
+
             return {
                 restrict    : 'E',
                 replace     : true,
                 templateUrl : '/app/partials/fill-in-the-blank.html',
                 scope       : {
                     theBlank            : '=',
+                    inputName           : '@',
                     label               : '@',
-                    typeaheadQueryField : '@'
+                    typeaheadQueryField : '@',
+                    setValidity         : '&'
                 },
                 link        : function (scope, element) {
-                    element.find('input').autoComplete({
+                    var lastSet = [],
+                        theBlankInput = element.find('input'),
+                        isValid,
+                        validation = function () {
+                            isValid = termIsFound(scope.theBlank, lastSet);
+
+                            scope.$apply(function () {
+                                if (scope.theBlank === undefined || scope.theBlank.length === 0) {
+                                    scope.fieldStatus = undefined;
+                                } else {
+                                    scope.fieldStatus = isValid;
+                                }
+
+                                if (isValid) {
+                                    scope.setValidity({
+                                        validationErrorKey: 'term',
+                                        isValid: true
+                                    });
+                                } else {
+                                    scope.setValidity({
+                                        validationErrorKey: 'term',
+                                        isValid: false
+                                    });
+                                }
+                            });
+                        };
+
+                    scope.$watch('theBlank', function (newValue) {
+                        if (newValue === undefined || newValue === '') {
+                            scope.fieldStatus = undefined;
+                        }
+                    });
+
+                    theBlankInput.autoComplete({
                         source: function (term, response) {
                             typeAhead.get({
                                 'field' : scope.typeaheadQueryField,
                                 'query' : term
                             }).then(function (data) {
+                                lastSet = data;
                                 response(data);
                             });
                         },
                         minChars : 1,
                         onSelect: function (event, term) {
-                            console.log(term);
-                            scope.$apply(function () {
-                                scope.theBlank = term;
-                            });
+                            scope.theBlank = term;
+
+                            validation();
                         }
                     }).on('blur', function () {
                         if (scope.theBlank !== this.value) {
                             scope.theBlank = this.value;
+                        }
+
+                        validation();
+                    }).on('keypress', function (event) {
+                        if (event.which === 13) {
+                            validation();
                         }
                     });
                 }
@@ -50,6 +95,9 @@
                         },
                         size: {
                             width: chartWidth
+                        },
+                        color: {
+                            pattern: ['#ce0606', '#588dae']
                         }
                     });
 
@@ -68,8 +116,8 @@
                     var chartElement = element.find('.chart')[0],
                         chartGenerate;
 
-                    scope.$watch('chartData', function (newchartData, oldchartData) {
-                        if (oldchartData.length) {
+                    scope.$watch('chartData', function (newchartData) {
+                        if (chartGenerate !== undefined) {
                             chartGenerate.destroy();
                             element.attr('aria-hidden', true);
                         }

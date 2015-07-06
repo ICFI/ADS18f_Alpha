@@ -3,117 +3,187 @@
 (function () {
     'use strict';
 
-    var Ads18fController = function ($scope, $q, $log, doesMedicineCauseReaction, getChartData, MESSAGES) {
-        var formIsValid = function () {
-                return !$scope.drugCauseSymptom.$valid;
-            },
+    var Ads18fController = function ($scope, $location, $routeParams, MESSAGES) {
+            var formIsValid = function () {
+                    return $scope.drugCauseSymptom.$valid;
+                },
 
-            showResult = function (data) {
-                var myMedChartPromise,
-                    anyMedChartPromise,
-                    promiseArray = [];
+                submit = function () {
+                    $scope.statusMessage = '';
 
-                $scope.hasSideEffect      = data.found;
-                $scope.hasSideEffectYesNo = ($scope.hasSideEffect) ? MESSAGES.YES : MESSAGES.NO;
-                $scope.hasSideEffectText  = ($scope.hasSideEffect) ? MESSAGES.YES_TEXT : MESSAGES.NO_TEXT;
-                $scope.guide              = (data.message !== undefined) ? data.message[0] : '';
-                $scope.resultDrug         = $scope.drug;
-                $scope.resultSymptom      = $scope.symptom;
+                    if (formIsValid()) {
+                        $location.path('/drug-symptom/' + $scope.drug + '/' + $scope.symptom).search('drug', null).search('symptom', null);
+                    } else if ($scope.drug === '' || $scope.drug === undefined || $scope.symptom === '' || $scope.symptom === undefined) {
+                        $scope.statusMessage = MESSAGES.INVALID_SEARCH;
+                        $location.path('/');
+                    } else if ($scope.drugCauseSymptom.drug.$invalid && $scope.drugCauseSymptom.symptom.$valid) {
+                        $location.path('/not-found/drug/' + $scope.drug + '/').search('symptom', $scope.symptom);
+                    } else if ($scope.drugCauseSymptom.drug.$valid && $scope.drugCauseSymptom.symptom.$invalid) {
+                        $location.path('/not-found/symptom/' + $scope.symptom + '/').search('drug', $scope.drug);
+                    } else {
+                        $location.path('/not-found/both/' + $scope.drug + '/' + $scope.symptom + '/');
+                    }
+                },
 
-                if ($scope.hasSideEffect) {
-                    myMedChartPromise = getChartData.get({
-                        'type'    : 'my_med',
-                        'drug'    : encodeURIComponent($scope.drug),
-                        'symptom' : encodeURIComponent($scope.symptom)
+                searchMore = function () {
+                    $scope.drug        = '';
+                    $scope.symptom     = '';
+                    $scope.hasResult   = false;
+                    $("body").scrollTop(0);
+                    $("#drug").focus();
+                };
+
+            $scope.$on('$routeChangeSuccess', function (event, next, current) {
+                if (next) {
+                    $scope.drug              = $routeParams.drug || '';
+                    $scope.symptom           = $routeParams.symptom || '';
+                } else {
+                    searchMore();
+                }
+            });
+
+            $scope.statusMessage     = '';
+            $scope.formIsValid       = formIsValid;
+            $scope.submit            = submit;
+
+            // $scope.$on('clearSearch', searchMore);
+        },
+
+        DrugSymptom = function ($scope, $location, $routeParams, $q, $log, doesMedicineCauseReaction, getChartData, MESSAGES) {
+            var showResult = function (data) {
+                    var myMedChartPromise,
+                        anyMedChartPromise,
+                        promiseArray = [];
+
+                    $scope.hasSideEffect      = data.found;
+                    $scope.hasSideEffectYesNo = ($scope.hasSideEffect) ? MESSAGES.YES : MESSAGES.NO;
+                    $scope.hasSideEffectText  = ($scope.hasSideEffect) ? MESSAGES.YES_TEXT : MESSAGES.NO_TEXT;
+                    $scope.guide              = (data.message !== undefined) ? data.message[0] : '';
+
+                    if ($scope.hasSideEffect) {
+                        myMedChartPromise = getChartData.get({
+                            'type'    : 'my_med',
+                            'drug'    : encodeURIComponent($scope.resultDrug),
+                            'symptom' : encodeURIComponent($scope.resultSymptom)
+                        });
+
+                        promiseArray.push(myMedChartPromise);
+
+                        myMedChartPromise.then(
+                            function (data) {
+                                $scope.myMedChartData = data.data;
+                                $scope.myMedChartTitle = data.title;
+                                $scope.myMedChartHasError = false;
+                            },
+                            function () {
+                                $scope.myMedChartHasError = true;
+                            }
+                        );
+                    }
+
+                    anyMedChartPromise = getChartData.get({
+                        'type'    : 'any_med',
+                        'drug'    : encodeURIComponent($scope.resultDrug),
+                        'symptom' : encodeURIComponent($scope.resultSymptom)
                     });
 
-                    promiseArray.push(myMedChartPromise);
+                    promiseArray.push(anyMedChartPromise);
 
-                    myMedChartPromise.then(
+                    anyMedChartPromise.then(
                         function (data) {
-                            $scope.myMedChartData = data.data;
-                            $scope.myMedChartTitle = data.title;
-                            $scope.myMedChartHasError = false;
+                            $scope.anyMedChartData = data.data;
+                            $scope.anyMedChartTitle = data.title;
+                            $scope.anyMedChartHasError = false;
                         },
                         function () {
-                            $scope.myMedChartHasError = true;
+                            $scope.anyMedChartHasError = true;
                         }
                     );
-                }
 
-                anyMedChartPromise = getChartData.get({
-                    'type'    : 'any_med',
-                    'drug'    : encodeURIComponent($scope.drug),
-                    'symptom' : encodeURIComponent($scope.symptom)
-                });
+                    $q.all(promiseArray).then(
+                        function () {
+                            $scope.hasResult = true;
+                            $scope.setFocus = true;
+                        },
+                        function () {
+                            $log.warn('there was an error loading chart data');
+                            $scope.hasResult = true;
+                            $scope.setFocus = true;
+                        }
+                    );
+                };
 
-                promiseArray.push(anyMedChartPromise);
+            $scope.resultDrug         = $routeParams.drug;
+            $scope.resultSymptom      = $routeParams.symptom;
 
-                anyMedChartPromise.then(
-                    function (data) {
-                        $scope.anyMedChartData = data.data;
-                        $scope.anyMedChartTitle = data.title;
-                        $scope.anyMedChartHasError = false;
-                    },
-                    function () {
-                        $scope.anyMedChartHasError = true;
-                    }
-                );
+            doesMedicineCauseReaction.get({
+                'drug'    : $scope.resultDrug,
+                'symptom' : $scope.resultSymptom
+            }).then(showResult);
 
-                $q.all(promiseArray).then(
-                    function () {
-                        $scope.hasResult = true;
-                        $scope.setFocus = true;
-                    },
-                    function () {
-                        $log.warn('there was an error loading chart data');
-                        $scope.hasResult = true;
-                    }
-                );
-            },
+            $scope.hasResult         = false;
+            $scope.setFocus          = false;
+            $scope.hasSideEffect     = false;
 
-            submit = function () {
-                $scope.setFocus = false;
-                var params = {
-                        'drug'    : encodeURIComponent($scope.drug),
-                        'symptom' : encodeURIComponent($scope.symptom)
-                    };
+            $scope.myMedChartTitle   = 'Percent of Reported Adverse Effects for Medicine';
+            $scope.myMedChartData    = [];
 
-                doesMedicineCauseReaction.get(params).then(showResult);
-            },
+            $scope.anyMedChartTitle  = 'Percent of all Reported Adverse Effects';
+            $scope.anyMedChartData   = [];
 
-            searchMore = function () {
-                $scope.drug        = '';
-                $scope.symptom     = '';
-                $scope.hasResult   = false;
-                $("body").scrollTop(0);
+            $scope.searchMore = function () {
+                $location.path('/').search('drug', null).search('symptom', null);
             };
+        },
 
-        $scope.drug              = '';
-        $scope.symptom           = '';
+        NotFound = function ($scope, $location, $route, $routeParams, MESSAGES) {
+            var terms = [],
+                term;
 
-        $scope.formIsValid       = formIsValid;
-        $scope.hasResult         = false;
-        $scope.setFocus          = false;
-        $scope.hasSideEffect     = false;
+                // debugger;
 
-        $scope.submit            = submit;
-        $scope.searchMore        = searchMore;
+            if ($route.current.pathParams.drug) {
+                terms.push($route.current.pathParams.drug);
+            }
 
-        $scope.myMedChartTitle   = 'Percent of Reported Adverse Effects for Medicine';
-        $scope.myMedChartData    = [];
+            if ($route.current.pathParams.symptom) {
+                terms.push($route.current.pathParams.symptom);
+            }
 
-        $scope.anyMedChartTitle  = 'Percent of all Reported Adverse Effects';
-        $scope.anyMedChartData   = [];
-    };
+            term = terms.join(" or ");
 
-    angular.module('ads18fApp').controller('Ads18fController', [
-        '$scope',
-        '$q',
-        '$log',
-        'doesMedicineCauseReaction',
-        'getChartData',
-        'MESSAGES',
-        Ads18fController
-    ]);
+            $scope.setFocus = true;
+            $scope.message = MESSAGES.INVALID_TERM.replace('%term%', term);
+            $scope.searchMore = function () {
+                $location.path('/').search('drug', null).search('symptom', null);
+            };
+        };
+
+    angular.module('ads18fApp')
+        .controller('Ads18fController', [
+            '$scope',
+            '$location',
+            '$routeParams',
+            'MESSAGES',
+            Ads18fController
+        ])
+        .controller('DrugSymptom', [
+            '$scope',
+            '$location',
+            '$routeParams',
+            '$q',
+            '$log',
+            'doesMedicineCauseReaction',
+            'getChartData',
+            'MESSAGES',
+            DrugSymptom
+        ])
+        .controller('NotFound', [
+            '$scope',
+            '$location',
+            '$route',
+            '$routeParams',
+            'MESSAGES',
+            NotFound
+        ]);
 }());

@@ -86,6 +86,8 @@
         chart = function () {
             var chartWidth = 220,
 
+                colors = ['#ce0606', '#588dae'],
+
                 makeDonut = function (columns, chartElement) {
                     var chartGenerate = c3.generate({
                         bindto: chartElement,
@@ -97,18 +99,44 @@
                             width: chartWidth
                         },
                         color: {
-                            pattern: ['#ce0606', '#588dae']
+                            pattern: colors
+                        },
+                        legend: {
+                            show: false
                         }
                     });
 
                     return chartGenerate;
+                },
+
+                mapLegendData = function (chartData) {
+                    var data = [],
+                        sum = chartData.reduce(function (a, b) {
+                            return a[1] + b[1];
+                        });
+
+                    console.log(sum);
+
+                    $.each(chartData, function (key, value) {
+                        var item = {};
+
+                        item.color = colors[key];
+                        item.title = value[0];
+                        item.percent = Math.round(value[1] / sum * 1000) / 10;
+
+                        data.push(item);
+
+                        console.log(key, value);
+                    });
+
+                    return data;
                 };
 
             return {
                 restrict    : 'E',
                 replace     : true,
                 transclude  : true,
-                template    : '<div class="chart-wrapper" aria-hidden="true"><h3 class="chart-header"><ng-transclude></ng-transclude></h3><div class="chart"></div></div>',
+                templateUrl : '/app/partials/chart.html',
                 scope       : {
                     chartData : '='
                 },
@@ -124,6 +152,7 @@
 
                         if (newchartData.length) {
                             chartGenerate = makeDonut(newchartData, chartElement);
+                            scope.legendData = mapLegendData(newchartData);
                             element.attr('aria-hidden', false);
                         }
                     });

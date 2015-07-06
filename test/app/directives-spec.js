@@ -25,6 +25,8 @@ describe("test directives", function () {
     });
 
     describe("chart directive", function () {
+        beforeEach(module('/app/partials/chart.html'));
+
         beforeEach(inject(function ($rootScope, $compile) {
             scope = $rootScope.$new();
 

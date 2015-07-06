@@ -1,0 +1,18 @@
+<div class="chart-wrapper" aria-hidden="true">
+    <h3 class="chart-header"><ng-transclude></ng-transclude></h3>
+    <div class="chart"></div>
+    <table class="table table-condensed table-donut-chart-legend">
+        <thead class="sr-only">
+            <tr>
+                <th>Reported</th>
+                <th>Percent of reported adverse effects</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-ng-repeat="column in legendData track by $index">
+                <td><div class="swatch" style="background-color: {{column.color}}"></div> {{column.title}}</td>
+                <td>{{column.percent}}%</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

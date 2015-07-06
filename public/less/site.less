@@ -35,8 +35,8 @@ main {
 }
 .btn.btn-danger {
     color: #ffffff;
-    background: #d30606;
-    #gradient.vertical(#d30606, #ae0404);
+    background: @brand-danger;
+    #gradient.vertical(@brand-danger, #ae0404);
     box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
     display: inline-block;
     min-width: 150px;
@@ -50,6 +50,11 @@ main {
     border-bottom: 1px solid #fff;
     padding: @grid-gutter-width / 2 0 200px;
     margin-bottom: 0;
+
+    .status {
+        padding: 5px;
+        margin-bottom: 10px;
+    }
 
     p {
         font-size: @font-size-h1;
@@ -96,10 +101,40 @@ main {
         bottom: 10px;
         opacity: 1;
         .transition(opacity 100ms);
+
+        &.blank-filled {
+            opacity: 0;
+        }
     }
 
-    &.blank-the-in-filled .blank-label {
-        opacity: 0;
+    .help-block {
+        color: @brand-danger;
+        font-size: @font-size-small;
+        line-height: @font-size-small;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        display: none;
+    }
+
+    &.has-error {
+        margin-bottom: @font-size-small;
+
+        .help-block {
+            display: block;
+        }
+
+        input {
+            border-bottom-color: @brand-danger;
+        }
+    }
+
+    &.has-success {
+        input {
+            border-bottom-color: @brand-success;
+        }
     }
 }
 
@@ -217,8 +252,13 @@ footer#site-footer {
         padding: 0 @grid-gutter-width / 2;
     }
 
-    .medlib p {
-        font-size: @font-size-h1 * .75;
+    .medlib {
+        .status {
+            font-size: @font-size-small;
+        }
+        p {
+            font-size: @font-size-h1 * .75;
+        }
     }
 }
 
@@ -232,13 +272,23 @@ footer#site-footer {
             display: block;
             margin: @grid-gutter-width / 2 auto 0;
         }
+
+        form {
+            padding: 0 25px;
+        }
+
+        label {
+            display: block;
+        }
+
+        p {
+            font-size: @font-size-h1 * .6;
+        }
     }
 
-    h2 {
+    #search-result-header {
         font-size: @font-size-h1 * .6;
-    }
-    .medlib p {
-        font-size: @font-size-h1 * .6;
+        margin-bottom: @grid-gutter-width / 2;
     }
 
     #logo-medCheck {
@@ -247,6 +297,7 @@ footer#site-footer {
     }
 
     .search-result {
+        padding: @grid-gutter-width / 2 0;
         .bg-emergency,
         .guide {
             font-size: @font-size-small;

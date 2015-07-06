@@ -1,0 +1,16 @@
+<section class="page-container search-result" data-scroll-to data-scroll-on="{{setFocus}}">
+    <h2 tabindex="-1" id="search-result-header" class="scroll-focus">{{message}}</h2>
+    <div class="row">
+        <div class="col-sm-12 col-md-7">
+            <p class="bg-emergency">Everyone reacts differently to medication. Always check with your doctor or healthcare professional for medical advice. <strong><em>If this is a medical emergency, call 911 immediately.</em></strong></p>
+            <footer>
+                <p class="disclaimer"><strong>Disclaimer:</strong> openFDA is a beta research project and is not for clinical use. While we make every effort to ensure that data is accurate, you should assume all results are unvalidated.</p>
+                <div data-ng-click="searchMore()" class="link-search-more btn btn-lg btn-primary">Search More Side Effects</div>
+            </footer>
+        </div>
+        <aside class="col-sm-12 col-md-5">
+            <a href="https://www.accessdata.fda.gov/scripts/medwatch/index.cfm?action=reporting.home" class="btn btn-lg btn-danger" data-tooltip="data-tooltip" data-toggle="tooltip" data-placement="top" title="When you report a side effect to the FDA, you help make medicine safer for everyone.")>Report a Side Effect</a>
+        </aside>
+    </div>
+</section>
+<div data-ng-class="{in: hasResult}" class="collapse end-gradient"></div>

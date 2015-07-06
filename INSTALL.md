@@ -45,13 +45,16 @@ Perform a base installation of Elasticsearch.
 
 * Create the "fda" index using the create_fda_index.json file here (
 from https://github.com/ICFI/ADS18f_Alpha/blob/master/supporting_tools/Elasticsearch/Ngrams/create_fda_index.json).
-Be sure to use the URL of your Elasticsearch instance
-:
-	http POST http://localhost:9200/fda < create_fda_index.jso
+Be sure to use the URL of your Elasticsearch instance:
+```sh	
+http POST http://localhost:9200/fda < create_fda_index.json
+```
 
 * Load the data into Elasticsearch using the bulk format with the two data files (https://github.com/ICFI/ADS18f_Alpha/tree/master/supporting_data)
-	http POST http://localhost:9200/fda/_bulk < medicines.json
-	http POST http://localhost:9200/fda/_bulk < side_effects.json
+```sh	
+http POST http://localhost:9200/fda/_bulk < medicines.json
+http POST http://localhost:9200/fda/_bulk < side_effects.json
+```
 
 Before you can run the tests, you'll need to set some environment
 variables so that the scripts can pass your credentials along to ElasticSearch. The

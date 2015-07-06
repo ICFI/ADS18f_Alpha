@@ -48,13 +48,13 @@ def escape_space(text):
 
 
 def process_routes():
-#	master_term_dict.clear()
-#	for route in routes:
-#		print("Processing route: " + route)
-#		escaped_route = escape_space(route)
-#		get_generic_names(escaped_route)
-#		time.sleep(1) # throttle back given rate limits
-#	create_output("terms_generic_names.txt")
+	master_term_dict.clear()
+	for route in routes:
+		print("Processing route: " + route)
+		escaped_route = escape_space(route)
+		get_generic_names(escaped_route)
+		time.sleep(1) # throttle back given rate limits
+	create_output("terms_generic_names.txt")
 
 	master_term_dict.clear()
 	for route in routes:

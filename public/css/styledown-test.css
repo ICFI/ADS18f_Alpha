@@ -42,11 +42,12 @@
  * Here are styles for Text Input in the Madlib layout. Individual operating systems may include additional default styling.
  *
  *     @example
- *     div
- *			div.fill-in-the-blank 
+ *     div.medlib
+ *        p.form-group
+ *			span.fill-in-the-blank 
  *     			label 
  *					span.blank-label Enter Medicine 
- * 						input
+ * 					input
  *     
  */
 

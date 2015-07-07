@@ -3,7 +3,7 @@
 (function () {
     'use strict';
 
-    var Ads18fController = function ($scope, $location, $routeParams, MESSAGES) {
+    var Ads18fController = function ($scope, $location, $route, MESSAGES) {
             var formIsValid = function () {
                     return $scope.drugCauseSymptom.$valid;
                 },
@@ -35,12 +35,15 @@
 
             $scope.$on('$routeChangeSuccess', function (event, next, current) {
                 if (next) {
-                    $scope.drug              = $routeParams.drug || '';
-                    $scope.symptom           = $routeParams.symptom || '';
+                    $scope.drug              = $route.current.pathParams.drug || '';
+                    $scope.symptom           = $route.current.pathParams.symptom || '';
                 } else {
                     searchMore();
                 }
             });
+
+            $scope.drug        = '';
+            $scope.symptom     = '';
 
             $scope.statusMessage     = '';
             $scope.formIsValid       = formIsValid;
@@ -136,24 +139,27 @@
             };
         },
 
-        NotFound = function ($scope, $location, $route, $routeParams, MESSAGES) {
+        NotFound = function ($scope, $location, $route, MESSAGES) {
             var terms = [],
                 term;
 
                 // debugger;
 
-            if ($route.current.pathParams.drug) {
-                terms.push($route.current.pathParams.drug);
-            }
+            $scope.$on('$routeChangeSuccess', function () {
+                if ($route.current.pathParams.drug) {
+                    terms.push($route.current.pathParams.drug);
+                }
 
-            if ($route.current.pathParams.symptom) {
-                terms.push($route.current.pathParams.symptom);
-            }
+                if ($route.current.pathParams.symptom) {
+                    terms.push($route.current.pathParams.symptom);
+                }
 
-            term = terms.join(" or ");
+                term = terms.join(" or ");
 
-            $scope.setFocus = true;
-            $scope.message = MESSAGES.INVALID_TERM.replace('%term%', term);
+                $scope.setFocus = true;
+                $scope.message = MESSAGES.INVALID_TERM.replace('%term%', term);
+            });
+
             $scope.searchMore = function () {
                 $location.path('/').search('drug', null).search('symptom', null);
             };
@@ -163,7 +169,7 @@
         .controller('Ads18fController', [
             '$scope',
             '$location',
-            '$routeParams',
+            '$route',
             'MESSAGES',
             Ads18fController
         ])
@@ -182,7 +188,6 @@
             '$scope',
             '$location',
             '$route',
-            '$routeParams',
             'MESSAGES',
             NotFound
         ]);

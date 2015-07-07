@@ -115,8 +115,6 @@
                             return a[1] + b[1];
                         });
 
-                    console.log(sum);
-
                     $.each(chartData, function (key, value) {
                         var item = {};
 
@@ -125,8 +123,6 @@
                         item.percent = Math.round(value[1] / sum * 1000) / 10;
 
                         data.push(item);
-
-                        console.log(key, value);
                     });
 
                     return data;

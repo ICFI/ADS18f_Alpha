@@ -28,20 +28,16 @@
                     controller: 'DrugSymptom'
                 })
                 .when('/not-found/both/:drug/:symptom', {
-                    templateUrl: 'app/partials/form-error.html',
+                    templateUrl: 'app/partials/not-found.html',
                     controller: 'NotFound'
                 })
                 .when('/not-found/drug/:drug', {
-                    templateUrl: 'app/partials/form-error.html',
+                    templateUrl: 'app/partials/not-found.html',
                     controller: 'NotFound'
                 })
                 .when('/not-found/symptom/:symptom', {
-                    templateUrl: 'app/partials/form-error.html',
+                    templateUrl: 'app/partials/not-found.html',
                     controller: 'NotFound'
-                })
-                .when('/form-error/', {
-                    templateUrl: 'app/partials/form-error.html',
-                    controller: 'FormError'
                 });
         };
 

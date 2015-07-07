@@ -25,12 +25,17 @@ describe("test directives", function () {
     });
 
     describe("chart directive", function () {
+        var chartData = [
+                ["Constipation reported", 25],
+                ["All other adverse effects reported", 75]
+            ];
+
         beforeEach(module('/app/partials/chart.html'));
 
         beforeEach(inject(function ($rootScope, $compile) {
             scope = $rootScope.$new();
 
-            scope.myMedChartData = [];
+            scope.myMedChartData = chartData;
 
             element = '<chart data-chart-data="myMedChartData"></chart>';
 
@@ -40,6 +45,14 @@ describe("test directives", function () {
 
         it("should replace <chart> with div.chart-wrapper", function () {
             expect(element.attr('class').indexOf('chart-wrapper')).to.be.at.least(0);
+        });
+
+        it("should map data to legend object", function () {
+            expect(element.isolateScope().legendData[0].title).to.equal(chartData[0][0]);
+            expect(element.isolateScope().legendData[1].title).to.equal(chartData[1][0]);
+
+            expect(element.isolateScope().legendData[0].percent).to.equal(chartData[0][1]);
+            expect(element.isolateScope().legendData[1].percent).to.equal(chartData[1][1]);
         });
     });
 });

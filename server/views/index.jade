@@ -39,7 +39,7 @@ html(lang="en-us")
                 form(novalidate role="search" class="page-container" name="drugCauseSymptom" data-ng-submit="submit()")
                     div(class="status collapse bg-danger" data-ng-class="{'in': (statusMessage !== '')}") {{statusMessage}}
                     p.form-group 
-                        | Can <fill-in-the-blank label="Medicine" data-the-blank="drug" data-input-name="drug" data-typeahead-query-field="DRUG" data-set-validity="drugCauseSymptom.drug.$setValidity(validationErrorKey, isValid)"></fill-in-the-blank> cause <fill-in-the-blank label="Symptom" data-the-blank="symptom" data-input-name="symptom" data-typeahead-query-field="SYMPTOM" data-set-validity="drugCauseSymptom.symptom.$setValidity(validationErrorKey, isValid)"></fill-in-the-blank>?
+                        | Can <fill-in-the-blank label="Medicine" data-the-blank="drug" data-input-name="drug" data-typeahead-query-field="DRUG" data-set-validity="drugCauseSymptom.drug.$setValidity(validationErrorKey, isValid)"></fill-in-the-blank> cause <fill-in-the-blank label="Side Effect" data-the-blank="symptom" data-input-name="symptom" data-typeahead-query-field="SYMPTOM" data-set-validity="drugCauseSymptom.symptom.$setValidity(validationErrorKey, isValid)"></fill-in-the-blank>?
                         button(type="submit" class="btn btn-lg btn-primary") Find Out
             div(class="search-result-wrapper" data-ng-view="data-ng-view")
 

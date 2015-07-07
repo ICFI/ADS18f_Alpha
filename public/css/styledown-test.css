@@ -9,8 +9,8 @@
  *     @example
  *     div.row.col-sm-12.primary-green.tall #298656 Primary Green Color
  *     div.row.col-sm-12.secondary-green.tall #36B676 Secondary Green Color
- *     div.row.col-sm-12.graph-orange.tall #FF7F0E Primary Orange for Graph
- *     div.row.col-sm-12.graph-blue.tall #1F77B4 Primary Blue for Graph
+ *     div.row.col-sm-12.graph-red.tall #CE0606 Primary Red for Graph
+ *     div.row.col-sm-12.graph-blue.tall #588DAE Primary Blue for Graph
  *     div.row.col-sm-12.text-color.tall #666666 Default Text Color
  *       
  */
@@ -84,10 +84,10 @@
 	background-color: #36B676;
 }
 
-.graph-orange {
-	background-color: #FF7F0E;
+.graph-red {
+	background-color: #ce0606;
 }
 
 .graph-blue {
-	background-color: #1F77B4;
+	background-color: #588dae;
 }

@@ -42,7 +42,7 @@
  * Here are styles for Text Input in the Madlib layout. Individual operating systems may include additional default styling.
  *
  *     @example
- *     div.medlib
+ *     div
  *			div.fill-in-the-blank 
  *     			label 
  *					span.blank-label Enter Medicine 
@@ -69,6 +69,7 @@
 	text-align: center;
 	vertical-align: center;
 	color: #ffffff;
+	padding: 35px;
 }
 
 .text-color {

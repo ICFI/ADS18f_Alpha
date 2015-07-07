@@ -3374,14 +3374,14 @@ main {
   border-left: 1px solid #cdcdcd;
 }
 .table-donut-chart-legend {
-  font-size: 11px;
+  font-size: 13px;
 }
 .table-donut-chart-legend > tbody > tr:first-child > td {
   border-top: none;
 }
 .swatch {
-  width: 11px;
-  height: 11px;
+  width: 13px;
+  height: 13px;
   display: inline-block;
   border: 1px solid #fff;
   margin-left: 5px;

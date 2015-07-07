@@ -91,7 +91,7 @@ Please reference our [installation documentation](https://github.com/ICFI/ADS18f
 The scenarios we developed were based on chronic diseases familiar to our subject matter experts, utilizing their knowledge of the medications used to treat those conditions. Combined with more common searches like "Children's Tylenol", we covered a broad spectrum of medications and potential side effects. In using the medcheck.gov tool the following scenarios demonstrate the spectrum of responses and side effects.
 
 * Does "Tylenol with Codeine" cause "drowsiness"?
-* Does "Xanax" cause "pregnancy"?
+* Does "Lipitor" cause "dizziness"?
 * Does "valproic acid" cause "bronchitis"?
 * Does "Abacavir Sulfate" cause "vomiting"?
 

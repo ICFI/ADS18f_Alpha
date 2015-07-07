@@ -1,0 +1,93 @@
+/***
+ * Color Palette:
+ */
+
+/**
+ * Colors:
+ * These are the colors and hex code references for graphics on the MedCheck.gov site.
+ *
+ *     @example
+ *     div.row.col-sm-12.primary-green.tall #298656 Primary Green Color
+ *     div.row.col-sm-12.secondary-green.tall #36B676 Secondary Green Color
+ *     div.row.col-sm-12.graph-orange.tall #FF7F0E Primary Orange for Graph
+ *     div.row.col-sm-12.graph-blue.tall #1F77B4 Primary Blue for Graph
+ *     div.row.col-sm-12.text-color.tall #666666 Default Text Color
+ *       
+ */
+
+/***
+ * Text:
+ */
+
+/**
+ * Text:
+ * Here are our Text Styles using Open Sans font. We use p, a, h1, h2, and h3 for HTML text Markup.
+ *
+ *     @example
+ *     p This is a plain text paragraph. Let us take this opportunty to express our fondness for this particular Styleguide reference. It is a wonderful tool that has allowed us to automagically generate this styleguide.
+ *     p.bg-emergency This is text used to convey important information. In the case of an emergency, we urge users to contact 911.
+ *     a This is a link
+ *     h1 This is an h1 header in Open Sans font.
+ *     h2 This is an h2 header in Open Sans font.
+ *     h3 This is an h3 header in Open Sans font.
+ *     
+ */
+
+ /***
+ * Input:
+ */
+
+/**
+ * Input Fields:
+ * Here are styles for Text Input in the Madlib layout. Individual operating systems may include additional default styling.
+ *
+ *     @example
+ *     div
+ *			div.fill-in-the-blank 
+ *     			label 
+ *					span.blank-label Enter Medicine 
+ * 						input
+ *     
+ */
+
+
+/***
+ * Buttons:
+ */
+
+/**
+ * Button:
+ * `.btn` - Here is our Button class. There are 2 specific actions on the site: Search and Report.
+ *
+ *     @example
+ *     a.btn.btn-large.btn-primary Find Out
+ *     a.btn.btn-large.btn-danger Report
+ */
+
+.tall {
+	height: 100px;
+	text-align: center;
+	vertical-align: center;
+	color: #ffffff;
+	padding: 35px;
+}
+
+.text-color {
+	background-color: #666666;
+}
+
+.primary-green {
+	background-color: #298656;
+}
+
+.secondary-green {
+	background-color: #36B676;
+}
+
+.graph-orange {
+	background-color: #FF7F0E;
+}
+
+.graph-blue {
+	background-color: #1F77B4;
+}
